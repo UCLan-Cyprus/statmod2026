@@ -9,8 +9,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px 20px;       /* SHORT HEADER */
-    background-color: white;
-    height = "50px"
+    background-color: #fff;
+
 }
 
 header.scrolled {
