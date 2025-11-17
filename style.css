@@ -12,10 +12,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 5px 20px;       /* SHORT HEADER */
-    background-color: rgba(255, 255, 255, 0.10);
-    backdrop-filter: blur(10px);
-    transition: background-color 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease;
-    z-index: 1000;
+    background-color: white;
+    height = "50px"
 }
 
 header.scrolled {
@@ -37,7 +35,10 @@ header.scrolled {
     width: auto;
 }
 
-
+header nav ul li a {
+    padding: 5px 10px;   /* tighten menu spacing */
+    font-size: 14px;     /* optional: smaller menu text */
+}
 
 
 
