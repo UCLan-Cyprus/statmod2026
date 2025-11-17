@@ -527,4 +527,52 @@ input, textarea {
 
   
 }
+/* Basic menu styling */
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  display: inline-block;
+  position: relative; /* Important for dropdown positioning */
+}
+
+/* Links */
+.menu a {
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+/* Dropdown content - hidden by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+/* Dropdown links */
+.dropdown-content li a {
+  padding: 10px 15px;
+  color: #333;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Optional: hover effect for links */
+.dropdown-content li a:hover {
+  background-color: #ddd;
+}
+
 
