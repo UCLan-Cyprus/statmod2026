@@ -7,8 +7,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 20px;       /* SHORT HEADER */
-    background-color: #fff;
+    padding: 3px 15px;       /* smaller padding */
+    background-color: #fff;  /* white background */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* optional: subtle shadow */
+    z-index: 1000;  
 
 }
 
@@ -19,7 +21,7 @@
 }
 
 .logo img {
-    height: 35px;      /* Perfect size */
+    height: 25px;      /* Perfect size */
     width: auto;
 }
 
@@ -71,15 +73,6 @@ nav li {
     }
 }
 
-nav a {
-    position: relative;
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-
 
 nav a::after {
     content: "";
@@ -88,7 +81,7 @@ nav a::after {
     left: 0;
     width: 0%;
     height: 2px;
-    background-color: #007bff;
+  
     transition: width 0.3s ease;
 }
 
