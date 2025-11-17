@@ -128,9 +128,26 @@ UCLan Cyprus is situated approximately 15 minutes from Larnaka International Air
 
 <!-- Email Script -->
 <script>
+document.getElementById("button").addEventListener("click", function (event) {
+    event.preventDefault();
 
-</script>
-    <script>
+    // Collect values from the form
+    const name = document.getElementById("name").value;
+    const surname = document.getElementById("surname").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
+
+    // Create email body
+    const body =
+        "Name: " + name + " " + surname + "%0D%0A" +
+        "Message:%0D%0A" + message;
+
+    // Open email client
+    window.location.href =
+        "mailto:mhadjikyriakou@uclan.ac.uk"
+        + "?subject=" + encodeURIComponent(subject)
+        + "&body=" + body;
+});
 
 </script>
 
