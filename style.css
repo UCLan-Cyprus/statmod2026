@@ -214,22 +214,6 @@ html {
 }
 
 
-@media (max-width: 768px) {
-
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        color: #333;
-    }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-}
 
 .contact {
     background: url('https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=cover,w=1200,h=635,q=80/sites/www.builtin.com/files/2024-10/data-science.jpg') center/cover no-repeat;
@@ -286,18 +270,7 @@ html {
             text-decoration: underline;
         }
 
-/* Ensure responsiveness */
-@media (max-width: 900px) {
-    .contact-container {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .contact-details, .contact-card {
-        width: 100%;
-        max-width: 500px;
-    }
-}
 
 
     .contact::before {
