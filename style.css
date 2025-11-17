@@ -1,3 +1,95 @@
+
+/* ----------------------------
+   BASIC HEADER STYLING
+----------------------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+}
+
+header.scrolled {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Keep header short on mobile */
+header .logo img {
+    max-height: 45px;
+}
+
+/* ----------------------------
+   NAVIGATION (DESKTOP)
+----------------------------- */
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ----------------------------
+   MOBILE MENU ICON
+----------------------------- */
+.menu-toggle {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* ----------------------------
+   MOBILE NAVIGATION
+----------------------------- */
+@media (max-width: 768px) {
+
+    /* reduce header height */
+    header {
+        padding: 8px 12px;
+    }
+
+    header .logo img {
+        max-height: 35px;
+    }
+
+    /* hamburger visible */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* hide nav by default */
+    nav {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: white;
+        width: 200px;
+        display: none;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    nav.open {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav li {
+        padding: 10px 0;
+    }
+}
+
 /* Hide navigation by default on mobile */
 nav {
     display: none;
