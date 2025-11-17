@@ -32,14 +32,14 @@ header.scrolled {
 }
 
 .logo img {
-    height: 55px;
+    height: 40px;
     object-fit: contain;
     transition: 0.3s;
+    width: auto;
+     margin-right: 10px;
 }
 
-header.scrolled .logo img {
-    height: 45px;
-}
+
 
 /* NAVIGATION (desktop) */
 nav ul {
