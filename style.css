@@ -11,6 +11,7 @@ body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
   color: #333;
+  background: #f9f9f9;
 }
 
 /* HEADER */
@@ -21,11 +22,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: rgba(0, 0, 0, 0.6); /* semi-transparent dark */
+  background: #011d2d; /* dark navy blue */
+  z-index: 1000;
 }
 
 header .logo img {
-  height: 50px; /* adjust as needed */
+  height: 50px;
   margin-right: 20px;
 }
 
@@ -36,7 +38,7 @@ nav ul.menu {
 }
 
 nav ul.menu li a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 500;
   padding: 8px 12px;
@@ -56,18 +58,23 @@ nav ul.menu li a:hover {
 .dropdown-content {
   display: none;
   position: absolute;
-  background: rgba(0, 0, 0, 0.8);
+  background: #0a1f35; /* slightly lighter navy */
   min-width: 180px;
   padding: 10px 0;
   border-radius: 4px;
   top: 100%;
   left: 0;
-  z-index: 100;
+  z-index: 2000;
 }
 
 .dropdown-content a {
   display: block;
   padding: 8px 16px;
+  color: #ffffff;
+}
+
+.dropdown-content a:hover {
+  background: #008c96;
 }
 
 .dropdown:hover .dropdown-content {
@@ -78,7 +85,7 @@ nav ul.menu li a:hover {
 .hero {
   position: relative;
   height: 70vh;
-  background: url('https://statmod2025.unipi.gr/wp-content/uploads/…') center/cover no-repeat; /* use similar background */
+  background: url('https://statmod2025.unipi.gr/wp-content/uploads/2024/06/statmod2025_banner_new_01.jpg') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,7 +94,7 @@ nav ul.menu li a:hover {
 .hero .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(1, 29, 45, 0.8); /* dark navy overlay */
 }
 
 .hero .content {
@@ -95,16 +102,19 @@ nav ul.menu li a:hover {
   text-align: center;
   color: #ffffff;
   padding: 0 20px;
+  max-width: 800px;
 }
 
 .hero h1 {
   font-size: 3.5rem;
   margin-bottom: 20px;
+  font-weight: 700;
 }
 
 .hero h2 {
   font-size: 1.8rem;
   font-weight: 300;
+  line-height: 1.3;
 }
 
 /* DETAILS SECTION */
@@ -123,12 +133,16 @@ nav ul.menu li a:hover {
   font-size: 2.4rem;
   margin-bottom: 20px;
   color: #2c3e50;
+  font-weight: 700;
 }
 
 .details p.intro {
   font-size: 1.1rem;
   color: #555;
   margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cards {
@@ -145,12 +159,14 @@ nav ul.menu li a:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   flex: 1 1 280px;
   max-width: 320px;
+  text-align: left;
 }
 
 .card h3 {
   margin-top: 20px;
   margin-bottom: 12px;
   color: #2c3e50;
+  font-weight: 700;
 }
 
 .card p {
@@ -158,56 +174,22 @@ nav ul.menu li a:hover {
   font-size: 0.95rem;
 }
 
-/* CONTACT SECTION */
-.contact {
-  padding: 60px 20px;
-}
-
-.contact-container {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.contact-details,
-.contact-card {
-  flex: 1 1 300px;
-}
-
-.contact-details h2,
-.contact-card h2 {
-  font-size: 1.9rem;
-  margin-bottom: 20px;
-  color: #2c3e50;
-}
-
-.contact-card .input-group {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-.contact-card input,
-.contact-card textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-.send-btn {
+/* BUTTONS */
+button, .btn, .read-more-btn {
   display: inline-block;
   padding: 12px 24px;
-  background: #008c96; /* teal-ish */
+  background: #008c96; /* teal */
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
   transition: background 0.3s;
 }
 
-.send-btn:hover {
+button:hover, .btn:hover, .read-more-btn:hover {
   background: #006f7a;
 }
+
+/* Contact section styling can be added similarly if needed */
