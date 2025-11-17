@@ -1,3 +1,40 @@
+/* Hide navigation by default on mobile */
+nav {
+    display: none;
+}
+
+/* When open */
+nav.open {
+    display: block;
+}
+
+/* Toggle button styling */
+.menu-toggle {
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black;
+    display: none; /* Hidden on desktop */
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        background: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+}
 
 * {
     margin: 0;
