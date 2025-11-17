@@ -2,6 +2,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 /* HEADER */
+
 header {
     position: fixed;
     top: 0;
@@ -10,20 +11,17 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 25px;       /* SHORTER */
-    background-color: rgba(255, 255, 255, 0.08);
+    padding: 5px 20px;       /* SHORT HEADER */
+    background-color: rgba(255, 255, 255, 0.10);
     backdrop-filter: blur(10px);
     transition: background-color 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease;
     z-index: 1000;
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: fadeDown 0.8s ease forwards;
 }
 
 header.scrolled {
     background-color: #fff;
+    padding: 5px 20px;       /* STAYS SHORT ON SCROLL */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 5px 25px;      /* SHORT ON SCROLL TOO */
 }
 
 
@@ -35,9 +33,10 @@ header.scrolled {
 }
 
 .logo img {
-    height: 40px;       /* MUCH SMALLER */
+    height: 35px;      /* Perfect size */
     width: auto;
 }
+
 
 
 
@@ -57,23 +56,7 @@ body {
     overflow-x: hidden;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 60px;
-    background-color: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(10px);
-    transition: background-color 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease;
-    z-index: 1000;
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: fadeDown 0.8s ease forwards;
-}
+
 
 @keyframes fadeDown {
     to {
@@ -82,11 +65,7 @@ header {
     }
 }
 
-header.scrolled {
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 12px 60px;
-}
+
 
 .logo {
     display: flex;
@@ -94,11 +73,7 @@ header.scrolled {
     gap: 10px;
 }
 
-    .logo img {
-        width: 200px;
-        height: 200px;
-        object-fit: contain;
-    }
+
 
     .logo h1 {
         font-size: 1.4rem;
@@ -289,13 +264,13 @@ nav a:hover {
         margin-bottom: 15px;
     }
 
-h1 {
+.hero h1 {
     font-size: 4rem;        /* bigger title */
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-h2 {
+.hero h2 {
     font-size: 2.4rem;      /* bigger subtitle */
     font-weight: 500;
 }
@@ -334,11 +309,7 @@ html {
 
 
 @media (max-width: 768px) {
-    header {
-        padding: 10px 30px;
-        flex-direction: column;
-        gap: 10px;
-    }
+
 
     nav ul {
         flex-direction: column;
@@ -550,9 +521,6 @@ input, textarea {
         cursor: pointer;
     }
 
-    header {
-        flex-direction: row;
-        padding: 10px 20px;
-    }
+  
 }
 
