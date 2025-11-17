@@ -7,22 +7,25 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    transition: 0.3s ease;
-    background-color: transparent;
-    z-index: 1000;
-    padding: 5px 20px;      /* reduce spacing */
-    height: 30px;           /* set desired height */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 5px 25px;       /* SHORTER */
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeDown 0.8s ease forwards;
 }
 
-/* Header after scrolling */
 header.scrolled {
-    background: white;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    padding: 10px 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px 25px;      /* SHORT ON SCROLL TOO */
 }
+
 
 /* LOGOS */
 .logo {
@@ -32,12 +35,10 @@ header.scrolled {
 }
 
 .logo img {
-    height: 40px;
-    object-fit: contain;
-    transition: 0.3s;
+    height: 40px;       /* MUCH SMALLER */
     width: auto;
-     margin-right: 10px;
 }
+
 
 
 
