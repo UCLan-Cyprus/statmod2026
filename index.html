@@ -151,35 +151,29 @@ UCLan Cyprus is situated approximately 15 minutes from Larnaka International Air
 
 <!-- Email Script -->
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const nameInput = document.getElementById("name");
-        const surnameInput = document.getElementById("surname");
-        const subjectInput = document.getElementById("subject");
-        const messageInput = document.getElementById("message");
-        const sendButton = document.getElementById("button");
+document.addEventListener("DOMContentLoaded", () => {
 
-        sendButton.addEventListener("click", function (event) {
-            event.preventDefault();
-
-            const name = nameInput.value.trim();
-            const surname = surnameInput.value.trim();
-            const subject = subjectInput.value.trim();
-            const message = messageInput.value.trim();
-
-            if (!name || !surname || !subject || !message) {
-                alert("Please fill in all fields before sending.");
-                return;
-            }
-
-            const email = "mhadjikyriakou@uclan.ac.uk";
-            const mailSubject = encodeURIComponent(subject);
-            const mailBody = encodeURIComponent(
-                `Name: ${name} ${surname}\n\nMessage:\n${message}`
-            );
-
-            window.location.href = `mailto:${email}?subject=${mailSubject}&body=${mailBody}`;
-        });
+    // Shrink header on scroll
+    window.addEventListener("scroll", () => {
+        document.querySelector("header")
+                .classList.toggle("scrolled", window.scrollY > 50);
     });
+
+    // Mobile menu toggle
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("nav");
+
+    toggle.addEventListener("click", () => {
+        nav.classList.toggle("open");
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll("nav a").forEach(a =>
+        a.addEventListener("click", () => nav.classList.remove("open"))
+    );
+
+});
 </script>
+
 
 </html>
