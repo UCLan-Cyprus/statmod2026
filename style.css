@@ -111,6 +111,76 @@ header.scrolled nav a {
         color: #333;
     }
 }
+/* HIDE hamburger on desktop */
+.menu-toggle {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: white;
+}
+
+/* DESKTOP NAV */
+nav {
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+/* SCROLLED header link color */
+header.scrolled nav a {
+    color: #333;
+}
+
+/* -----------------------------
+   MOBILE BELOW 768px
+------------------------------ */
+@media (max-width: 768px) {
+
+    /* show hamburger */
+    .menu-toggle {
+        display: block;
+        z-index: 2000;
+        color: white;
+    }
+
+    header.scrolled .menu-toggle {
+        color: #333;
+    }
+
+    /* hide nav by default */
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 220px;
+        background: white;
+        padding: 15px 0;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+    }
+
+    /* show nav when toggled */
+    nav.open {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding-left: 0;
+        text-align: left;
+    }
+
+    nav li {
+        padding: 12px 20px;
+    }
+
+    nav a {
+        color: #333;
+    }
+}
 
 
 * {
