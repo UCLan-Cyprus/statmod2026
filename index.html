@@ -128,52 +128,10 @@ UCLan Cyprus is situated approximately 15 minutes from Larnaka International Air
 
 <!-- Email Script -->
 <script>
-document.addEventListener("DOMContentLoaded", () => {
 
-    // Shrink header on scroll
-    window.addEventListener("scroll", () => {
-        document.querySelector("header")
-                .classList.toggle("scrolled", window.scrollY > 50);
-    });
-
-    // Mobile menu toggle
-    const toggle = document.querySelector(".menu-toggle");
-    const nav = document.querySelector("nav");
-
-    toggle.addEventListener("click", () => {
-        nav.classList.toggle("open");
-    });
-
-    // Close menu when clicking a link
-    document.querySelectorAll("nav a").forEach(a =>
-        a.addEventListener("click", () => nav.classList.remove("open"))
-    );
-
-});
 </script>
     <script>
-    // Header Scroll Effect
-    window.addEventListener('scroll', function () {
-        const header = document.querySelector('header');
-        header.classList.toggle('scrolled', window.scrollY > 50);
-    });
 
-    // Menu Toggle Script
-    document.addEventListener("DOMContentLoaded", () => {
-        const menuToggle = document.querySelector(".menu-toggle");
-        const nav = document.querySelector("nav");
-
-        menuToggle.addEventListener("click", () => {
-            nav.classList.toggle("open");
-        });
-
-        // Optional: close nav when clicking any menu link
-        document.querySelectorAll("nav a").forEach(link => {
-            link.addEventListener("click", () => {
-                nav.classList.remove("open");
-            });
-        });
-    });
 </script>
 
 
