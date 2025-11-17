@@ -1,6 +1,4 @@
-/* style.css */
 
-/* GENERAL RESET / BASE STYLES */
 * {
   margin: 0;
   padding: 0;
@@ -192,4 +190,4 @@ button:hover, .btn:hover, .read-more-btn:hover {
   background: #006f7a;
 }
 
-/* Contact section styling can be added similarly if needed */
+
