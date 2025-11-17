@@ -11,7 +11,7 @@ header {
     background-color: transparent;
     z-index: 1000;
     padding: 5px 20px;      /* reduce spacing */
-    height: 70px;           /* set desired height */
+    height: 30px;           /* set desired height */
     display: flex;
     justify-content: space-between;
     align-items: center;
