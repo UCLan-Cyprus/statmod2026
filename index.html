@@ -8,30 +8,7 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<script>
-    // Header Scroll Effect
-    window.addEventListener('scroll', function () {
-        const header = document.querySelector('header');
-        header.classList.toggle('scrolled', window.scrollY > 50);
-    });
 
-    // Menu Toggle Script
-    document.addEventListener("DOMContentLoaded", () => {
-        const menuToggle = document.querySelector(".menu-toggle");
-        const nav = document.querySelector("nav");
-
-        menuToggle.addEventListener("click", () => {
-            nav.classList.toggle("open");
-        });
-
-        // Optional: close nav when clicking any menu link
-        document.querySelectorAll("nav a").forEach(link => {
-            link.addEventListener("click", () => {
-                nav.classList.remove("open");
-            });
-        });
-    });
-</script>
 
 <body>
   <header>
@@ -173,6 +150,30 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
 });
+</script>
+    <script>
+    // Header Scroll Effect
+    window.addEventListener('scroll', function () {
+        const header = document.querySelector('header');
+        header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Menu Toggle Script
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const nav = document.querySelector("nav");
+
+        menuToggle.addEventListener("click", () => {
+            nav.classList.toggle("open");
+        });
+
+        // Optional: close nav when clicking any menu link
+        document.querySelectorAll("nav a").forEach(link => {
+            link.addEventListener("click", () => {
+                nav.classList.remove("open");
+            });
+        });
+    });
 </script>
 
 
