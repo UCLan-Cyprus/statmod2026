@@ -1,79 +1,96 @@
+/* BASIC RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* ----------------------------
-   BASIC HEADER STYLING
------------------------------ */
+/* HEADER */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: white;
+    padding: 15px 40px;
+    transition: 0.3s ease;
+    background-color: transparent;
     z-index: 1000;
 }
 
+/* Header after scrolling */
 header.scrolled {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    padding: 10px 40px;
 }
 
-/* Keep header short on mobile */
-header .logo img {
-    max-height: 45px;
+/* LOGOS */
+.logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
-/* ----------------------------
-   NAVIGATION (DESKTOP)
------------------------------ */
+.logo img {
+    height: 55px;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+header.scrolled .logo img {
+    height: 45px;
+}
+
+/* NAVIGATION (desktop) */
 nav ul {
     display: flex;
-    gap: 20px;
     list-style: none;
+    gap: 25px;
 }
 
 nav a {
     text-decoration: none;
-    color: black;
+    font-weight: 500;
+    color: white;
+    transition: 0.3s;
 }
 
-/* ----------------------------
-   MOBILE MENU ICON
------------------------------ */
+/* Change link color after scroll */
+header.scrolled nav a {
+    color: #333;
+}
+
+/* MOBILE MENU BUTTON */
 .menu-toggle {
     display: none;
-    font-size: 32px;
+    font-size: 35px;
     cursor: pointer;
+    user-select: none;
 }
 
-/* ----------------------------
-   MOBILE NAVIGATION
------------------------------ */
+/* MOBILE STYLES */
 @media (max-width: 768px) {
 
-    /* reduce header height */
-    header {
-        padding: 8px 12px;
-    }
-
-    header .logo img {
-        max-height: 35px;
-    }
-
-    /* hamburger visible */
+    /* Make hamburger visible */
     .menu-toggle {
         display: block;
+        color: white;
+        z-index: 1100;
     }
 
-    /* hide nav by default */
+    header.scrolled .menu-toggle {
+        color: #333;
+    }
+
+    /* Hide nav */
     nav {
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: white;
-        width: 200px;
         display: none;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 220px;
+        background: white;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+        padding: 15px 0;
     }
 
     nav.open {
@@ -82,51 +99,19 @@ nav a {
 
     nav ul {
         flex-direction: column;
-        padding: 10px;
+        text-align: left;
+        padding-left: 0;
     }
 
     nav li {
-        padding: 10px 0;
+        padding: 12px 20px;
+    }
+
+    nav a {
+        color: #333;
     }
 }
 
-/* Hide navigation by default on mobile */
-nav {
-    display: none;
-}
-
-/* When open */
-nav.open {
-    display: block;
-}
-
-/* Toggle button styling */
-.menu-toggle {
-    font-size: 30px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: black;
-    display: none; /* Hidden on desktop */
-}
-
-/* Mobile view */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    nav ul {
-        flex-direction: column;
-        background: white;
-        padding: 20px;
-        text-align: center;
-    }
-
-    nav ul li {
-        margin: 15px 0;
-    }
-}
 
 * {
     margin: 0;
