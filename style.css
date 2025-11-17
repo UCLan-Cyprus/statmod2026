@@ -25,7 +25,7 @@
 
 /* HEADER */
 
-header {
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -178,15 +178,21 @@ nav a:hover {
 
 
 .hero {
-    height: 100vh;
-    background: url('https://ik.imagekit.io/edtechdigit/usdsi/content/images/articles/explore-the-vital-role-of-data-visualisation-in-data-science.jpeg') center/cover no-repeat;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
+    height: 80vh;                 /* make container 80% of viewport height */
+    display: flex;                 
+    flex-direction: column;        
+    justify-content: center;       /* vertical centering */
+    align-items: center;           /* horizontal centering */
     text-align: center;
+    padding-top: 50px;             /* extra space if needed */
 }
+
+.hero h1 {
+    font-size: 2.5rem;             /* adjust as needed */
+    line-height: 1.2;
+    margin: 0;
+}
+
 
 
     .hero .overlay {
