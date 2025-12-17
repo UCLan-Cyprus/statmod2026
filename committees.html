@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <meta charset="UTF-8">
-  <title>Organizing Committee</title>
+<head>
+  <meta charset="UTF-8" />
+  <title>Organizing Committee | ΣtatMod2026</title>
+  <meta name="robots" content="max-image-preview:large">
 
+  <!-- MAIN SITE CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- PAGE-SPECIFIC CSS -->
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -14,7 +20,6 @@
       padding-bottom: 60px;
     }
 
-    /* HEADER WITH BACKGROUND IMAGE */
     .committee-header {
       background-image:
         linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
@@ -22,21 +27,19 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-
       color: #ffffff;
       text-align: center;
-      padding: 70px 20px;
+      padding: 80px 20px;
     }
 
     .committee-header h1 {
       margin: 0;
       font-size: 2.5rem;
-      letter-spacing: 1px;
     }
 
     .committee-card {
       max-width: 900px;
-      margin: -40px auto 0; /* pulls card up slightly */
+      margin: -40px auto 0;
       background: #ffffff;
       padding: 30px;
       border-radius: 8px;
@@ -52,30 +55,16 @@
       list-style: none;
       padding: 0;
       margin: 0;
-
       display: grid;
       grid-template-columns: 1fr;
       row-gap: 16px;
     }
 
     .committee-list li {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .committee-list img {
-      width: 22px;
-      height: auto;
-      flex-shrink: 0;
-    }
-
-    .committee-list span {
-      color: #333;
       line-height: 1.4;
+      color: #333;
     }
 
-    /* Two columns on large screens */
     @media (min-width: 900px) {
       .committee-list {
         grid-template-columns: 1fr 1fr;
@@ -87,6 +76,51 @@
 
 <body>
 
+<!-- ================= HEADER ================= -->
+<header>
+  <a href="index.html">
+    <div class="logo">
+      <img src="https://keystoneacademic-res.cloudinary.com/image/upload/element/15/155464_UCLan_Cyprus_logo_rgb.png">
+      <img src="https://statmod2025.unipi.gr/wp-content/uploads/2024/12/logo_statmod2025.png">
+    </div>
+  </a>
+
+  <nav>
+    <ul class="menu">
+      <li class="dropdown">
+        <a href="honours.html" class="dropbtn">Committees</a>
+        <ul class="dropdown-content">
+          <li><a href="honours.html">Co-organizers</a></li>
+          <li><a href="honours.html">Chairs</a></li>
+          <li><a href="honours.html">Scientific Committee</a></li>
+          <li><a href="committees.html">Organizing Committee</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="abtconference.html">About the Conference</a>
+        <ul class="dropdown-content">
+          <li><a href="honours.html">Plenary Speakers</a></li>
+          <li><a href="honours.html">Invited Speakers</a></li>
+          <li><a href="honours.html">Contributed Speakers</a></li>
+          <li><a href="honours.html">Topics</a></li>
+          <li><a href="honours.html">Scientific Program</a></li>
+          <li><a href="honours.html">Social Events</a></li>
+          <li><a href="honours.html">Past Conferences</a></li>
+          <li><a href="honours.html">Partners</a></li>
+        </ul>
+      </li>
+
+      <li><a href="bookofabs.html">Book of Abstracts</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+      <li><a href="uclangallery.html">UCLAN Photo Gallery</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main>
+
   <section class="committee-section">
 
     <div class="committee-header">
@@ -97,17 +131,45 @@
       <h2>Local Organizing Committee</h2>
 
       <ul class="committee-list">
-        <li><span><strong>Milto Hadjikyriakou</strong>, UCLan Cyprus</span></li>
-        <li><span><strong>Andreas Makrides</strong>, University of the Aegean</span></li>
-        <li><span><strong>Andreas Artemiou</strong>, University of Limassol</span></li>
-        <li><span><strong>Petroula Mavrikou</strong>, Frederick University</span></li>
-        <li><span><strong>Haritini Tsangari</strong>, University of Nicosia</span></li>
-        <li><span><strong>Costas Christophi</strong>, Cyprus University of Technology</span></li>
-        <li>><span><strong>Kyriaki Michailidou</strong>, Cyprus Institute of Neurology and Genetics</span></li>
+        <li><strong>Milto Hadjikyriakou</strong>, UCLan Cyprus</li>
+        <li><strong>Andreas Makrides</strong>, University of the Aegean</li>
+        <li><strong>Andreas Artemiou</strong>, University of Limassol</li>
+        <li><strong>Petroula Mavrikou</strong>, Frederick University</li>
+        <li><strong>Haritini Tsangari</strong>, University of Nicosia</li>
+        <li><strong>Costas Christophi</strong>, Cyprus University of Technology</li>
+        <li><strong>Kyriaki Michailidou</strong>, Cyprus Institute of Neurology and Genetics</li>
       </ul>
     </div>
 
   </section>
+
+</main>
+
+<!-- ================= FOOTER / CONTACT ================= -->
+<section class="contact-section">
+  <div class="contact-wrapper">
+
+    <div class="contact-details">
+      <h2>Contact details</h2>
+      <p>University Of Central Lancashire</p>
+
+      <h3>📍 Location</h3>
+      <p>
+        University Ave 12-14, Pyla 7080<br>
+        <a href="https://www.google.com/maps/place/University+of+Central+Lancashire,+Cyprus+(UCLan+Cyprus)/" target="_blank">
+          View on Google Maps
+        </a>
+      </p>
+
+      <h3>📞 Info</h3>
+      <p>
+        Email: <a href="mailto:mhadjikyriakou@uclan.ac.uk">mhadjikyriakou@uclan.ac.uk</a><br>
+        Phone: +357 24 694000
+      </p>
+    </div>
+
+  </div>
+</section>
 
 </body>
 </html>
