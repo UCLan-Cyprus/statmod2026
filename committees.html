@@ -1,171 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Organizing Committee</title>
+
   <style>
-    :root {
-      --primary: #0aa3a3;
-      --dark: #0b2230;
-      --text: #2b2b2b;
-      --muted: #6b7280;
-      --card: #ffffff;
-    }
-
-    * { box-sizing: border-box; }
-
     body {
-      margin: 0;
-      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: var(--text);
+      font-family: Arial, sans-serif;
       background: #f4f6f8;
+      margin: 0;
     }
 
-    /* HERO */
-    .hero {
-      position: relative;
-      min-height: 260px;
-      background: url("hero-committee.jpg") center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .committee-section {
+      padding-bottom: 60px;
     }
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(6, 20, 30, 0.65);
+    /* HEADER WITH BACKGROUND IMAGE */
+    .committee-header {
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("https://ik.imagekit.io/edtechdigit/usdsi/content/images/articles/explore-the-vital-role-of-data-visualisation-in-data-science.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      color: #ffffff;
+      text-align: center;
+      padding: 70px 20px;
     }
 
-    .hero h1 {
-      position: relative;
-      z-index: 1;
-      color: #fff;
-      font-size: clamp(28px, 4vw, 42px);
-      letter-spacing: 0.5px;
+    .committee-header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
     }
 
-    /* CONTENT CARD */
-    .container {
-      max-width: 1200px;
-      margin: -70px auto 80px;
-      padding: 0 20px;
+    .committee-card {
+      max-width: 900px;
+      margin: -40px auto 0; /* pulls card up slightly */
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
 
-    .card {
-      background: var(--card);
-      border-radius: 12px;
-      padding: 50px 40px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    .committee-card h2 {
+      color: #0a6c6d;
+      margin-bottom: 20px;
     }
 
-    .committee-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 60px;
-    }
-
-    h2 {
-      margin-top: 0;
-      margin-bottom: 25px;
-      font-size: 20px;
-      color: var(--primary);
-      font-weight: 600;
-    }
-
-    ul {
+    .committee-list {
       list-style: none;
       padding: 0;
       margin: 0;
+
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 16px;
     }
 
-    li {
+    .committee-list li {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       gap: 12px;
-      margin-bottom: 16px;
-      line-height: 1.5;
-      font-size: 15px;
     }
 
-    .flag {
-      width: 20px;
-      height: 14px;
+    .committee-list img {
+      width: 22px;
+      height: auto;
       flex-shrink: 0;
-      border-radius: 2px;
-      box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
-      background: linear-gradient(
-        to bottom,
-        #0d5eb7 0%,
-        #0d5eb7 33%,
-        #ffffff 33%,
-        #ffffff 66%,
-        #d61f26 66%,
-        #d61f26 100%
-      );
     }
 
-    .affiliation {
-      color: var(--muted);
+    .committee-list span {
+      color: #333;
+      line-height: 1.4;
     }
 
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
-      .committee-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .container {
-        margin-top: -40px;
+    /* Two columns on large screens */
+    @media (min-width: 900px) {
+      .committee-list {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 40px;
       }
     }
   </style>
 </head>
+
 <body>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <h1>Organizing Committee</h1>
-  </section>
+  <section class="committee-section">
 
-  <!-- COMMITTEE CONTENT -->
-  <main class="container">
-    <div class="card">
-      <div class="committee-grid">
-
-        <!-- LOCAL COMMITTEE -->
-        <section>
-          <h2>Local Organizing Committee</h2>
-          <ul>
-            <li><span class="flag"></span><span>Milto Hadjikyriakou, <span class="affiliation">UCLan Cyprus.</span></span></li>
-            <li><span class="flag"></span><span>Andreas Makrides, <span class="affiliation">University of the Aegean.</span></span></li>
-            <li><span class="flag"></span><span>Andreas Artemiou, <span class="affiliation">University of Limassol.</span></span></li>
-            <li><span class="flag"></span><span>Petroula Mavrikiou, <span class="affiliation">Frederick University.</span></span></li>
-            <li><span class="flag"></span><span>Haritini Tsangari, <span class="affiliation">University of Nicosia.</span></span></li>
-            <li><span class="flag"></span><span>Costas Christophi, <span class="affiliation">Cyprus University of Technology.</span></span></li>
-            <li><span class="flag"></span><span>Kyriaki Michailidou, <span class="affiliation">Cyprus Institute of Neurology and Genetics.</span></span></li>
-          </ul>
-        </section>
-
-        <!-- INTERNATIONAL COMMITTEE -->
-        <section>
-          <h2></h2>
-          <ul>
-            <li><span class="flag"></span><span><span class="affiliation"> &amp;</span></span></li>
-            <li><span class="flag"></span><span><span class="affiliation"></span></span></li>
-            <li><span class="flag"></span><span> <span class="affiliation"></span></span></li>
-            <li><span class="flag"></span><span><span class="affiliation"></span></span></li>
-            <li><span class="flag"></span><span><span class="affiliation"></span></span></li>
-            <li><span class="flag"></span><span><span class="affiliation"></span></span></li>
-            <li><span class="flag"></span><span><span class="affiliation"></span></span></li>
-          </ul>
-        </section>
-
-      </div>
+    <div class="committee-header">
+      <h1>Organizing Committee</h1>
     </div>
-  </main>
+
+    <div class="committee-card">
+      <h2>Local Organizing Committee</h2>
+
+      <ul class="committee-list">
+        <li><img src="flag.png"><span><strong>Milto Hadjikyriakou</strong>, UCLan Cyprus</span></li>
+        <li><img src="flag.png"><span><strong>Andreas Makrides</strong>, University of the Aegean</span></li>
+        <li><img src="flag.png"><span><strong>Andreas Artemiou</strong>, University of Limassol</span></li>
+        <li><img src="flag.png"><span><strong>Petroula Mavrikou</strong>, Frederick University</span></li>
+        <li><img src="flag.png"><span><strong>Haritini Tsangari</strong>, University of Nicosia</span></li>
+        <li><img src="flag.png"><span><strong>Costas Christophi</strong>, Cyprus University of Technology</span></li>
+        <li><img src="flag.png"><span><strong>Kyriaki Michailidou</strong>, Cyprus Institute of Neurology and Genetics</span></li>
+      </ul>
+    </div>
+
+  </section>
 
 </body>
 </html>
