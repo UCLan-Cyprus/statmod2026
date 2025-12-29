@@ -23,8 +23,8 @@ header .logo {
 
 /* Logo images */
 header .logo img {
-    height: 60px;         /* adjust as needed */
-    width: auto;          /* maintain aspect ratio */
+    height: 50px;         /* Adjusted smaller height */
+    width: auto;          /* Maintain aspect ratio */
     display: block;
 }
 
