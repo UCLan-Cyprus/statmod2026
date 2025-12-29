@@ -27,17 +27,21 @@ header .logo img {
 
 }
 .title1 {
-    font-style: italic;
-    white-space: nowrap;      /* prevents wrapping */
+    font-style: italic;       /* italic text */
+    white-space: nowrap;       /* prevent wrapping */
     display: block;
     text-align: center;
+    overflow-x: auto;          /* optional: allow horizontal scroll if too long */
 }
+
+/* Remove the part in your media query that changes white-space */
 @media (max-width: 600px) {
     .title1 {
-        white-space: normal;
+        /* white-space: normal;  REMOVE this line */
         font-size: 1.2rem;
     }
 }
+
 
 /* HEADER */
 header {
