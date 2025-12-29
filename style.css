@@ -38,11 +38,12 @@ header .logo img {
 
 }
 .title1 {
-    font-style: italic;       /* italic text */
-    white-space: nowrap;       /* prevent wrapping */
+    font-style: italic;       /* italics */
+    white-space: nowrap;      /* keep it on a single line */
     display: block;
     text-align: center;
-    overflow-x: auto;          /* optional: allow horizontal scroll if too long */
+    overflow-x: auto;         /* allows horizontal scroll if needed */
+    font-size: 1.5rem;        /* adjust as needed */
 }
 
 /* Remove the part in your media query that changes white-space */
