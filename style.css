@@ -142,10 +142,8 @@ nav ul.menu {
         color: #555;
         margin-bottom: 40px;
         max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
         text-align: justify;
-          text-justify: inter-word;
+        text-justify: inter-word;
     }
 
 .cards {
