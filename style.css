@@ -17,13 +17,18 @@ header . {
     align-items: center;
 }
 
-header .logo img {
-    display: block;
-    border: 0;
-    outline: 0;
-    vertical-align: top;
-    background: transparent;
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;       /* spacing between logos */
 }
+
+header .logo img {
+    height: 50px;     /* limits height */
+    width: auto;      /* maintain aspect ratio */
+    display: block;
+}
+
 
 }
 .title1 {
