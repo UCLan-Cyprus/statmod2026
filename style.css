@@ -12,22 +12,19 @@ body {
     background: #f9f9f9;
 }
     
-header . {
-    display: flex;
-    align-items: center;
-}
+
 
 /* Logo container */
 header .logo {
-    display: flex;           /* align logos horizontally */
-    align-items: center;     /* vertically center */
-    gap: 10px;               /* spacing between logos */
+    display: flex;        /* horizontal alignment */
+    align-items: center;  /* vertically center */
+    gap: 10px;            /* space between logos */
 }
 
 /* Logo images */
 header .logo img {
-    height: 60px;            /* adjust as needed */
-    width: auto;             /* maintain aspect ratio */
+    height: 60px;         /* adjust as needed */
+    width: auto;          /* maintain aspect ratio */
     display: block;
 }
 
@@ -59,21 +56,15 @@ header .logo img {
 
 /* HEADER */
 header {
-    position: relative;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background: #ffff;
+    background: #fff;
+    width: 100%;
     z-index: 1000;
-     line-height: 0;
 }
 
-    header . img {
-        height: 50px;
-        margin-right: 20px;
-    }
 
 nav ul.menu {
     list-style: none;
