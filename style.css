@@ -137,26 +137,22 @@ nav ul.menu {
 }
 
     .details .container {
-        max-width: 1000px;
-        margin: 0 auto;
-    }
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
 
-    .details h2 {
-        font-size: 2.4rem;
-        margin-bottom: 20px;
-        color: #2c3e50;
-        font-weight: 700;
-        text-align: center;
-    }
-
-    .details p.intro {
-        font-size: 1.1rem;
-        color: #555;
-        margin-bottom: 40px;
-        max-width: 800px;
-        text-align: justify;
-        text-justify: inter-word;
-    }
+.details h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.details p.intro {
+    text-align: justify;
+    text-justify: inter-word;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}
 
 .cards {
     display: flex;
