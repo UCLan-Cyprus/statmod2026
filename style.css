@@ -12,7 +12,9 @@ body {
     background: #f9f9f9;
 
 }
-
+.title1 {
+    font-style: italic;
+}
 /* HEADER */
 header {
     position: relative;
