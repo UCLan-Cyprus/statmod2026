@@ -160,8 +160,10 @@ nav ul.menu {
 .cards {
     display: flex;
     justify-content: center;
+    align-items: stretch;   /* keeps same height */
     gap: 30px;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .card {
@@ -176,7 +178,11 @@ nav ul.menu {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    flex: 0 1 320px;   /* fixed nice width */
+    max-width: 320px;
 }
+
     .card h3 {
         margin-top: 20px;
         margin-bottom: 12px;
