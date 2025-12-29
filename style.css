@@ -10,6 +10,15 @@ body {
     line-height: 1.6;
     color: #333;
     background: #f9f9f9;
+    
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    display: block;
+}
 
 }
 .title1 {
