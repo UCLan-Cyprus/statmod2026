@@ -28,7 +28,17 @@ header .logo img {
 }
 .title1 {
     font-style: italic;
+    white-space: nowrap;      /* prevents wrapping */
+    display: block;
+    text-align: center;
 }
+@media (max-width: 600px) {
+    .title1 {
+        white-space: normal;
+        font-size: 1.2rem;
+    }
+}
+
 /* HEADER */
 header {
     position: relative;
