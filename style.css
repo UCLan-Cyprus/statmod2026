@@ -17,16 +17,25 @@ header . {
     align-items: center;
 }
 
+/* Logo container */
 header .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;       /* spacing between logos */
+    display: flex;           /* align logos horizontally */
+    align-items: center;     /* vertically center */
+    gap: 10px;               /* spacing between logos */
 }
 
+/* Logo images */
 header .logo img {
-    height: 50px;     /* limits height */
-    width: auto;      /* maintain aspect ratio */
+    height: 60px;            /* adjust as needed */
+    width: auto;             /* maintain aspect ratio */
     display: block;
+}
+
+/* Optional: mobile adjustment */
+@media (max-width: 600px) {
+    header .logo img {
+        height: 40px;        /* shrink logos on small screens */
+    }
 }
 
 
