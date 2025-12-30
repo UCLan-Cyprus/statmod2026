@@ -103,13 +103,15 @@ header .logo img {
 
 }
 .title1 {
-    font-style: italic;       /* italics */
-    white-space: nowrap;      /* keep it on a single line */
-    display: block;
+    font-style: italic;
     text-align: center;
-    overflow-x: auto;         /* allows horizontal scroll if needed */
-    font-size: 1.5rem;        /* adjust as needed */
+    white-space: nowrap;       /* force single line */
+    overflow: hidden;         /* prevent breaking */
+    text-overflow: ellipsis;  /* optional: show ... if ever too long */
+    width: 100%;
+    font-size: clamp(0.9rem, 2.2vw, 1.5rem);  /* auto-resize */
 }
+
 
 /* Remove the part in your media query that changes white-space */
 @media (max-width: 600px) {
