@@ -445,7 +445,7 @@ button, .btn, .read-more-btn {
 .contact-details h3,
 .contact-details p,
 .contact-details a {
-    color: white;
+    color: black;
 }
 
 /* Adjust inputs in the form for visibility */
