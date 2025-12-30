@@ -297,7 +297,7 @@ nav ul.menu {
 button, .btn, .read-more-btn {
     display: inline-block;
     padding: 12px 24px;
-    background: #008c96; /* teal */
+    background: #008c96;
     color: #fff;
     text-decoration: none;
     border-radius: 4px;
@@ -305,8 +305,8 @@ button, .btn, .read-more-btn {
     border: none;
     cursor: pointer;
     transition: background 0.3s;
- 
 }
+
 
 
     button:hover, .btn:hover, .read-more-btn:hover {
@@ -316,11 +316,9 @@ button, .btn, .read-more-btn {
     font-size: 0.9rem;
     color: #666;
     line-height: 1.4;
-    max-height: 70px;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
+    text-align: center;
+    max-height: none;
 }
-
   .card-text.expanded {
     max-height: 500px;
 }
@@ -466,13 +464,13 @@ button, .btn, .read-more-btn {
 
 /* Ensure the cards are aligned next to each other horizontally */
 .cards {
-    display: flex; /* Aligns cards horizontally */
-    justify-content: center; /* Centers the cards horizontally */
-    gap: 30px; /* Space between cards */
-    flex-wrap: nowrap; /* Prevents wrapping of cards */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: nowrap;
     width: 100%;
-    max-width: 1200px; /* Optional: limit max width */
-    margin: 0 auto; /* Centers the container */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* For the card itself */
@@ -480,11 +478,11 @@ button, .btn, .read-more-btn {
     background: white;
     border-radius: 10px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    width: 320px; /* Fixed width for each card */
+    width: 320px;
     padding: 25px 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center everything inside the card */
+    align-items: center;
     text-align: center;
-    flex-shrink: 0; /* Prevent shrinking */
+    flex-shrink: 0;
 }
