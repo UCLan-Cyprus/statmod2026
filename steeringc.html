@@ -1,3 +1,92 @@
+
+<style>
+  /* Style for main content */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: 100vh;
+}
+
+/* Section to add padding */
+.committee-section {
+  width: 100%;
+  max-width: 1200px; /* Maximum width of the content */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.committee-header {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("https://ik.imagekit.io/edtechdigit/usdsi/content/images/articles/explore-the-vital-role-of-data-visualisation-in-data-science.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 8px;
+}
+
+.committee-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* Card for committee members */
+.committee-card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-top: -40px;
+}
+
+/* List of committee members */
+.committee-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center; /* Center the items */
+  padding: 0;
+  margin: 0;
+}
+
+.committee-list li {
+  flex: 1 1 calc(50% - 20px); /* Two items per row, with space */
+  line-height: 1.6;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+.committee-list li strong {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.committee-list li span {
+  display: block;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .committee-list li {
+    flex: 1 1 100%; /* Stack the items on smaller screens */
+  }
+}
+
+</style>
+
 <!-- ================= HEADER ================= -->
 <header>
   <a href="index.html">
