@@ -13,11 +13,10 @@
     border-radius: 2px;
 }
 .cards {
-    display: flex;
+    display: flex; /* Aligns cards horizontally */
     justify-content: center; /* Centers the cards horizontally */
-    align-items: center; /* Centers vertically within the container */
     gap: 30px; /* Space between cards */
-    flex-wrap: wrap; /* Allows the cards to wrap on smaller screens */
+    flex-wrap: nowrap; /* Prevents wrapping of cards */
     width: 100%;
     max-width: 1200px; /* Optional: limit max width */
     margin: 0 auto; /* Centers the container */
@@ -259,7 +258,7 @@ nav ul.menu {
     margin-right: auto;
     max-width: 800px;
 }
-.card img {
+. img {
     width: 60px;
     margin-bottom: 15px;
 }
@@ -275,7 +274,7 @@ nav ul.menu {
     width: 100%;
 }
 
-.card {
+. {
     background: white;
     border-radius: 10px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
@@ -315,6 +314,18 @@ button, .btn, .read-more-btn {
     cursor: pointer;
     transition: background 0.3s;
  
+}
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center everything inside the card */
+    text-align: center;
+    flex-shrink: 0; /* Prevent shrinking */
 }
 
     button:hover, .btn:hover, .read-more-btn:hover {
