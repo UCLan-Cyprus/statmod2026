@@ -183,7 +183,10 @@ nav ul.menu {
 .cards {
     display: flex;
     justify-content: center;
-    align-items: stretch;   /* keeps same height */
+    margin-left: auto;
+    margin-right: auto;
+     align-items: center;
+    align-items: stretch;  
     gap: 30px;
     flex-wrap: wrap;
     width: 100%;
