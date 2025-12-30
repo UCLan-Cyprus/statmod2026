@@ -7,15 +7,42 @@
     <title>ΣtatMod2026</title>
     <link rel="stylesheet" href="style.css" />
 </head>
+    <script>
+const hamburger = document.getElementById("hamburger");
+const menu = document.querySelector(".menu");
+const dropdowns = document.querySelectorAll(".dropdown > a");
+
+hamburger.addEventListener("click", () => {
+    menu.classList.toggle("active");
+});
+
+/* Allow dropdowns to open on mobile */
+dropdowns.forEach(drop => {
+    drop.addEventListener("click", (e) => {
+        if (window.innerWidth <= 900) {
+            e.preventDefault();
+            drop.parentElement.classList.toggle("open");
+        }
+    });
+});
+</script>
+
 
 <body>
     <header>
+        
         <a href="index.html">
             <div class="logo">
                 <img src="https://keystoneacademic-res.cloudinary.com/image/upload/element/15/155464_UCLan_Cyprus_logo_rgb.png">
                 <img src="statmodpng2.png">
             </div>
         </a>
+        <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
 
         <nav>
             <ul class="menu">
