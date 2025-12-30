@@ -10,6 +10,30 @@
 
   <!-- PAGE-SPECIFIC CSS -->
   <style>
+    .committee-list li {
+  line-height: 1.6;
+  color: #333;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Name line */
+.committee-list li strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #0a6c6d;
+}
+
+/* Text below the name */
+.committee-list li span {
+  display: block;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+}
+
     body {
       font-family: Arial, sans-serif;
       background: #f4f6f8;
@@ -126,19 +150,51 @@
 
     
     <div class="committee-card">
+<ul class="committee-list">
 
-      <ul class="committee-list">
-        <li><strong>Vlad Stefan BARBU</strong>, Founding Member
-LMRS, Univ. of Rouen-Normandy, France & "Costin C. Kiritescu" National Institute of Economic Research of Romanian Academy, Romania</li>
-        <li><strong>Salim BOUZEBDA</strong>, Univ. of Technology of Compiègne, France</li>
-        <li><strong>Guglielmo D'AMICO</strong>, Univ. "G. d'Annunzio" of Chieti-Pescara, Italy</li>
-        <li><strong>Milto HADJIKYRIAKOU</strong>, Acting Chair
-Univ. of Central Lancashire, Cyprus</li>
-        <li><strong>Alex KARAGRIGORIOU</strong>, Univ. of Piraeus, Greece</li>
-        <li><strong>Bojana MILOŠEVIĆ</strong>, Univ. of Belgrade, Faculty of Mathematics, Serbia</li>
-        <li><strong>Vasile PREDA</strong>, Founding Member, Honorary Chair
-"Gheorghe Mihoc-Caius Iacob" Institute of Mathematical Statistics and Applied Mathematics of Romanian Academy & "Costin C. Kiritescu" National Institute of Economic Research of Romanian Academy, Univ. of Bucharest, Romania</li>
-      </ul>
+  <li>
+    <strong>Vlad Stefan BARBU</strong>
+    <span>
+      Founding Member, LMRS, Univ. of Rouen-Normandy, France & 
+      "Costin C. Kiritescu" National Institute of Economic Research of Romanian Academy, Romania
+    </span>
+  </li>
+
+  <li>
+    <strong>Salim BOUZEBDA</strong>
+    <span>Univ. of Technology of Compiègne, France</span>
+  </li>
+
+  <li>
+    <strong>Guglielmo D'AMICO</strong>
+    <span>Univ. "G. d'Annunzio" of Chieti-Pescara, Italy</span>
+  </li>
+
+  <li>
+    <strong>Milto HADJIKYRIAKOU</strong>
+    <span>Acting Chair, Univ. of Central Lancashire, Cyprus</span>
+  </li>
+
+  <li>
+    <strong>Alex KARAGRIGORIOU</strong>
+    <span>Univ. of Piraeus, Greece</span>
+  </li>
+
+  <li>
+    <strong>Bojana MILOŠEVIĆ</strong>
+    <span>Univ. of Belgrade, Faculty of Mathematics, Serbia</span>
+  </li>
+
+  <li>
+    <strong>Vasile PREDA</strong>
+    <span>
+      Founding Member, Honorary Chair — "Gheorghe Mihoc-Caius Iacob" Institute of Mathematical Statistics and Applied Mathematics of Romanian Academy & 
+      "Costin C. Kiritescu" National Institute of Economic Research of Romanian Academy, Univ. of Bucharest, Romania
+    </span>
+  </li>
+
+</ul>
+
     </div>
 
   </section>
