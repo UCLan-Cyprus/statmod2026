@@ -12,6 +12,16 @@
     background: black;
     border-radius: 2px;
 }
+.cards {
+    display: flex;
+    justify-content: center; /* Centers the cards horizontally */
+    align-items: center; /* Centers vertically within the container */
+    gap: 30px; /* Space between cards */
+    flex-wrap: wrap; /* Allows the cards to wrap on smaller screens */
+    width: 100%;
+    max-width: 1200px; /* Optional: limit max width */
+    margin: 0 auto; /* Centers the container */
+}
 
 /* MOBILE MENU */
 @media (max-width: 900px) {
@@ -203,24 +213,27 @@ nav ul.menu {
     }
 
     .hero .content {
-        position: relative;
-        text-align: center;
-        color: #ffffff;
-        padding: 0 20px;
-        max-width: 800px;
-    }
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+    max-width: 800px; /* Limits max width */
+    margin: 0 auto; /* Centers the content */
+}
+  .hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center; /* Ensures the heading is centered */
+}
 
-    .hero h1 {
-        font-size: 3.5rem;
-        margin-bottom: 20px;
-        font-weight: 700;
-    }
 
-    .hero h2 {
-        font-size: 1.8rem;
-        font-weight: 300;
-        line-height: 1.3;
-    }
+.hero h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.3;
+    text-align: center;
+}
 
 /* DETAILS SECTION */
 .details {
@@ -265,14 +278,14 @@ nav ul.menu {
 .card {
     background: white;
     border-radius: 10px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     width: 320px;
     padding: 25px 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;    /* center everything */
+    align-items: center;    /* Center everything inside the card */
     text-align: center;
-    flex-shrink: 0;         /* prevents shrinking */
+    flex-shrink: 0;         /* Prevent shrinking */
 }
 
 .card h3 {
@@ -342,19 +355,24 @@ button, .btn, .read-more-btn {
 
 .contact-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Centers the content */
     align-items: flex-start;
     gap: 60px;
     max-width: 1200px;
     margin: auto;
+    flex-wrap: wrap; /* Allow content to wrap on small screens */
 }
 
-/* LEFT SIDE */
+.contact-form,
 .contact-details {
     flex: 1;
-    color: #333;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background: white;
+    max-width: 600px; /* Optional: limits the width of each section */
+    margin: 20px; /* Adds space around each section */
 }
-
     .contact-details h2 {
         font-size: 2rem;
         margin-bottom: 20px;
@@ -365,14 +383,7 @@ button, .btn, .read-more-btn {
         font-size: 1.2rem;
     }
 
-/* RIGHT SIDE */
-.contact-form {
-    flex: 1;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
+
 
     .contact-form h2 {
         text-align: center;
