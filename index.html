@@ -7,30 +7,9 @@
     <title>ΣtatMod2026</title>
     <link rel="stylesheet" href="style.css" />
 </head>
-    <script>
-const hamburger = document.getElementById("hamburger");
-const menu = document.querySelector(".menu");
-const dropdowns = document.querySelectorAll(".dropdown > a");
-
-hamburger.addEventListener("click", () => {
-    menu.classList.toggle("active");
-});
-
-/* Allow dropdowns to open on mobile */
-dropdowns.forEach(drop => {
-    drop.addEventListener("click", (e) => {
-        if (window.innerWidth <= 900) {
-            e.preventDefault();
-            drop.parentElement.classList.toggle("open");
-        }
-    });
-});
-</script>
-
 
 <body>
     <header>
-        
         <a href="index.html">
             <div class="logo">
                 <img src="https://keystoneacademic-res.cloudinary.com/image/upload/element/15/155464_UCLan_Cyprus_logo_rgb.png">
@@ -38,11 +17,10 @@ dropdowns.forEach(drop => {
             </div>
         </a>
         <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
-
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
         <nav>
             <ul class="menu">
@@ -75,84 +53,61 @@ dropdowns.forEach(drop => {
         </nav>
     </header>
 
-
-
     <main>
         <section class="hero">
-
             <div class="overlay"></div>
             <div class="content">
                 </br>
                 </br>
                 <h1>Statistical Modeling with Applications<br></h1>
                 <h2 class="title1"><i>18-19 September, 2026, UCLan Cyprus, Larnaka, Pyla, CYPRUS</i></h2></br></br>
-
             </div>
         </section>
 
         <section class="details">
             <div class="container">
                 <h2>Details about ΣtatMod2026 Conference</h2>
-            
                 <p class="intro">
-                    ΣtatMod2026 is organized under the aegis of UCLan Cyprus,
-                    with the support of the Cyprus Statistical Society and the Greek Statistical Institute and follows six successful and impactful conferences since 2020.
-                    The general objective of ΣtatMod2026 conference is to bring together experts on statistical and probability modeling,
-                    considering both theoretical and applied points of view.
+                    ΣtatMod2026 is organized under the aegis of UCLan Cyprus, with the support of the Cyprus Statistical Society and the Greek Statistical Institute and follows six successful and impactful conferences since 2020. The general objective of ΣtatMod2026 conference is to bring together experts on statistical and probability modeling, considering both theoretical and applied points of view.
                 </p><br><br>
-    
-                     <h2>ΣtatMod through the years...</h2>
-            
+
+                <h2>ΣtatMod through the years...</h2>
+
                 <p class="intro">
-                 Statistical Modeling with Applications (ΣtatMod2026) is an international scientific conference dedicated to advancing the theory and practice of statistical modeling.
-                Founded in 2020, the conference brings together leading researchers and professionals from around the world exploring
-                both theoretical foundations and real-world applications of modern statistical methods.
-                The conference has been hosted in multiple European countries, including, France (Rouen), Romania (Bucharest), Serbia (Belgrade), and Greece (Piraeus).
-                The goal of the conference is to encourage collaboration across a variety of disciplines as well as discussion on recent challenges and innovations in the broader area of statistical modelling.
+                    Statistical Modeling with Applications (ΣtatMod2026) is an international scientific conference dedicated to advancing the theory and practice of statistical modeling. Founded in 2020, the conference brings together leading researchers and professionals from around the world exploring both theoretical foundations and real-world applications of modern statistical methods. The conference has been hosted in multiple European countries, including, France (Rouen), Romania (Bucharest), Serbia (Belgrade), and Greece (Piraeus). The goal of the conference is to encourage collaboration across a variety of disciplines as well as discussion on recent challenges and innovations in the broader area of statistical modelling.
                 </p> <br><br>
 
+                <div class="cards">
+                    <div class="card">
+                        <img src="icon1_nobg.png" alt="Venue">
+                        <h3>Venue / Location</h3>
+                        <p class="card-text">
+                            The conference will be hosted at the University of Central Lancashire Cyprus (UCLan Cyprus), located in Pyla, in the Larnaca district...
+                        </p>
+                        <button class="read-more-btn">Read More</button>
+                    </div>
 
-         <div class="cards">
-    
-    <div class="card">
-        <img src="icon1_nobg.png" alt="Venue">
-
-        <h3>Venue / Location</h3>
-
-        <p class="card-text">
-            The conference will be hosted at the University of Central Lancashire Cyprus (UCLan Cyprus), located in Pyla, in the Larnaca district...
-        </p>
-
-        <button class="read-more-btn">Read More</button>
-    </div>
-
-    <div class="card">
-        <img src="icon2_nobg.png" alt="Dates">
-
-        <h3>Important Dates</h3>
-
-        <p class="card-text">
-            Deadline for Registration: 1 June 2026<br>
-            Deadline for Abstract Submission: 1 June 2026<br>
-            Deadline for Special Sessions: 1 June 2026<br>
-            Conference: 18–19 September 2026
-        </p>
-
-        <button class="read-more-btn">Read More</button>
-    </div>
-
-</div>
-
+                    <div class="card">
+                        <img src="icon2_nobg.png" alt="Dates">
+                        <h3>Important Dates</h3>
+                        <p class="card-text">
+                            Deadline for Registration: 1 June 2026<br>
+                            Deadline for Abstract Submission: 1 June 2026<br>
+                            Deadline for Special Sessions: 1 June 2026<br>
+                            Conference: 18–19 September 2026
+                        </p>
+                        <button class="read-more-btn">Read More</button>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="contact-section">
             <div class="contact-wrapper">
-
                 <!-- LEFT SIDE -->
                 <div class="contact-details">
                     <h2>Contact details</h2>
                     <p>University Of Central Lancashire</p>
-
                     <h3>📍 Location</h3>
                     <p>
                         University Ave 12-14, Pyla 7080<br>
@@ -182,16 +137,15 @@ dropdowns.forEach(drop => {
 
                     <button id="send-btn" class="send-btn">SEND MESSAGE</button>
                 </div>
-
             </div>
         </section>
 
     </main>
+
     <script>
         document.querySelectorAll(".read-more-btn").forEach(button => {
             button.addEventListener("click", () => {
                 const cardText = button.previousElementSibling; // the <p> element
-
                 cardText.classList.toggle("expanded");
 
                 if (cardText.classList.contains("expanded")) {
@@ -201,32 +155,7 @@ dropdowns.forEach(drop => {
                 }
             });
         });
-</body >
-
-< !--Email Script-- >
-            <script>
-                document.getElementById("button").addEventListener("click", function (event) {
-                    event.preventDefault();
-
-                // Collect values from the form
-                const name = document.getElementById("name").value;
-                const surname = document.getElementById("surname").value;
-                const subject = document.getElementById("subject").value;
-                const message = document.getElementById("message").value;
-
-                // Create email body
-                const body =
-                "Name: " + name + " " + surname + "%0D%0A" +
-                "Message:%0D%0A" + message;
-
-                // Open email client
-                window.location.href =
-                "mailto:mhadjikyriakou@uclan.ac.uk"
-                + "?subject=" + encodeURIComponent(subject)
-                + "&body=" + body;
-        });
-
     </script>
-
+</body>
 
 </html>
