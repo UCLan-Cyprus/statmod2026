@@ -12,15 +12,7 @@
     background: black;
     border-radius: 2px;
 }
-.cards {
-    display: flex; /* Aligns cards horizontally */
-    justify-content: center; /* Centers the cards horizontally */
-    gap: 30px; /* Space between cards */
-    flex-wrap: nowrap; /* Prevents wrapping of cards */
-    width: 100%;
-    max-width: 1200px; /* Optional: limit max width */
-    margin: 0 auto; /* Centers the container */
-}
+
 
 /* MOBILE MENU */
 @media (max-width: 900px) {
@@ -315,18 +307,7 @@ button, .btn, .read-more-btn {
     transition: background 0.3s;
  
 }
-.card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    width: 320px;
-    padding: 25px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center everything inside the card */
-    text-align: center;
-    flex-shrink: 0; /* Prevent shrinking */
-}
+
 
     button:hover, .btn:hover, .read-more-btn:hover {
         background: #006f7a;
@@ -483,4 +464,27 @@ button, .btn, .read-more-btn {
     color: white;
 }
 
+/* Ensure the cards are aligned next to each other horizontally */
+.cards {
+    display: flex; /* Aligns cards horizontally */
+    justify-content: center; /* Centers the cards horizontally */
+    gap: 30px; /* Space between cards */
+    flex-wrap: nowrap; /* Prevents wrapping of cards */
+    width: 100%;
+    max-width: 1200px; /* Optional: limit max width */
+    margin: 0 auto; /* Centers the container */
+}
 
+/* For the card itself */
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 320px; /* Fixed width for each card */
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center everything inside the card */
+    text-align: center;
+    flex-shrink: 0; /* Prevent shrinking */
+}
