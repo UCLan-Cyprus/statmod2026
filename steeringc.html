@@ -1,169 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Organizing Committee | ΣtatMod2026</title>
+  <meta name="robots" content="max-image-preview:large">
 
-<style>
-  /* Style for main content */
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f6f8;
-  margin: 0;
-  display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-  height: 100vh;
-}
+  <!-- MAIN SITE CSS -->
+  <link rel="stylesheet" href="style.css">
 
-/* Section to add padding */
-.committee-section {
-  width: 100%;
-  max-width: 1200px; /* Maximum width of the content */
-  padding: 20px;
-  box-sizing: border-box;
-}
+  <!-- PAGE-SPECIFIC CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+    }
 
-.committee-header {
-  background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url("https://ik.imagekit.io/edtechdigit/usdsi/content/images/articles/explore-the-vital-role-of-data-visualisation-in-data-science.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
-  border-radius: 8px;
-}
+    .committee-section {
+      padding-bottom: 60px;
+    }
 
-.committee-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
+    .committee-header {
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("https://ik.imagekit.io/edtechdigit/usdsi/content/images/articles/explore-the-vital-role-of-data-visualisation-in-data-science.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #ffffff;
+      text-align: center;
+      padding: 80px 20px;
+    }
 
-/* Card for committee members */
-.committee-card {
-  background: white;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  margin-top: -40px;
-}
+    .committee-header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
 
-/* List of committee members */
-.committee-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center; /* Center the items */
-  padding: 0;
-  margin: 0;
-}
+    .committee-card {
+      max-width: 900px;
+      margin: -40px auto 0;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
 
-.committee-list li {
-  flex: 1 1 calc(50% - 20px); /* Two items per row, with space */
-  line-height: 1.6;
-  color: #333;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 12px;
-  margin-bottom: 12px;
-}
+    .committee-card h2 {
+      color: #0a6c6d;
+      margin-bottom: 20px;
+    }
 
-.committee-list li strong {
-  display: block;
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 4px;
-}
+    .committee-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 16px;
+    }
 
-.committee-list li span {
-  display: block;
-  font-size: 1rem;
-  color: #444;
-}
+    .committee-list li {
+      line-height: 1.4;
+      color: #333;
+    }
 
-/* Responsive design for smaller screens */
-@media (max-width: 600px) {
-  .committee-list li {
-    flex: 1 1 100%; /* Stack the items on smaller screens */
-  }
-}
+    @media (min-width: 900px) {
+      .committee-list {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 40px;
+      }
+    }
+  </style>
+</head>
 
-</style>
+<body>
 
 <!-- ================= HEADER ================= -->
 <header>
-  <a href="index.html">
-    <div class="logo">
-      <img src="https://keystoneacademic-res.cloudinary.com/image/upload/element/15/155464_UCLan_Cyprus_logo_rgb.png">
-      <img src="statmodpng2.png">
-    </div>
-  </a>
-  <nav>
-    <ul class="menu">
-      <li class="dropdown">
-        <a href="honours.html" class="dropbtn">Committees</a>
-        <ul class="dropdown-content">
-          <li><a href="honours.html">Co-organizers</a></li>
-          <li><a href="steeringc.html">Steering Committee</a></li>
-          <li><a href="honours.html">Scientific Committee</a></li>
-          <li><a href="committees.html">Organizing Committee</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="abtconference.html">About the Conference</a>
-        <ul class="dropdown-content">
-          <li><a href="honours.html">Plenary Speakers</a></li>
-          <li><a href="honours.htmll">Invited Speakers</a></li>
-          <li><a href="honours.html">Contributed Speakers</a></li>
-          <li><a href="honours.html">Topics</a></li>
-          <li><a href="honours.htmll">Scientific Program</a></li>
-          <li><a href="honours.html">Social Events</a></li>
-          <li><a href="honours.html">Past Conferences</a></li>
-          <li><a href="honours.html">Partners</a></li>
-        </ul>
-      </li>
-      <li><a href="bookofabs.html">Book of Abstracts</a></li>
-      <li><a href="sponsors.html">Sponsors</a></li>
-      <li><a href="uclangallery.html">UCLAN Photo Gallery</a></li>
-    </ul>
-  </nav>
-</header>
+        <a href="index.html">
+            <div class="logo">
+                <img src="https://keystoneacademic-res.cloudinary.com/image/upload/element/15/155464_UCLan_Cyprus_logo_rgb.png">
+                <img src="statmodpng2.png">
+            </div>
+        </a>
 
+        <nav>
+            <ul class="menu">
+                <li class="dropdown">
+                    <a href="honours.html" class="dropbtn">Committees</a>
+                    <ul class="dropdown-content">
+                        <li><a href="honours.html">Co-organizers</a></li>
+                        <li><a href="steeringc.html">Steering Committee</a></li>
+                        <li><a href="honours.html">Scientific Committee</a></li>
+                        <li><a href="committees.html">Organizing Committee</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="abtconference.html">About the Conference</a>
+                    <ul class="dropdown-content">
+                        <li><a href="honours.html">Plenary Speakers</a></li>
+                        <li><a href="honours.htmll">Invited Speakers</a></li>
+                        <li><a href="honours.html">Contributed Speakers</a></li>
+                        <li><a href="honours.html">Topics</a></li>
+                        <li><a href="honours.htmll">Scientific Program</a></li>
+                        <li><a href="honours.html">Social Events</a></li>
+                        <li><a href="honours.html">Past Conferences</a></li>
+                        <li><a href="honours.html">Partners</a></li>
+                    </ul>
+                </li>
+                <li><a href="bookofabs.html">Book of Abstracts</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="uclangallery.html"> UCLAN Photo Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
 <!-- ================= MAIN ================= -->
 <main>
+
   <section class="committee-section">
+
     <div class="committee-header">
-      <h1>Steering Committee</h1>
+      <h1>Organizing Committee</h1>
     </div>
 
     <div class="committee-card">
+      <h2>Local Organizing Committee</h2>
+
       <ul class="committee-list">
-        <li>
-          <strong>Vlad Stefan BARBU</strong>
-          <span>Founding Member, LMRS, Univ. of Rouen-Normandy, France & "Costin C. Kiritescu" National Institute of Economic Research of Romanian Academy, Romania</span>
-        </li>
-        <li>
-          <strong>Salim BOUZEBDA</strong>
-          <span>Univ. of Technology of Compiègne, France</span>
-        </li>
-        <li>
-          <strong>Guglielmo D'AMICO</strong>
-          <span>Univ. "G. d'Annunzio" of Chieti-Pescara, Italy</span>
-        </li>
-        <li>
-          <strong>Milto HADJIKYRIAKOU</strong>
-          <span>Acting Chair, Univ. of Central Lancashire, Cyprus</span>
-        </li>
-        <li>
-          <strong>Alex KARAGRIGORIOU</strong>
-          <span>Univ. of Piraeus, Greece</span>
-        </li>
-        <li>
-          <strong>Bojana MILOŠEVIĆ</strong>
-          <span>Univ. of Belgrade, Faculty of Mathematics, Serbia</span>
-        </li>
-        <li>
-          <strong>Vasile PREDA</strong>
-          <span>Founding Member, Honorary Chair — "Gheorghe Mihoc-Caius Iacob" Institute of Mathematical Statistics and Applied Mathematics of Romanian Academy & "Costin C. Kiritescu" National Institute of Economic Research of Romanian Academy, Univ. of Bucharest, Romania</span>
-        </li>
+        <li><strong>Milto Hadjikyriakou</strong>, UCLan Cyprus</li>
+        <li><strong>Andreas Makrides</strong>, University of the Aegean</li>
+        <li><strong>Andreas Artemiou</strong>, University of Limassol</li>
+        <li><strong>Petroula Mavrikou</strong>, Frederick University</li>
+        <li><strong>Haritini Tsangari</strong>, University of Nicosia</li>
+        <li><strong>Costas Christophi</strong>, Cyprus University of Technology</li>
+        <li><strong>Kyriaki Michailidou</strong>, Cyprus Institute of Neurology and Genetics</li>
       </ul>
     </div>
+
   </section>
+
 </main>
+
+<!-- ================= FOOTER / CONTACT ================= -->
+<section class="contact-section">
+  <div class="contact-wrapper">
+
+    <div class="contact-details">
+      <h2>Contact details</h2>
+      <p>University Of Central Lancashire</p>
+
+      <h3>📍 Location</h3>
+      <p>
+        University Ave 12-14, Pyla 7080<br>
+        <a href="https://www.google.com/maps/place/University+of+Central+Lancashire,+Cyprus+(UCLan+Cyprus)/" target="_blank">
+          View on Google Maps
+        </a>
+      </p>
+
+      <h3>📞 Info</h3>
+      <p>
+        Email: <a href="mailto:mhadjikyriakou@uclan.ac.uk">mhadjikyriakou@uclan.ac.uk</a><br>
+        Phone: +357 24 694000
+      </p>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
