@@ -308,8 +308,7 @@ button, .btn, .read-more-btn {
     border: none;
     cursor: pointer;
     transition: background 0.3s;
-       margin-left: auto;
-    margin-right: auto;
+ 
 }
 
     button:hover, .btn:hover, .read-more-btn:hover {
