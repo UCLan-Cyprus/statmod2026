@@ -1,1 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="max-image-preview:large">
+    <title>ΣtatMod2026</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+   <header>
+        <a href="index.html">
+            <div class="logo">
+                <img src="https://keystoneacademic-res.cloudinary.com/image/upload/element/15/155464_UCLan_Cyprus_logo_rgb.png">
+                <img src="statmodpng2.png">
+            </div>
+        </a>
+
+        <nav>
+            <ul class="menu">
+                <li class="dropdown">
+                    <a href="honours.html" class="dropbtn">Committees</a>
+                    <ul class="dropdown-content">
+                        <li><a href="honours.html">Co-organizers</a></li>
+                        <li><a href="steeringc.html">Steering Committee</a></li>
+                        <li><a href="honours.html">Scientific Committee</a></li>
+                        <li><a href="committees.html">Organizing Committee</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="abtconference.html">About the Conference</a>
+                    <ul class="dropdown-content">
+                        <li><a href="honours.html">Plenary Speakers</a></li>
+                        <li><a href="honours.htmll">Invited Speakers</a></li>
+                        <li><a href="honours.html">Contributed Speakers</a></li>
+                        <li><a href="honours.html">Topics</a></li>
+                        <li><a href="honours.htmll">Scientific Program</a></li>
+                        <li><a href="honours.html">Social Events</a></li>
+                        <li><a href="honours.html">Past Conferences</a></li>
+                        <li><a href="honours.html">Partners</a></li>
+                    </ul>
+                </li>
+                <li><a href="bookofabs.html">Book of Abstracts</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="uclangallery.html"> UCLAN Photo Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main>
+
+
+        <section class="details">
+            <style>
+                .newbg {
+                    height: 70vh;
+                    background-image: url('https://www.uclancyprus.ac.cy/wp-content/uploads/2025/03/Main-Entrance_1-21.jpg');
+                }
+
+                .newbg2 {
+                    height: 70vh;
+                    background-image: url('https://cf.bstatic.com/xdata/images/hotel/max1024x768/382555356.jpg?k=d3f67b69363b0db6c9aa77a6c410630f7eb1e8b81a783943264a273095160751&o=');
+                }
+
+                body {
+                    font-family: 'Helvetica Neue', Arial, sans-serif;
+                    color: #ccc;
+                    margin: 0;
+                }
+
+                .mainheading {
+                    color: white;
+                }
+
+                h1 {
+                    font-size: 2.8rem;
+                    font-weight: 700;
+                    color: black;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                    max-width: 700px;
+                    margin-bottom: 40px;
+                    color: black;
+                    text-align: center; /* center the text */
+                    margin: 0 auto 40px auto; /* horizontally center container */
+                }
+
+                .gallery {
+                    /*display: grid;*/
+                    align-content: center;
+                    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+                    gap: 20px;
+                    max-width: 900px;
+                    margin: 0 auto;
+                }
+
+                    .gallery img {
+                        width: 200px;
+                        height: 200px;
+                        border-radius: 8px;
+                        box-shadow: 0 4px 12px rgba(0, 140, 150, 0.5);
+                        transition: transform 0.3s ease;
+                    }
+
+                        .gallery img:hover {
+                            transform: scale(1.05);
+                            box-shadow: 0 6px 20px rgba(0, 140, 150, 0.8);
+                        }
+
+                .textheading {
+                    color
+                }
+            </style>
+            </head>
+            <body>
+
+                <h1> Partners</h1>
+                <div class="gallery">
+                    <img src="https://study-net.eu/wp-content/uploads/2018/02/UCLan_Cyprus_logo_rgb.jpg" alt="Photo 1" />
+                    
+
+                </div><br /><br />
+
+
+</section>
+
+        <section class="contact-section">
+            <div class="contact-wrapper">
+
+                <!-- LEFT SIDE -->
+                <div class="contact-details">
+                    <h2>Contact details</h2>
+                    <p>University Of Central Lancashire</p>
+
+                    <h3>📍 Location</h3>
+                    <p>
+                        University Ave 12-14, Pyla 7080<br>
+                        <a href="https://www.google.com/maps/place/University+of+Central+Lancashire,+Cyprus+(UCLan+Cyprus)/" target="_blank">
+                            View on Google Maps
+                        </a>
+                    </p>
+
+                    <h3>📞 Info</h3>
+                    <p>
+                        Email: <a href="mailto:mhadjikyriakou@uclan.ac.uk">mhadjikyriakou@uclan.ac.uk</a><br>
+                        Phone: +357 24 694000
+                    </p>
+                </div>
+
+                <!-- RIGHT SIDE -->
+                <div class="contact-form">
+                    <h2 class="textheading">Contact Us</h2>
+
+                    <div class="form-row">
+                        <input id="name" type="text" placeholder="Your Name" required>
+                        <input id="surname" type="text" placeholder="Your Surname" required>
+                    </div>
+
+                    <input id="subject" type="text" placeholder="Subject" required>
+                    <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+
+                    <button id="send-btn" class="send-btn">SEND MESSAGE</button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <script>
+        document.querySelectorAll(".read-more-btn").forEach(button => {
+            button.addEventListener("click", () => {
+                const cardText = button.previousElementSibling; // the <p> element
+
+                cardText.classList.toggle("expanded");
+
+                if (cardText.classList.contains("expanded")) {
+                    button.textContent = "Read Less";
+                } else {
+                    button.textContent = "Read More";
+                }
+            });
+        });
+</body >
+
+< !--Email Script-- >
+            <script>
+                document.getElementById("button").addEventListener("click", function (event) {
+                    event.preventDefault();
+
+                // Collect values from the form
+                const name = document.getElementById("name").value;
+                const surname = document.getElementById("surname").value;
+                const subject = document.getElementById("subject").value;
+                const message = document.getElementById("message").value;
+
+                // Create email body
+                const body =
+                "Name: " + name + " " + surname + "%0D%0A" +
+                "Message:%0D%0A" + message;
+
+                // Open email client
+                window.location.href =
+                "mailto:mhadjikyriakou@uclan.ac.uk"
+                + "?subject=" + encodeURIComponent(subject)
+                + "&body=" + body;
+            });
+
+    </script>
+
+
+</html>
