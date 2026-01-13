@@ -90,6 +90,37 @@
   border: none;
   border-radius: 8px;
 }
+    .form-bg {
+  position: relative;
+  background: url("https://ik.imagekit.io/edtechdigit/usdsi/content/images/articles/explore-the-vital-role-of-data-visualisation-in-data-science.jpeg") center/cover no-repeat;
+  padding: 80px 20px;
+}
+
+.form-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 0;
+}
+
+.form-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.form-wrapper iframe {
+  width: 100%;
+  height: 1200px;
+  border: none;
+  border-radius: 10px;
+}
+
 
   </style>
 </head>
@@ -148,6 +179,10 @@
   <section class="committee-section">
 
   <div class="form-container">
+    <div class="form-bg">
+  <div class="form-overlay"></div>
+
+  <div class="form-wrapper">
     <iframe 
       src="https://docs.google.com/forms/d/e/1FAIpQLSceXaPpnm27TWWO0WUgpaaTxk73-9MiEmX4Ji45oVzYJSsOaw/viewform?embedded=true"
       frameborder="0"
@@ -155,6 +190,8 @@
       marginwidth="0">
       Loading…
     </iframe>
+  </div>
+</div>
   </div>
 
 </section>
