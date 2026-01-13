@@ -75,6 +75,22 @@
         grid-template-columns: 1fr; /* Force single column */
       }
     }
+    .form-container {
+  max-width: 900px;          /* nice readable width */
+  margin: 40px auto;         /* centers horizontally */
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.form-container iframe {
+  width: 100%;
+  height: 1200px;            /* fits most Google forms */
+  border: none;
+  border-radius: 8px;
+}
+
   </style>
 </head>
 
@@ -130,10 +146,18 @@
 
   <section class="committee-section">
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSceXaPpnm27TWWO0WUgpaaTxk73-9MiEmX4Ji45oVzYJSsOaw/viewform?embedded=true" width="1500" height="1230" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-  
+  <div class="form-container">
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSceXaPpnm27TWWO0WUgpaaTxk73-9MiEmX4Ji45oVzYJSsOaw/viewform?embedded=true"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0">
+      Loading…
+    </iframe>
+  </div>
 
-  </section>
+</section>
+
 
 </main>
 
