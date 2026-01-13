@@ -12,6 +12,10 @@
     background: black;
     border-radius: 2px;
 }
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 
 /* MOBILE MENU */
@@ -76,6 +80,8 @@ body {
     line-height: 1.6;
     color: #333;
     background: #f9f9f9;
+    max-width: 100%;
+    overflow-x: hidden;
 }
     
 
@@ -139,6 +145,8 @@ nav ul.menu {
     list-style: none;
     display: flex;
     gap: 30px;
+    width: 80%;
+    max-width: 280px;
 }
 
     nav ul.menu li a {
@@ -195,6 +203,8 @@ nav ul.menu {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    overflow: hidden;
 }
 
     .hero .overlay {
@@ -341,6 +351,9 @@ button, .btn, .read-more-btn {
 .contact-section {
     padding: 60px 40px;
     background: #f9f9f9;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .contact-wrapper {
@@ -348,9 +361,11 @@ button, .btn, .read-more-btn {
     justify-content: center; /* Centers the content */
     align-items: flex-start;
     gap: 60px;
-    max-width: 1200px;
     margin: auto;
-    flex-wrap: wrap; /* Allow content to wrap on small screens */
+    flex-wrap: wrap; 
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;/* Allow content to wrap on small screens */
 }
 
 .contact-form,
@@ -471,6 +486,8 @@ button, .btn, .read-more-btn {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
 }
 @media (max-width: 900px) {
   .cards {
@@ -512,4 +529,5 @@ button, .btn, .read-more-btn {
     align-items: center;
     text-align: center;
     flex-shrink: 0;
+     max-width: 100%;
 }
