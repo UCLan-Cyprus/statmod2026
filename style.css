@@ -145,8 +145,6 @@ nav ul.menu {
     list-style: none;
     display: flex;
     gap: 30px;
-    width: 80%;
-    max-width: 280px;
 }
 
     nav ul.menu li a {
