@@ -5,6 +5,12 @@
 html, body {
   overflow-x: hidden;
 }
+nav ul.menu {
+  display: flex;
+  gap: 30px;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
 
 /* HAMBURGER */
 .hamburger {
@@ -147,6 +153,7 @@ header {
     background: #fff;
     width: 100%;
     z-index: 1000;
+    min-height: 80px;
 }
 
 
@@ -168,6 +175,10 @@ nav ul.menu {
             background: rgba(255, 255, 255, 0.2);
             border-radius: 4px;
         }
+nav {
+  overflow: hidden;
+}
+
 
 /* DROPDOWN */
 .dropdown {
