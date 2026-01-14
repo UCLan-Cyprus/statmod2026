@@ -1,254 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="robots" content="max-image-preview:large">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ΣtatMod2026</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <a href="index.html">
-            <div class="logo">
-                <img src="https://keystoneacademic-res.cloudinary.com/image/upload/element/15/155464_UCLan_Cyprus_logo_rgb.png">
-                <img src="statmodpng2.png">
-            </div>
-        </a>
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+
+<header>
+    <a href="index.html">
+        <div class="logo">
+            <img src="https://keystoneacademic-res.cloudinary.com/image/upload/element/15/155464_UCLan_Cyprus_logo_rgb.png" alt="UCLan">
+            <img src="statmodpng2.png" alt="StatMod">
         </div>
+    </a>
 
-        <nav>
-            <ul class="menu">
-                <li class="dropdown">
-                    <a class="dropbtn">Committees</a>
-                    <ul class="dropdown-content">
-                        <li><a>Co-organizers</a></li>
-                        <li><a href="steeringc.html">Steering Committee</a></li>
-                        <li><a>Scientific Committee</a></li>
-                        <li><a href="committees.html">Organizing Committee</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a class="dropbtn">About the Conference</a>
-                    <ul class="dropdown-content">
-                        <li><a >Plenary Speakers</a></li>
-                        <li><a >Invited Speakers</a></li>
-                        <li><a >Contributed Speakers</a></li>
-                        <li><a href="topics.html">Topics</a></li>
-                        <li><a >Scientific Program</a></li>
-                        <li><a>Social Events</a></li>
-                        <li><a >Past Conferences</a></li>
-                        <li><a href="partners.html">Partners</a></li>
-                    </ul>
-                </li>
-                <li><a href="bookofabs.html">Book of Abstracts</a></li>
-                <li><a href="sponsors.html">Sponsors</a></li>
-                <li><a href="registration.html">Registration/Abstraction Submission</a></li>
-                 <li><a href="uclangallery.html"> UCLAN Photo Gallery</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-    <main>
-      
+    <nav>
+        <ul class="menu" id="menu">
+            <li class="dropdown">
+                <a class="dropbtn">Committees</a>
+                <ul class="dropdown-content">
+                    <li><a>Co-organizers</a></li>
+                    <li><a href="steeringc.html">Steering Committee</a></li>
+                    <li><a>Scientific Committee</a></li>
+                    <li><a href="committees.html">Organizing Committee</a></li>
+                </ul>
+            </li>
 
-        <section class="details">
-            <style>
-                .newbg {
-              
-                    height: 70vh;
-               
-                    background-image: url('https://www.uclancyprus.ac.cy/wp-content/uploads/2025/03/Main-Entrance_1-21.jpg');
-                }
-                .newbg2 {
-            
-                    height: 70vh;
-                 
-                    background-image: url('https://cf.bstatic.com/xdata/images/hotel/max1024x768/382555356.jpg?k=d3f67b69363b0db6c9aa77a6c410630f7eb1e8b81a783943264a273095160751&o=');
-                }
-                body {
-                    font-family: 'Helvetica Neue', Arial, sans-serif;
-                  
-                    color: #ccc;
-                    margin: 0;
-                  
-                }
-                .mainheading {
-                    color: white;
-                }
+            <li class="dropdown">
+                <a class="dropbtn">About the Conference</a>
+                <ul class="dropdown-content">
+                    <li><a>Plenary Speakers</a></li>
+                    <li><a>Invited Speakers</a></li>
+                    <li><a>Contributed Speakers</a></li>
+                    <li><a href="topics.html">Topics</a></li>
+                    <li><a>Scientific Program</a></li>
+                    <li><a>Social Events</a></li>
+                    <li><a>Past Conferences</a></li>
+                    <li><a href="partners.html">Partners</a></li>
+                </ul>
+            </li>
 
-                h1 {
-                    font-size: 2.8rem;
-                    font-weight: 700;
-                    color: black; 
-                    margin-bottom: 10px;
-                }
+            <li><a href="bookofabs.html">Book of Abstracts</a></li>
+            <li><a href="sponsors.html">Sponsors</a></li>
+            <li><a href="registration.html">Registration / Abstract Submission</a></li>
+            <li><a href="uclangallery.html">UCLAN Photo Gallery</a></li>
+        </ul>
+    </nav>
+</header>
 
-                p {
-                    font-size: 1.2rem;
-                    max-width: 700px;
-                    margin-bottom: 40px;
-                    color: black;
-                    text-align: center; /* center the text */
-                    margin: 0 auto 40px auto; /* horizontally center container */
-                }
+<main>
 
-                .gallery {
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-                    gap: 20px;
-                    max-width: 900px;
-                    margin: 0 auto;
-                }
+<section class="details">
 
-                    .gallery img {
-                        width: 100%;
-                        height: auto;
-                        border-radius: 8px;
-                        box-shadow: 0 4px 12px rgba(0, 140, 150, 0.5);
-                        transition: transform 0.3s ease;
-                    }
+    <h1>UCLAN Cyprus</h1>
 
-                        .gallery img:hover {
-                            transform: scale(1.05);
-                            box-shadow: 0 6px 20px rgba(0, 140, 150, 0.8);
-                        }
-               .textheading {
-                   color
-               }
-            </style>
-            </head>
-            <body>
+    <p>
+        The conference will be hosted at the University of Central Lancashire Cyprus (UCLan Cyprus),
+        located in Pyla, in the Larnaca district. Established in 2012, UCLan Cyprus is the first
+        British university campus on the island, combining UK academic standards with a modern
+        Mediterranean setting.
+    </p>
 
-                <h1>UCLAN Cyprus</h1>
-                <p>
-                    The conference will be hosted at the University of Central Lancashire Cyprus (UCLan Cyprus), located in Pyla, in the Larnaca district. Established in 2012, UCLan Cyprus is the first British university campus on the island, combining the academic standards of the UK higher-education system with a modern Mediterranean setting. The campus features contemporary lecture theatres, seminar rooms, a spacious auditorium, and dedicated networking areas, providing an ideal environment for academic exchange and collaboration.
+    <div class="gallery">
+        <img src="photo1.png" alt="Campus photo 1">
+        <img src="photo2.png" alt="Campus photo 2">
+        <img src="photo3.png" alt="Campus photo 3">
+        <img src="photo4.png" alt="Campus photo 4">
+    </div>
 
+    <br><br>
 
-                    UCLan Cyprus is situated approximately 15 minutes from Larnaka International Airport and is easily accessible via major transport routes. The campus lies close to the coastline, offering visiting delegates a welcoming and pleasant environment with nearby accommodation options, cafés, and beach-side facilities. With a blend of academic excellence, modern infrastructure, and convenient travel connections, UCLan Cyprus offers an exceptional venue for our conference.
-                </p>
+    <h1>Village of Pyla</h1>
 
-                <div class="gallery">
-                    <img src="photo1.png" alt="Photo 1" />
-                    <img src="photo2.png" alt="Photo 2" />
-                    <img src="photo3.png" alt="Photo 3" />
-                    <img src="photo4.png" alt="Photo 4" />
+    <p>
+        Pyla is a historic village northeast of Larnaka with continuous habitation since the
+        Bronze Age. It remains one of the few mixed communities of Greek Cypriots and Turkish Cypriots.
+    </p>
 
+    <div class="gallery">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/47/8e/b9/photo0jpg.jpg?w=1000&h=500&s=1" alt="Pyla view 1">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/a5/5f/02/another-view-from-the.jpg?w=1000&h=500&s=1" alt="Pyla view 2">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/8b/0d/c1/photo2jpg.jpg?w=1000&h=500&s=1" alt="Pyla view 3">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/64/34/33/photo2jpg.jpg?w=1000&h=500&s=1" alt="Pyla view 4">
+    </div>
 
-                </div><br /><br />
-            
-                <h1>Village of Pyla</h1>
-                <p>
-                    Pyla is a historic village northeast of Larnaka with continuous habitation since the Early and Middle Bronze Age (2400–1700 B.C.), confirmed by archaeological excavations. During medieval times, it was initially a private fief and later a royal estate, featuring a
-
-                    defensive tower that formed part of the Larnaka bay observatory network. The village later came under Venetian rule and was taken over by the Ottomans in 1570–71, becoming and remaining a mixed community of Greek Cypriots and Turkish Cypriots.
-                </p>
-
-                <div class="gallery">
-                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/47/8e/b9/photo0jpg.jpg?w=1000&h=500&s=1" alt="Photo 1" />
-                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/a5/5f/02/another-view-from-the.jpg?w=1000&h=500&s=1" alt="Photo 2" />
-
-                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/8b/0d/c1/photo2jpg.jpg?w=1000&h=500&s=1"alt="Photo 3" />
-                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/64/34/33/photo2jpg.jpg?w=1000&h=500&s=1" alt="Photo 4" />
-                    
-
-                </div><br /><br />
-                <p>
-                    The name Pyla is believed either to derive from the Greek word pyli (gate), referring to its strategic location leading to the Mesaoria plain, or to share origins with ancient Greek toponyms related to Achaean settlement.
-
-
-                    Today, visitors can explore medieval and cultural landmarks, including the tower, a folk art museum, a Turkish Cypriot mosque, and other heritage sites. Population records from 1881 to 2001 show steady growth, with both Greek Cypriot and Turkish Cypriot communities residing in the village throughout its history. For more information, visit <a href="https://www.pyla.com.cy/en.html">https://www.pyla.com.cy/en.html</a> 
-                </p>
+    <p>
+        For more information, visit
+        <a href="https://www.pyla.com.cy/en.html" target="_blank">https://www.pyla.com.cy</a>
+    </p>
 
 </section>
 
-        <section class="contact-section">
-            <div class="contact-wrapper">
+<section class="contact-section">
+    <div class="contact-wrapper">
 
-                <!-- LEFT SIDE -->
-                <div class="contact-details">
-                    <h2>Contact details</h2>
-                    <p>University Of Central Lancashire</p>
+        <div class="contact-details">
+            <h2>Contact Details</h2>
+            <p>University Of Central Lancashire</p>
 
-                    <h3>📍 Location</h3>
-                    <p>
-                        University Ave 12-14, Pyla 7080<br>
-                        <a href="https://www.google.com/maps/place/University+of+Central+Lancashire,+Cyprus+(UCLan+Cyprus)/" target="_blank">
-                            View on Google Maps
-                        </a>
-                    </p>
+            <h3>📍 Location</h3>
+            <p>
+                University Ave 12-14, Pyla 7080<br>
+                <a href="https://www.google.com/maps/place/University+of+Central+Lancashire,+Cyprus+(UCLan+Cyprus)/" target="_blank">
+                    View on Google Maps
+                </a>
+            </p>
 
-                    <h3>📞 Info</h3>
-                    <p>
-                        Email: <a href="mailto:mhadjikyriakou@uclan.ac.uk">mhadjikyriakou@uclan.ac.uk</a><br>
-                        Phone: +357 24 694000
-                    </p>
-                </div>
+            <h3>📞 Info</h3>
+            <p>
+                Email:
+                <a href="mailto:mhadjikyriakou@uclan.ac.uk">
+                    mhadjikyriakou@uclan.ac.uk
+                </a><br>
+                Phone: +357 24 694000
+            </p>
+        </div>
 
-                <!-- RIGHT SIDE -->
-                <div class="contact-form">
-                    <h2 class="textheading">Contact Us</h2>
+        <div class="contact-form">
+            <h2>Contact Us</h2>
 
-                    <div class="form-row">
-                        <input id="name" type="text" placeholder="Your Name" required>
-                        <input id="surname" type="text" placeholder="Your Surname" required>
-                    </div>
-
-                    <input id="subject" type="text" placeholder="Subject" required>
-                    <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
-
-                    <button id="send-btn" class="send-btn">SEND MESSAGE</button>
-                </div>
-
+            <div class="form-row">
+                <input id="name" type="text" placeholder="Your Name" required>
+                <input id="surname" type="text" placeholder="Your Surname" required>
             </div>
-        </section>
 
-    </main>
-    <script>
-        document.querySelectorAll(".read-more-btn").forEach(button => {
-            button.addEventListener("click", () => {
-                const cardText = button.previousElementSibling; // the <p> element
+            <input id="subject" type="text" placeholder="Subject" required>
+            <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
 
-                cardText.classList.toggle("expanded");
+            <button id="send-btn" class="send-btn">SEND MESSAGE</button>
+        </div>
 
-                if (cardText.classList.contains("expanded")) {
-                    button.textContent = "Read Less";
-                } else {
-                    button.textContent = "Read More";
-                }
-            });
-        });
-</body >
+    </div>
+</section>
 
-< !--Email Script-- >
-            <script>
-                document.getElementById("button").addEventListener("click", function (event) {
-                    event.preventDefault();
+</main>
 
-                // Collect values from the form
-                const name = document.getElementById("name").value;
-                const surname = document.getElementById("surname").value;
-                const subject = document.getElementById("subject").value;
-                const message = document.getElementById("message").value;
+<!-- MOBILE MENU SCRIPT -->
+<script>
+const hamburger = document.getElementById("hamburger");
+const menu = document.getElementById("menu");
 
-                // Create email body
-                const body =
-                "Name: " + name + " " + surname + "%0D%0A" +
-                "Message:%0D%0A" + message;
+hamburger.addEventListener("click", () => {
+    menu.classList.toggle("active");
+});
 
-                // Open email client
-                window.location.href =
-                "mailto:mhadjikyriakou@uclan.ac.uk"
-                + "?subject=" + encodeURIComponent(subject)
-                + "&body=" + body;
-            });
+document.querySelectorAll(".dropdown > a").forEach(item => {
+    item.addEventListener("click", e => {
+        if (window.innerWidth <= 1250) {
+            e.preventDefault();
+            item.parentElement.classList.toggle("open");
+        }
+    });
+});
+</script>
 
-    </script>
+<!-- EMAIL SCRIPT -->
+<script>
+document.getElementById("send-btn").addEventListener("click", function () {
+    const name = document.getElementById("name").value;
+    const surname = document.getElementById("surname").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
 
+    const body =
+        "Name: " + name + " " + surname + "%0D%0A%0D%0A" +
+        "Message:%0D%0A" + message;
 
+    window.location.href =
+        "mailto:mhadjikyriakou@uclan.ac.uk" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + body;
+});
+</script>
+
+</body>
 </html>
