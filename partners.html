@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="max-image-preview:large">
-<title>ΣtatMod2026 – Partners</title>
+<title>Partners | ΣtatMod2026</title>
 <link rel="stylesheet" href="style.css">
 
 <style>
@@ -13,9 +14,11 @@ body {
 }
 
 /* ===== PARTNERS SECTION ===== */
-.details {
+main .details {
     padding: 60px 20px;
     text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .details h1 {
@@ -39,6 +42,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 }
 
 .gallery img {
@@ -61,6 +65,28 @@ body {
 @media (max-width: 900px) {
     .gallery {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .gallery img {
+        width: 160px;
+        height: 110px;
+    }
+}
+
+@media (max-width: 480px) {
+    .details h1 {
+        font-size: 2rem;
+    }
+    
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .gallery img {
+        width: 200px;
+        height: 130px;
     }
 }
 </style>
@@ -68,104 +94,166 @@ body {
 
 <body>
 
-    <header>
-        <a href="index.html">
-            <div class="logo">
-                <img src="https://keystoneacademic-res.cloudinary.com/image/upload/element/15/155464_UCLan_Cyprus_logo_rgb.png">
-                <img src="statmodpng2.png">
-            </div>
-        </a>
+<!-- ================= HEADER - SAME AS INDEX.HTML ================= -->
+<header>
+    <!-- LOGO - LEFT SIDE -->
+    <div class="logo-container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logosheader.png" alt="UCLan Cyprus and ΣtatMod2026 Logo" class="combined-logo">
+            </a>
+        </div>
+    </div>
+
+    <!-- HAMBURGER - RIGHT SIDE (Hidden on desktop) -->
+    <div class="hamburger-container">
         <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
             <span></span>
         </div>
-
-        <nav>
-            <ul class="menu">
-                <li class="dropdown">
-                    <a class="dropbtn">Committees</a>
-                    <ul class="dropdown-content">
-                        <li><a>Co-organizers</a></li>
-                        <li><a href="steeringc.html">Steering Committee</a></li>
-                        <li><a>Scientific Committee</a></li>
-                        <li><a href="committees.html">Organizing Committee</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a>About the Conference</a>
-                    <ul class="dropdown-content">
-                        <li><a >Plenary Speakers</a></li>
-                        <li><a >Invited Speakers</a></li>
-                        <li><a >Contributed Speakers</a></li>
-                        <li><a href="topics.html">Topics</a></li>
-                        <li><a >Scientific Program</a></li>
-                        <li><a>Social Events</a></li>
-                        <li><a >Past Conferences</a></li>
-                        <li><a href="partners.html">Partners</a></li>
-                    </ul>
-                </li>
-                <li><a href="bookofabs.html">Book of Abstracts</a></li>
-                <li><a href="sponsors.html">Sponsors</a></li>
-                <li><a href="uclangallery.html"> UCLAN Photo Gallery</a></li>
-            </ul>
-        </nav>
-    </header>
-<main>
-
-<section class="details">
-    <h1>Our Partners</h1>
-
-    <div class="gallery">
-        
-        <a href="http://www.css.org.cy/?lang=el" target="_blank">
-            <img src="cypstatsoc.png" alt="Partner 8">
-        </a>
-          <a href="https://www.gsi-stat.gr/" target="_blank">
-            <img src="esilogo.png" alt="Partner 8">
-        </a>
-
-        <a href="https://lmrs.univ-rouen.fr/" target="_blank">
-            <img src="LMRS.png" alt="">
-        </a>
-
-        <a href="https://www.univ-rouen.fr/university-of-rouen-normandy/" target="_blank">
-            <img src="Universite╠ü_de_Rouen.png" alt="Partner 2">
-        </a>
-
-        <a href="https://www.cnrs.fr/en" target="_blank">
-            <img src="CNRS.png" alt="Partner 3">
-        </a>
-
-        <a href="https://normandie.math.cnrs.fr/" target="_blank">
-            <img src="FNM-removebg-preview.png" alt="Partner 4">
-        </a>
-           <a href="https://ismma.ro/" target="_blank">
-            <img src="ismma logo.png" alt="Partner 8">
-        </a>
-
-        <a href="https://spsr.ase.ro/" target="_blank">
-            <img src="spsr.png" alt="Partner 5">
-        </a>
-
-        <a href="https://www.romai.ro/index_romai_eng.html" target="_blank">
-            <img src="romai.png" alt="Partner 6">
-        </a>
-
-        <a href="https://ince.ro/" target="_blank">
-            <img src="INCE.jpg" alt="Partner 7">
-        </a>
-
-   
-         
-
-       
-
-    
     </div>
-</section>
 
+    <!-- NAV MENU -->
+    <nav>
+        <ul class="menu">
+            <li class="dropdown">
+                <a href="#">Committees</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Co-organizers</a></li>
+                    <li><a href="steeringc.html">Steering Committee</a></li>
+                    <li><a href="#">Scientific Committee</a></li>
+                    <li><a href="committees.html">Organizing Committee</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">About the Conference</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Plenary Speakers</a></li>
+                    <li><a href="#">Invited Speakers</a></li>
+                    <li><a href="#">Contributed Speakers</a></li>
+                    <li><a href="topics.html">Topics</a></li>
+                    <li><a href="#">Scientific Program</a></li>
+                    <li><a href="#">Social Events</a></li>
+                    <li><a href="#">Past Conferences</a></li>
+                    <li><a href="partners.html">Partners</a></li>
+                </ul>
+            </li>
+            <li><a href="bookofabs.html">Book of Abstracts</a></li>
+            <li><a href="sponsors.html">Sponsors</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="uclangallery.html">UCLAN Gallery</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="details">
+        <h1>Our Partners</h1>
+
+        <div class="gallery">
+            <a href="http://www.css.org.cy/?lang=el" target="_blank">
+                <img src="cypstatsoc.png" alt="Cyprus Statistical Society">
+            </a>
+            <a href="https://www.gsi-stat.gr/" target="_blank">
+                <img src="esilogo.png" alt="Greek Statistical Institute">
+            </a>
+            <a href="https://lmrs.univ-rouen.fr/" target="_blank">
+                <img src="LMRS.png" alt="LMRS - Laboratoire de Mathématiques Raphaël Salem">
+            </a>
+            <a href="https://www.univ-rouen.fr/university-of-rouen-normandy/" target="_blank">
+                <img src="Universite╠ü_de_Rouen.png" alt="University of Rouen Normandy">
+            </a>
+            <a href="https://www.cnrs.fr/en" target="_blank">
+                <img src="CNRS.png" alt="French National Centre for Scientific Research">
+            </a>
+            <a href="https://normandie.math.cnrs.fr/" target="_blank">
+                <img src="FNM-removebg-preview.png" alt="Fédération Normandie Mathématiques">
+            </a>
+            <a href="https://ismma.ro/" target="_blank">
+                <img src="ismma logo.png" alt="Institute of Mathematical Statistics and Applied Mathematics">
+            </a>
+            <a href="https://spsr.ase.ro/" target="_blank">
+                <img src="spsr.png" alt="Romanian Society of Probability and Statistics">
+            </a>
+            <a href="https://www.romai.ro/index_romai_eng.html" target="_blank">
+                <img src="romai.png" alt="Romanian Society of Applied and Industrial Mathematics">
+            </a>
+            <a href="https://ince.ro/" target="_blank">
+                <img src="INCE.jpg" alt="Costin C. Kiritescu National Institute of Economic Research">
+            </a>
+        </div>
+    </section>
+    
+    <section class="contact-section">
+        <div class="contact-wrapper">
+            <div class="contact-details">
+                <h2>Contact details</h2>
+                <p>University Of Central Lancashire</p>
+                
+                <h3>📍 Location</h3>
+                <p>
+                    University Ave 12-14, Pyla 7080<br>
+                    <a href="https://www.google.com/maps/place/University+of+Central+Lancashire,+Cyprus+(UCLan+Cyprus)/" target="_blank">
+                        View on Google Maps
+                    </a>
+                </p>
+                
+                <h3>📞 Info</h3>
+                <p>
+                    Email: <a href="mailto:mhadjikyriakou@uclan.ac.uk">mhadjikyriakou@uclan.ac.uk</a><br>
+                    Phone: +357 24 694000
+                </p>
+            </div>
+        </div>
+    </section>
 </main>
+
+<!-- ================= SAME JAVASCRIPT AS INDEX.HTML ================= -->
+<script>
+// SIMPLE HAMBURGER TOGGLE
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.getElementById("hamburger");
+    const menu = document.querySelector(".menu");
+    const body = document.body;
+
+    hamburger.addEventListener("click", function(e) {
+        e.stopPropagation();
+        menu.classList.toggle("active");
+        hamburger.classList.toggle("active");
+        body.classList.toggle("menu-open");
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", function(e) {
+        if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+            menu.classList.remove("active");
+            hamburger.classList.remove("active");
+            body.classList.remove("menu-open");
+        }
+    });
+
+    // Mobile dropdowns
+    document.querySelectorAll(".dropdown > a").forEach(link => {
+        link.addEventListener("click", function(e) {
+            if (window.innerWidth <= 1250) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                // Close other dropdowns
+                document.querySelectorAll(".dropdown").forEach(item => {
+                    if (item !== this.parentElement) {
+                        item.classList.remove("open");
+                    }
+                });
+                
+                // Toggle current dropdown
+                this.parentElement.classList.toggle("open");
+            }
+        });
+    });
+});
+</script>
 
 </body>
 </html>
