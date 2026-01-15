@@ -44,20 +44,15 @@ header {
 .logo a {
   display: flex;
   align-items: center;
-  gap: 5px;
   text-decoration: none;
 }
 
-.logo img:first-child {
-  height: 35px;
+/* Combined logo styling - SINGLE IMAGE */
+.combined-logo {
+  height: 45px;
   width: auto;
-  max-width: 90px;
-}
-
-.logo img:last-child {
-  height: 30px;
-  width: auto;
-  max-width: 110px;
+  max-width: 280px;
+  object-fit: contain;
 }
 
 /* Hamburger container - takes right side */
@@ -286,15 +281,10 @@ nav ul.menu li a {
     height: 55px;
   }
   
-  /* Make logos even smaller on mobile */
-  .logo img:first-child {
-    height: 30px;
-    max-width: 80px;
-  }
-  
-  .logo img:last-child {
-    height: 25px;
-    max-width: 95px;
+  /* Make combined logo smaller on mobile */
+  .combined-logo {
+    height: 35px;
+    max-width: 220px;
   }
   
   /* Show hamburger on mobile */
@@ -410,14 +400,9 @@ nav ul.menu li a {
 
 /* Extra small devices */
 @media screen and (max-width: 480px) {
-  .logo img:first-child {
-    height: 25px;
-    max-width: 70px;
-  }
-  
-  .logo img:last-child {
-    height: 22px;
-    max-width: 80px;
+  .combined-logo {
+    height: 30px;
+    max-width: 180px;
   }
   
   .hero h1 {
