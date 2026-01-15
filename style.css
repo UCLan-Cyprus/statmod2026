@@ -20,7 +20,7 @@ header {
   padding: 10px 15px;
   background: #fff;
   width: 100%;
-  height: 70px; /* Increased header height for bigger logo */
+  height: 85px; /* Increased for bigger logo */
   position: relative;
   z-index: 1000;
   overflow: visible;
@@ -35,11 +35,10 @@ header {
   min-width: 0; /* Allows shrinking */
 }
 
-/* Logo styling - REMOVED the 500px width/height */
+/* Logo styling */
 .logo {
   display: flex;
   align-items: center;
-  /* REMOVED: width: 500px; height: 500px; */
 }
 
 .logo a {
@@ -48,11 +47,11 @@ header {
   text-decoration: none;
 }
 
-/* Combined logo styling - SINGLE IMAGE - MADE BIGGER */
+/* Combined logo styling - SINGLE IMAGE - EXTRA BIG */
 .combined-logo {
-  height: 55px; /* Increased from 45px */
+  height: 70px; /* Increased from 55px */
   width: auto;
-  max-width: 350px; /* Increased from 280px */
+  max-width: 420px; /* Increased from 350px */
   object-fit: contain;
 }
 
@@ -298,13 +297,13 @@ nav ul.menu li a {
   /* Header adjustments */
   header {
     padding: 10px 15px;
-    height: 65px; /* Increased for bigger logo */
+    height: 80px; /* Increased for bigger logo */
   }
   
   /* Make combined logo smaller on mobile but still bigger than before */
   .combined-logo {
-    height: 45px; /* Increased from 35px */
-    max-width: 280px; /* Increased from 220px */
+    height: 60px; /* Increased from 45px */
+    max-width: 350px; /* Increased from 280px */
   }
   
   /* Show hamburger on mobile */
@@ -316,11 +315,11 @@ nav ul.menu li a {
   nav ul.menu {
     display: none;
     position: fixed;
-    top: 65px; /* Updated to match new header height */
+    top: 80px; /* Updated to match new header height */
     left: -100%;
     width: 100%;
     max-width: 280px;
-    height: calc(100vh - 65px);
+    height: calc(100vh - 80px); /* Updated */
     background: white;
     flex-direction: column;
     padding: 15px;
@@ -459,8 +458,17 @@ nav ul.menu li a {
 /* Extra small devices */
 @media screen and (max-width: 480px) {
   .combined-logo {
-    height: 40px; /* Increased from 30px */
-    max-width: 240px; /* Increased from 180px */
+    height: 55px; /* Increased from 40px */
+    max-width: 300px; /* Increased from 240px */
+  }
+  
+  header {
+    height: 75px; /* Increased for mobile */
+  }
+  
+  nav ul.menu {
+    top: 75px; /* Updated */
+    height: calc(100vh - 75px); /* Updated */
   }
   
   .hero h1 {
@@ -510,14 +518,14 @@ nav ul.menu li a {
   }
 }
 
-/* If you want even BIGGER logo, add this: */
+/* If you want even BIGGER logo for desktop, add this: */
 @media screen and (min-width: 1251px) {
   .combined-logo {
-    height: 65px; /* Even bigger for desktop */
-    max-width: 400px; /* Even wider */
+    height: 75px; /* Even bigger for desktop */
+    max-width: 450px; /* Even wider */
   }
   
   header {
-    height: 80px; /* Even taller header */
+    height: 90px; /* Even taller header */
   }
 }
