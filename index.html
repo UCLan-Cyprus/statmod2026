@@ -5,24 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ΣtatMod2026</title>
 <link rel="stylesheet" href="style.css">
+<style>
+  /* Temporary inline styles for debugging */
+  * { border: 1px solid transparent; }
+  header { border-color: red; }
+  .logo { border-color: blue; }
+  .hamburger { border-color: green; }
+</style>
 </head>
 
 <body>
 
 <header>
-  <!-- LOGO - Left side -->
-  <div class="logo">
-    <a href="index.html">
-      <img src="https://keystoneacademic-res.cloudinary.com/image/upload/element/15/155464_UCLan_Cyprus_logo_rgb.png" alt="UCLan Cyprus Logo">
-      <img src="statmodpng2.png" alt="ΣtatMod2026 Logo">
-    </a>
+  <!-- LOGO CONTAINER - Left side -->
+  <div class="logo-container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="https://keystoneacademic-res.cloudinary.com/image/upload/element/15/155464_UCLan_Cyprus_logo_rgb.png" alt="UCLan Cyprus Logo">
+        <img src="statmodpng2.png" alt="ΣtatMod2026 Logo">
+      </a>
+    </div>
   </div>
 
-  <!-- HAMBURGER - Right side -->
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
+  <!-- HAMBURGER CONTAINER - Right side -->
+  <div class="hamburger-container">
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
 
   <!-- NAV -->
@@ -59,6 +70,8 @@
     </ul>
   </nav>
 </header>
+
+<!-- ... rest of your HTML remains the same ... -->
 
 <section class="hero">
   <div class="overlay"></div>
