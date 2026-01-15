@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="max-image-preview:large">
 <title>ΣtatMod2026</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -11,21 +10,26 @@
 <body>
 
 <header>
-  <a href="index.html">
-    <div class="logo">
+
+  <!-- LOGO -->
+  <div class="logo">
+    <a href="index.html">
       <img src="https://keystoneacademic-res.cloudinary.com/image/upload/element/15/155464_UCLan_Cyprus_logo_rgb.png">
       <img src="statmodpng2.png">
-    </div>
-  </a>
+    </a>
+  </div>
 
+  <!-- HAMBURGER -->
   <div class="hamburger" id="hamburger">
     <span></span>
     <span></span>
     <span></span>
   </div>
 
+  <!-- NAV -->
   <nav>
     <ul class="menu">
+
       <li class="dropdown">
         <a href="#">Committees</a>
         <ul class="dropdown-content">
@@ -54,80 +58,15 @@
       <li><a href="sponsors.html">Sponsors</a></li>
       <li><a href="registration.html">Registration</a></li>
       <li><a href="uclangallery.html">UCLAN Gallery</a></li>
+
     </ul>
   </nav>
+
 </header>
-
-<main>
-
-<section class="hero">
-  <div class="overlay"></div>
-  <div class="content">
-    <h1>Statistical Modeling with Applications</h1>
-    <h2>18–19 September 2026 · UCLan Cyprus · Larnaka · Pyla</h2>
-  </div>
-</section>
-
-<section class="details">
-  <div class="container">
-    <h2>ΣtatMod2026 Conference</h2>
-    <p>
-      ΣtatMod2026 is organized under the aegis of UCLan Cyprus, with the support of the Cyprus Statistical Society and the Greek Statistical Institute. It brings together experts in statistical and probability modeling.
-    </p>
-
-    <div class="cards">
-      <div class="card">
-        <img src="icon1_nobg.png">
-        <h3>Venue</h3>
-        <p class="card-text">UCLan Cyprus, Pyla, Larnaca.</p>
-        <a href="venuelocation.html"><button class="read-more-btn">Read More</button></a>
-      </div>
-
-      <div class="card">
-        <img src="icon2_nobg.png">
-        <h3>Dates</h3>
-        <p class="card-text">Deadline for Registration: 1 June 2026
-
-Deadline for Abstract submission: 1 June 2026
-
-Deadline for Special Session Proposals: 1 June 2026
-
-
-Conference Dates: 18-19 September 2026</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="contact-section">
-  <div class="contact-wrapper">
-
-    <div class="contact-details">
-      <h2>Contact</h2>
-      <p>University of Central Lancashire Cyprus</p>
-      <p>Email: mhadjikyriakou@uclan.ac.uk</p>
-      <p>Phone: +357 24 694000</p>
-    </div>
-
-    <div class="contact-form">
-      <h2>Contact Us</h2>
-      <div class="form-row">
-        <input type="text" placeholder="Name">
-        <input type="text" placeholder="Surname">
-      </div>
-      <input type="text" placeholder="Subject">
-      <textarea rows="4" placeholder="Message"></textarea>
-      <button class="read-more-btn">Send</button>
-    </div>
-
-  </div>
-</section>
-
-</main>
+  <section class="hero">   <div class="overlay"></div>   <div class="content">     <h1>Statistical Modeling with Applications</h1>     <h2>18–19 September 2026 · UCLan Cyprus · Larnaka · Pyla</h2>   </div> </section>  <section class="details">   <div class="container">     <h2>ΣtatMod2026 Conference</h2>     <p>       ΣtatMod2026 is organized under the aegis of UCLan Cyprus, with the support of the Cyprus Statistical Society and the Greek Statistical Institute. It brings together experts in statistical and probability modeling.     </p>      <div class="cards">       <div class="card">         <img src="icon1_nobg.png">         <h3>Venue</h3>         <p class="card-text">UCLan Cyprus, Pyla, Larnaca.</p>         <a href="venuelocation.html"><button class="read-more-btn">Read More</button></a>       </div>        <div class="card">         <img src="icon2_nobg.png">         <h3>Dates</h3>         <p class="card-text">Deadline for Registration: 1 June 2026  Deadline for Abstract submission: 1 June 2026  Deadline for Special Session Proposals: 1 June 2026   Conference Dates: 18-19 September 2026</p>       </div>     </div>   </div> </section>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-
   const hamburger = document.getElementById("hamburger");
   const menu = document.querySelector(".menu");
 
@@ -137,22 +76,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
   document.querySelectorAll(".dropdown > a").forEach(link => {
     link.addEventListener("click", e => {
-      if (window.innerWidth <= 900) {
+      if (window.innerWidth <= 1250) {
         e.preventDefault();
         link.parentElement.classList.toggle("open");
       }
     });
   });
-
-  document.querySelectorAll(".read-more-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const p = btn.previousElementSibling;
-      if (!p) return;
-      p.classList.toggle("expanded");
-      btn.textContent = p.classList.contains("expanded") ? "Read Less" : "Read More";
-    });
-  });
-
 });
 </script>
 
