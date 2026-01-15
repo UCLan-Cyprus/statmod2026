@@ -6,21 +6,19 @@
 <title>ΣtatMod2026</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-  <!-- LOGO CONTAINER - Left side -->
+  <!-- LOGO - LEFT SIDE -->
   <div class="logo-container">
     <div class="logo">
       <a href="index.html">
-        <!-- Single combined logo image -->
         <img src="logosheader.png" alt="UCLan Cyprus and ΣtatMod2026 Logo" class="combined-logo">
       </a>
     </div>
   </div>
 
-  <!-- HAMBURGER CONTAINER - Right side -->
+  <!-- HAMBURGER - RIGHT SIDE (Hidden on desktop) -->
   <div class="hamburger-container">
     <div class="hamburger" id="hamburger">
       <span></span>
@@ -29,7 +27,7 @@
     </div>
   </div>
 
-  <!-- NAV -->
+  <!-- NAV MENU -->
   <nav>
     <ul class="menu">
       <li class="dropdown">
@@ -41,7 +39,6 @@
           <li><a href="committees.html">Organizing Committee</a></li>
         </ul>
       </li>
-
       <li class="dropdown">
         <a href="#">About the Conference</a>
         <ul class="dropdown-content">
@@ -55,7 +52,6 @@
           <li><a href="partners.html">Partners</a></li>
         </ul>
       </li>
-
       <li><a href="bookofabs.html">Book of Abstracts</a></li>
       <li><a href="sponsors.html">Sponsors</a></li>
       <li><a href="registration.html">Registration</a></li>
@@ -63,7 +59,6 @@
     </ul>
   </nav>
 </header>
-
 <!-- ... rest of your HTML remains the same ... -->
 
 <!-- ... rest of your HTML remains the same ... -->
@@ -127,6 +122,7 @@
 </section>
 
 <script>
+// SIMPLE HAMBURGER TOGGLE
 document.addEventListener("DOMContentLoaded", function() {
   const hamburger = document.getElementById("hamburger");
   const menu = document.querySelector(".menu");
@@ -148,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  // Handle dropdowns on mobile
+  // Mobile dropdowns
   document.querySelectorAll(".dropdown > a").forEach(link => {
     link.addEventListener("click", function(e) {
       if (window.innerWidth <= 1250) {
@@ -166,30 +162,6 @@ document.addEventListener("DOMContentLoaded", function() {
         this.parentElement.classList.toggle("open");
       }
     });
-  });
-
-  // Close menu when clicking on a link (except dropdown triggers)
-  document.querySelectorAll(".menu a").forEach(link => {
-    link.addEventListener("click", function(e) {
-      if (!this.parentElement.classList.contains("dropdown") || 
-          window.innerWidth > 1250) {
-        menu.classList.remove("active");
-        hamburger.classList.remove("active");
-        body.classList.remove("menu-open");
-      }
-    });
-  });
-
-  // Close menu when window is resized above 1250px
-  window.addEventListener("resize", function() {
-    if (window.innerWidth > 1250) {
-      menu.classList.remove("active");
-      hamburger.classList.remove("active");
-      body.classList.remove("menu-open");
-      document.querySelectorAll(".dropdown").forEach(item => {
-        item.classList.remove("open");
-      });
-    }
   });
 });
 </script>
