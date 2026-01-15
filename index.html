@@ -63,9 +63,40 @@
   </nav>
 
 </header>
-  <section class="hero">   <div class="overlay"></div>   <div class="content">     <h1>Statistical Modeling with Applications</h1>     <h2>18–19 September 2026 · UCLan Cyprus · Larnaka · Pyla</h2>   </div> </section>  <section class="details">   <div class="container">     <h2>ΣtatMod2026 Conference</h2>     <p>       ΣtatMod2026 is organized under the aegis of UCLan Cyprus, with the support of the Cyprus Statistical Society and the Greek Statistical Institute. It brings together experts in statistical and probability modeling.     </p>      <div class="cards">       <div class="card">         <img src="icon1_nobg.png">         <h3>Venue</h3>         <p class="card-text">UCLan Cyprus, Pyla, Larnaca.</p>         <a href="venuelocation.html"><button class="read-more-btn">Read More</button></a>       </div>        <div class="card">         <img src="icon2_nobg.png">         <h3>Dates</h3>         <p class="card-text">Deadline for Registration: 1 June 2026  Deadline for Abstract submission: 1 June 2026  Deadline for Special Session Proposals: 1 June 2026   Conference Dates: 18-19 September 2026</p>       </div>     </div>   </div> </section>
 
-  <section class="contact-section">
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="content">
+    <h1>Statistical Modeling with Applications</h1>
+    <h2>18–19 September 2026 · UCLan Cyprus · Larnaka · Pyla</h2>
+  </div>
+</section>
+
+<section class="details">
+  <div class="container">
+    <h2>ΣtatMod2026 Conference</h2>
+    <p>
+      ΣtatMod2026 is organized under the aegis of UCLan Cyprus, with the support of the Cyprus Statistical Society and the Greek Statistical Institute. It brings together experts in statistical and probability modeling.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <img src="icon1_nobg.png">
+        <h3>Venue</h3>
+        <p class="card-text">UCLan Cyprus, Pyla, Larnaca.</p>
+        <a href="venuelocation.html"><button class="read-more-btn">Read More</button></a>
+      </div>
+
+      <div class="card">
+        <img src="icon2_nobg.png">
+        <h3>Dates</h3>
+        <p class="card-text">Deadline for Registration: 1 June 2026  Deadline for Abstract submission: 1 June 2026  Deadline for Special Session Proposals: 1 June 2026   Conference Dates: 18-19 September 2026</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section">
   <div class="contact-wrapper">
 
     <div class="contact-details">
@@ -89,22 +120,71 @@
 
   </div>
 </section>
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const hamburger = document.getElementById("hamburger");
   const menu = document.querySelector(".menu");
+  const body = document.body;
 
-  hamburger.addEventListener("click", () => {
+  hamburger.addEventListener("click", function(e) {
+    e.stopPropagation();
     menu.classList.toggle("active");
+    hamburger.classList.toggle("active");
+    body.classList.toggle("menu-open");
   });
 
+  // Close menu when clicking outside
+  document.addEventListener("click", function(e) {
+    if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+      menu.classList.remove("active");
+      hamburger.classList.remove("active");
+      body.classList.remove("menu-open");
+    }
+  });
+
+  // Handle dropdowns on mobile
   document.querySelectorAll(".dropdown > a").forEach(link => {
-    link.addEventListener("click", e => {
+    link.addEventListener("click", function(e) {
       if (window.innerWidth <= 1250) {
         e.preventDefault();
-        link.parentElement.classList.toggle("open");
+        e.stopPropagation();
+        
+        // Close other dropdowns
+        document.querySelectorAll(".dropdown").forEach(item => {
+          if (item !== this.parentElement) {
+            item.classList.remove("open");
+          }
+        });
+        
+        // Toggle current dropdown
+        this.parentElement.classList.toggle("open");
       }
     });
+  });
+
+  // Close menu when clicking on a link (except dropdown triggers)
+  document.querySelectorAll(".menu a").forEach(link => {
+    link.addEventListener("click", function(e) {
+      if (!this.parentElement.classList.contains("dropdown") || 
+          window.innerWidth > 1250) {
+        menu.classList.remove("active");
+        hamburger.classList.remove("active");
+        body.classList.remove("menu-open");
+      }
+    });
+  });
+
+  // Close menu when window is resized above 1250px
+  window.addEventListener("resize", function() {
+    if (window.innerWidth > 1250) {
+      menu.classList.remove("active");
+      hamburger.classList.remove("active");
+      body.classList.remove("menu-open");
+      document.querySelectorAll(".dropdown").forEach(item => {
+        item.classList.remove("open");
+      });
+    }
   });
 });
 </script>
