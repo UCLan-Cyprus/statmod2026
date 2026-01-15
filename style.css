@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+li {
+  list-style: none;
+}
 
 html, body {
   overflow-x: hidden;
@@ -333,6 +336,7 @@ max-height: none; /* REMOVED fixed height */
     z-index: 9999;
     box-shadow: 5px 0 15px rgba(0,0,0,0.1);
     overflow-y: auto;
+    list-style: none;
   }
   
   nav ul.menu.active {
@@ -474,6 +478,7 @@ max-height: none; /* REMOVED fixed height */
   nav ul.menu {
     top: 75px; /* Updated */
     height: calc(100vh - 75px); /* Updated */
+    list-style: none;
   }
   
   .hero h1 {
