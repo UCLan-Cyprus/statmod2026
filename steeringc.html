@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <title>Steering Committee | ΣtatMod2026</title>
   <meta name="robots" content="max-image-preview:large">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <!-- MAIN SITE CSS -->
   <link rel="stylesheet" href="style.css">
 
@@ -79,57 +80,62 @@
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- ================= HEADER - SAME AS INDEX.HTML ================= -->
 <header>
-        <a href="index.html">
-            <div class="logo">
-                <img src="https://keystoneacademic-res.cloudinary.com/image/upload/element/15/155464_UCLan_Cyprus_logo_rgb.png">
-                <img src="statmodpng2.png">
-            </div>
-        </a>
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+  <!-- LOGO - LEFT SIDE -->
+  <div class="logo-container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="logosheader.png" alt="UCLan Cyprus and ΣtatMod2026 Logo" class="combined-logo">
+      </a>
+    </div>
+  </div>
 
-        <nav>
-            <ul class="menu">
-                <li class="dropdown">
-                    <a class="dropbtn">Committees</a>
-                    <ul class="dropdown-content">
-                        <li><a>Co-organizers</a></li>
-                        <li><a href="steeringc.html">Steering Committee</a></li>
-                        <li><a>Scientific Committee</a></li>
-                        <li><a href="committees.html">Organizing Committee</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a class="dropbtn">About the Conference</a>
-                    <ul class="dropdown-content">
-                        <li><a >Plenary Speakers</a></li>
-                        <li><a >Invited Speakers</a></li>
-                        <li><a >Contributed Speakers</a></li>
-                        <li><a href="topics.html">Topics</a></li>
-                        <li><a >Scientific Program</a></li>
-                        <li><a>Social Events</a></li>
-                        <li><a >Past Conferences</a></li>
-                        <li><a href="partners.html">Partners</a></li>
-                    </ul>
-                </li>
-                <li><a href="bookofabs.html">Book of Abstracts</a></li>
-                <li><a href="sponsors.html">Sponsors</a></li>
-                <li><a href="registration.html">Registration/Abstraction Submission</a></li>
-                 <li><a href="uclangallery.html"> UCLAN Photo Gallery</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- HAMBURGER - RIGHT SIDE (Hidden on desktop) -->
+  <div class="hamburger-container">
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- NAV MENU -->
+  <nav>
+    <ul class="menu">
+      <li class="dropdown">
+        <a href="#">Committees</a>
+        <ul class="dropdown-content">
+          <li><a href="#">Co-organizers</a></li>
+          <li><a href="steeringc.html">Steering Committee</a></li>
+          <li><a href="#">Scientific Committee</a></li>
+          <li><a href="committees.html">Organizing Committee</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">About the Conference</a>
+        <ul class="dropdown-content">
+          <li><a href="#">Plenary Speakers</a></li>
+          <li><a href="#">Invited Speakers</a></li>
+          <li><a href="#">Contributed Speakers</a></li>
+          <li><a href="topics.html">Topics</a></li>
+          <li><a href="#">Scientific Program</a></li>
+          <li><a href="#">Social Events</a></li>
+          <li><a href="#">Past Conferences</a></li>
+          <li><a href="partners.html">Partners</a></li>
+        </ul>
+      </li>
+      <li><a href="bookofabs.html">Book of Abstracts</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+      <li><a href="registration.html">Registration</a></li>
+      <li><a href="uclangallery.html">UCLAN Gallery</a></li>
+    </ul>
+  </nav>
+</header>
 
 <!-- ================= MAIN ================= -->
 <main>
-
   <section class="committee-section">
-
     <div class="committee-header">
       <h1>Steering Committee</h1>
     </div>
@@ -147,15 +153,12 @@
         <li><strong>Vasile Preda</strong>, Founding Member, Honorary Chair<br>"Gheorghe Mihoc-Caius Iacob" Institute of Mathematical Statistics and Applied Mathematics of Romanian Academy & "Costin C. Kiritescu" National Institute of Economic Research of Romanian Academy, Univ. of Bucharest, Romania</li>
       </ul>
     </div>
-
   </section>
-
 </main>
 
 <!-- ================= FOOTER / CONTACT ================= -->
 <section class="contact-section">
   <div class="contact-wrapper">
-
     <div class="contact-details">
       <h2>Contact details</h2>
       <p>University Of Central Lancashire</p>
@@ -174,9 +177,54 @@
         Phone: +357 24 694000
       </p>
     </div>
-
   </div>
 </section>
+
+<!-- ================= SAME JAVASCRIPT AS INDEX.HTML ================= -->
+<script>
+// SIMPLE HAMBURGER TOGGLE
+document.addEventListener("DOMContentLoaded", function() {
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.querySelector(".menu");
+  const body = document.body;
+
+  hamburger.addEventListener("click", function(e) {
+    e.stopPropagation();
+    menu.classList.toggle("active");
+    hamburger.classList.toggle("active");
+    body.classList.toggle("menu-open");
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", function(e) {
+    if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+      menu.classList.remove("active");
+      hamburger.classList.remove("active");
+      body.classList.remove("menu-open");
+    }
+  });
+
+  // Mobile dropdowns
+  document.querySelectorAll(".dropdown > a").forEach(link => {
+    link.addEventListener("click", function(e) {
+      if (window.innerWidth <= 1250) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // Close other dropdowns
+        document.querySelectorAll(".dropdown").forEach(item => {
+          if (item !== this.parentElement) {
+            item.classList.remove("open");
+          }
+        });
+        
+        // Toggle current dropdown
+        this.parentElement.classList.toggle("open");
+      }
+    });
+  });
+});
+</script>
 
 </body>
 </html>
