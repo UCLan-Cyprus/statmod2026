@@ -9,7 +9,6 @@
     <style>
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            color: #ccc;
             margin: 0;
         }
 
@@ -27,7 +26,7 @@
             margin-bottom: 10px;
         }
 
-        p {
+        main .details p {
             font-size: 1.2rem;
             max-width: 700px;
             margin-bottom: 40px;
@@ -166,9 +165,6 @@
                         Phone: +357 24 694000
                     </p>
                 </div>
-
-                <!-- RIGHT SIDE -->
-             
             </div>
         </section>
     </main>
@@ -215,28 +211,6 @@
                     this.parentElement.classList.toggle("open");
                 }
             });
-        });
-
-        // Email form script - FIXED: Changed "button" to "send-btn"
-        document.getElementById("send-btn").addEventListener("click", function(event) {
-            event.preventDefault();
-            
-            // Collect values from the form
-            const name = document.getElementById("name").value;
-            const surname = document.getElementById("surname").value;
-            const subject = document.getElementById("subject").value;
-            const message = document.getElementById("message").value;
-
-            // Create email body
-            const body =
-                "Name: " + name + " " + surname + "%0D%0A%0D%0A" +
-                "Message:%0D%0A" + message;
-
-            // Open email client
-            window.location.href =
-                "mailto:mhadjikyriakou@uclan.ac.uk" +
-                "?subject=" + encodeURIComponent(subject) +
-                "&body=" + body;
         });
     });
     </script>
