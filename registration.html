@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Steering Committee | ΣtatMod2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration | ΣtatMod2026</title>
   <meta name="robots" content="max-image-preview:large">
 
   <!-- MAIN SITE CSS -->
@@ -17,11 +17,11 @@
       margin: 0;
     }
 
-    .committee-section {
-      padding-bottom: 60px;
+    .form-section {
+      padding: 60px 20px;
     }
 
-    .committee-header {
+    .form-header {
       background-image:
         linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
         url("https://ik.imagekit.io/edtechdigit/usdsi/content/images/articles/explore-the-vital-role-of-data-visualisation-in-data-science.jpeg");
@@ -31,175 +31,138 @@
       color: #ffffff;
       text-align: center;
       padding: 80px 20px;
+      margin-bottom: 40px;
     }
 
-    .committee-header h1 {
+    .form-header h1 {
       margin: 0;
       font-size: 2.5rem;
     }
 
-    .committee-card {
+    .form-container {
       max-width: 900px;
-      margin: -40px auto 0;
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
     }
 
-    .committee-card h2 {
-      color: #333;
-      margin-bottom: 20px;
+    .form-container iframe {
+      width: 100%;
+      height: 1200px;
+      border: none;
+      border-radius: 10px;
     }
 
-    .committee-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .committee-list li {
-      line-height: 1.6;
-      color: #333;
-      font-size: 1rem;
-      margin-bottom: 15px; /* Space between each item */
-    }
-
-    .committee-list li strong {
-      font-weight: bold;
-    }
-
-    /* Ensure the layout remains a single column on all screen sizes */
-    @media (min-width: 900px) {
-      .committee-list {
-        grid-template-columns: 1fr; /* Force single column */
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .form-header h1 {
+        font-size: 2rem;
+      }
+      
+      .form-container {
+        padding: 15px;
+      }
+      
+      .form-container iframe {
+        height: 1000px;
       }
     }
-    .form-container {
-  max-width: 900px;          /* nice readable width */
-  margin: 40px auto;         /* centers horizontally */
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-.form-container iframe {
-  width: 100%;
-  height: 1200px;            /* fits most Google forms */
-  border: none;
-  border-radius: 8px;
-}
-    .form-bg {
-  position: relative;
-  
-  padding: 80px 20px;
-}
-
-.form-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  z-index: 0;
-}
-
-.form-wrapper {
-  position: relative;
-  z-index: 1;
-  max-width: 900px;
-  margin: 0 auto;
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-}
-
-.form-wrapper iframe {
-  width: 100%;
-  height: 1200px;
-  border: none;
-  border-radius: 10px;
-}
-
-
+    
+    @media (max-width: 480px) {
+      .form-header {
+        padding: 60px 15px;
+      }
+      
+      .form-header h1 {
+        font-size: 1.8rem;
+      }
+      
+      .form-container iframe {
+        height: 900px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- ================= HEADER - SAME AS INDEX.HTML ================= -->
 <header>
-        <a href="index.html">
-            <div class="logo">
-                <img src="https://keystoneacademic-res.cloudinary.com/image/upload/element/15/155464_UCLan_Cyprus_logo_rgb.png">
-                <img src="statmodpng2.png">
-            </div>
-        </a>
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+  <!-- LOGO - LEFT SIDE -->
+  <div class="logo-container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="logosheader.png" alt="UCLan Cyprus and ΣtatMod2026 Logo" class="combined-logo">
+      </a>
+    </div>
+  </div>
 
-       <nav>
-            <ul class="menu">
-                <li class="dropdown">
-                    <a class="dropbtn">Committees</a>
-                    <ul class="dropdown-content">
-                        <li><a>Co-organizers</a></li>
-                        <li><a href="steeringc.html">Steering Committee</a></li>
-                        <li><a>Scientific Committee</a></li>
-                        <li><a href="committees.html">Organizing Committee</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a class="dropbtn">About the Conference</a>
-                    <ul class="dropdown-content">
-                        <li><a >Plenary Speakers</a></li>
-                        <li><a >Invited Speakers</a></li>
-                        <li><a >Contributed Speakers</a></li>
-                        <li><a href="topics.html">Topics</a></li>
-                        <li><a >Scientific Program</a></li>
-                        <li><a>Social Events</a></li>
-                        <li><a >Past Conferences</a></li>
-                        <li><a href="partners.html">Partners</a></li>
-                    </ul>
-                </li>
-                <li><a href="bookofabs.html">Book of Abstracts</a></li>
-                <li><a href="sponsors.html">Sponsors</a></li>
-                <li><a href="registration.html">Registration/Abstraction Submission</a></li>
-                 <li><a href="uclangallery.html"> UCLAN Photo Gallery</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- HAMBURGER - RIGHT SIDE (Hidden on desktop) -->
+  <div class="hamburger-container">
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- NAV MENU -->
+  <nav>
+    <ul class="menu">
+      <li class="dropdown">
+        <a href="#">Committees</a>
+        <ul class="dropdown-content">
+          <li><a href="#">Co-organizers</a></li>
+          <li><a href="steeringc.html">Steering Committee</a></li>
+          <li><a href="#">Scientific Committee</a></li>
+          <li><a href="committees.html">Organizing Committee</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">About the Conference</a>
+        <ul class="dropdown-content">
+          <li><a href="#">Plenary Speakers</a></li>
+          <li><a href="#">Invited Speakers</a></li>
+          <li><a href="#">Contributed Speakers</a></li>
+          <li><a href="topics.html">Topics</a></li>
+          <li><a href="#">Scientific Program</a></li>
+          <li><a href="#">Social Events</a></li>
+          <li><a href="#">Past Conferences</a></li>
+          <li><a href="partners.html">Partners</a></li>
+        </ul>
+      </li>
+      <li><a href="bookofabs.html">Book of Abstracts</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+      <li><a href="registration.html">Registration</a></li>
+      <li><a href="uclangallery.html">UCLAN Gallery</a></li>
+    </ul>
+  </nav>
+</header>
 
 <!-- ================= MAIN ================= -->
 <main>
+  <section class="form-section">
+    <div class="form-header">
+      <h1>Registration & Abstract Submission</h1>
+    </div>
 
-  <section class="committee-section">
-
-  <div class="form-container">
-  
-  <div class="form-wrapper">
-    <iframe 
-      src="https://docs.google.com/forms/d/e/1FAIpQLSceXaPpnm27TWWO0WUgpaaTxk73-9MiEmX4Ji45oVzYJSsOaw/viewform?embedded=true"
-      frameborder="0"
-      marginheight="0"
-      marginwidth="0">
-      Loading…
-    </iframe>
-  </div>
-  </div>
-
-</section>
-
-
+    <div class="form-container">
+      <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSceXaPpnm27TWWO0WUgpaaTxk73-9MiEmX4Ji45oVzYJSsOaw/viewform?embedded=true"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0">
+        Loading registration form…
+      </iframe>
+    </div>
+  </section>
 </main>
 
 <!-- ================= FOOTER / CONTACT ================= -->
 <section class="contact-section">
   <div class="contact-wrapper">
-
     <div class="contact-details">
       <h2>Contact details</h2>
       <p>University Of Central Lancashire</p>
@@ -218,10 +181,54 @@
         Phone: +357 24 694000
       </p>
     </div>
-
   </div>
 </section>
 
+<!-- ================= SAME JAVASCRIPT AS INDEX.HTML ================= -->
+<script>
+// SIMPLE HAMBURGER TOGGLE
+document.addEventListener("DOMContentLoaded", function() {
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.querySelector(".menu");
+  const body = document.body;
+
+  hamburger.addEventListener("click", function(e) {
+    e.stopPropagation();
+    menu.classList.toggle("active");
+    hamburger.classList.toggle("active");
+    body.classList.toggle("menu-open");
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", function(e) {
+    if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+      menu.classList.remove("active");
+      hamburger.classList.remove("active");
+      body.classList.remove("menu-open");
+    }
+  });
+
+  // Mobile dropdowns
+  document.querySelectorAll(".dropdown > a").forEach(link => {
+    link.addEventListener("click", function(e) {
+      if (window.innerWidth <= 1250) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // Close other dropdowns
+        document.querySelectorAll(".dropdown").forEach(item => {
+          if (item !== this.parentElement) {
+            item.classList.remove("open");
+          }
+        });
+        
+        // Toggle current dropdown
+        this.parentElement.classList.toggle("open");
+      }
+    });
+  });
+});
+</script>
+
 </body>
 </html>
-
