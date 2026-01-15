@@ -13,7 +13,6 @@ html, body {
 }
 
 /* ---------------- HEADER ---------------- */
-
 header {
   display: flex;
   justify-content: space-between;
@@ -21,44 +20,87 @@ header {
   padding: 10px 15px;
   background: #fff;
   width: 100%;
-  height: 60px; /* Even smaller */
+  height: 60px;
   position: relative;
   z-index: 1000;
-  overflow: hidden; /* Prevent any overflow */
+  overflow: visible;
 }
 
-/* LOGO - Left side - Much more compact */
+/* Logo container - takes left side */
+.logo-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0; /* Allows shrinking */
+}
+
+/* Logo styling */
 .logo {
-  flex-shrink: 0;
   display: flex;
   align-items: center;
-  max-width: 65%; /* Limit width */
 }
 
 .logo a {
   display: flex;
   align-items: center;
-  gap: 5px; /* Very small gap */
+  gap: 5px;
   text-decoration: none;
-  height: 40px; /* Fixed height */
 }
 
-/* First logo (UCLan) - Much smaller */
 .logo img:first-child {
-  height: 35px !important;
-  width: auto !important;
-  max-width: 90px !important; /* Much smaller */
+  height: 35px;
+  width: auto;
+  max-width: 90px;
 }
 
-/* Second logo (StatMod) - Much smaller */
 .logo img:last-child {
-  height: 30px !important;
-  width: auto !important;
-  max-width: 110px !important; /* Much smaller */
+  height: 30px;
+  width: auto;
+  max-width: 110px;
+}
+
+/* Hamburger container - takes right side */
+.hamburger-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+/* Hamburger styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: black;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger animation when active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -5px);
 }
 
 /* ---------------- NAV ---------------- */
-
 nav ul.menu {
   list-style: none;
   display: flex;
@@ -73,7 +115,6 @@ nav ul.menu li a {
 }
 
 /* ---------------- DROPDOWN ---------------- */
-
 .dropdown {
   position: relative;
 }
@@ -99,44 +140,7 @@ nav ul.menu li a {
   display: block;
 }
 
-/* ---------------- HAMBURGER - Right side - Fixed position ---------------- */
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 4px;
-  cursor: pointer;
-  z-index: 1001;
-  position: absolute; /* Absolute positioning */
-  right: 15px; /* Fixed to right */
-  top: 50%;
-  transform: translateY(-50%);
-  width: 30px;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: black;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-/* Hamburger animation when active */
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -5px);
-}
-
 /* ---------------- HERO ---------------- */
-
 .hero {
   position: relative;
   height: 70vh;
@@ -170,7 +174,6 @@ nav ul.menu li a {
 }
 
 /* ---------------- DETAILS ---------------- */
-
 .details {
   padding: 60px 20px;
   text-align: center;
@@ -188,7 +191,6 @@ nav ul.menu li a {
 }
 
 /* ---------------- CARDS ---------------- */
-
 .cards {
   display: flex;
   justify-content: center;
@@ -222,7 +224,6 @@ nav ul.menu li a {
 }
 
 /* ---------------- BUTTONS ---------------- */
-
 .read-more-btn, .send-btn {
   margin-top: 15px;
   padding: 12px 18px;
@@ -234,7 +235,6 @@ nav ul.menu li a {
 }
 
 /* ---------------- CONTACT ---------------- */
-
 .contact-section {
   padding: 60px 20px;
   background: url('https://iep-edu.ec/wp-content/uploads/2025/06/Business_Data_Science_y_Visual_Analytics.jpg') center/cover no-repeat;
@@ -279,45 +279,32 @@ nav ul.menu li a {
 }
 
 /* ---------------- MOBILE ---------------- */
-
 @media screen and (max-width: 1250px), (max-device-width: 1250px) {
+  /* Header adjustments */
   header {
     padding: 8px 10px;
-    height: 55px; /* Even smaller on mobile */
-    justify-content: flex-start; /* Align everything to start */
-  }
-  
-  .logo {
-    max-width: 75%; /* Allow more space for logos */
-    min-width: 0; /* Allow shrinking */
-  }
-  
-  .logo a {
-    gap: 4px; /* Minimal gap */
-    height: 35px; /* Smaller height */
+    height: 55px;
   }
   
   /* Make logos even smaller on mobile */
   .logo img:first-child {
-    height: 30px !important;
-    max-width: 80px !important;
+    height: 30px;
+    max-width: 80px;
   }
   
   .logo img:last-child {
-    height: 25px !important;
-    max-width: 95px !important;
+    height: 25px;
+    max-width: 95px;
   }
   
+  /* Show hamburger on mobile */
   .hamburger {
     display: flex;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    margin: 0;
   }
-
+  
+  /* Hide regular menu on mobile */
   nav ul.menu {
+    display: none;
     position: fixed;
     top: 55px;
     left: -100%;
@@ -333,31 +320,34 @@ nav ul.menu li a {
     box-shadow: 5px 0 15px rgba(0,0,0,0.1);
     overflow-y: auto;
   }
-
+  
   nav ul.menu.active {
+    display: flex;
     left: 0;
   }
-
+  
+  /* Mobile menu items */
   nav ul.menu li {
     width: 100%;
     border-bottom: 1px solid #eee;
   }
-
+  
   nav ul.menu li:last-child {
     border-bottom: none;
   }
-
+  
   nav ul.menu li a {
     display: block;
     padding: 15px 0;
     width: 100%;
   }
-
+  
+  /* Mobile dropdowns */
   .dropdown > a {
     position: relative;
     padding-right: 30px;
   }
-
+  
   .dropdown > a::after {
     content: "›";
     position: absolute;
@@ -367,11 +357,11 @@ nav ul.menu li a {
     font-size: 1.5rem;
     transition: transform 0.3s ease;
   }
-
+  
   .dropdown.open > a::after {
     transform: translateY(-50%) rotate(-90deg);
   }
-
+  
   .dropdown-content {
     position: static;
     display: none;
@@ -380,61 +370,54 @@ nav ul.menu li a {
     padding-left: 20px;
     width: 100%;
   }
-
+  
   .dropdown.open .dropdown-content {
     display: block;
   }
-
+  
   .dropdown-content li {
     border-bottom: none;
   }
-
+  
   .dropdown-content a {
     padding: 12px 0;
     color: #555;
     border-bottom: 1px solid #eee;
   }
-
+  
   .dropdown-content a:last-child {
     border-bottom: none;
   }
-
+  
+  /* Prevent body scrolling when menu is open */
   body.menu-open {
     overflow: hidden;
   }
-
+  
+  /* Adjust hero text for mobile */
   .hero h1 {
     font-size: 2rem;
   }
-
+  
   .hero h2 {
     font-size: 0.9rem;
   }
-
+  
   .contact-wrapper {
     flex-direction: column;
-  }
-  
-  /* Hide regular nav on mobile */
-  nav ul.menu:not(.active) {
-    display: none;
   }
 }
 
 /* Extra small devices */
 @media screen and (max-width: 480px) {
   .logo img:first-child {
-    height: 28px !important;
-    max-width: 70px !important;
+    height: 25px;
+    max-width: 70px;
   }
   
   .logo img:last-child {
-    height: 23px !important;
-    max-width: 85px !important;
-  }
-  
-  .hamburger {
-    right: 8px;
+    height: 22px;
+    max-width: 80px;
   }
   
   .hero h1 {
