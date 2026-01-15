@@ -43,7 +43,26 @@ header .logo img {
     height: 40px;
   }
 }
+@media (max-width: 1250px) {
+  header {
+    justify-content: space-between;
+  }
 
+  header .logo {
+    flex: 1; /* gives logo priority space */
+  }
+
+  .hamburger {
+    display: flex;
+    margin-left: auto; /* pushes hamburger to the far right */
+  }
+}
+header .logo img {
+  flex-shrink: 0;
+}
+header {
+  flex-wrap: wrap;
+}
 /* ---------------- NAV ---------------- */
 
 nav {
