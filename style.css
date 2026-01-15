@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 100%;
 }
 
 html, body {
@@ -19,62 +18,37 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap;
   padding: 20px 40px;
   background: #fff;
   width: 100%;
-  min-height: 80px;
+  height: 80px;
+  position: relative;
   z-index: 1000;
 }
 
-header .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+/* LOGO */
+.logo {
+  flex-shrink: 0;
 }
 
-header .logo img {
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo img {
   height: 50px;
   width: auto;
 }
 
-@media (max-width: 600px) {
-  header .logo img {
-    height: 40px;
-  }
-}
-@media (max-width: 1250px) {
-  header {
-    justify-content: space-between;
-  }
-
-  header .logo {
-    flex: 1; /* gives logo priority space */
-  }
-
-  .hamburger {
-    display: flex;
-    margin-left: auto; /* pushes hamburger to the far right */
-  }
-}
-header .logo img {
-  flex-shrink: 0;
-}
-header {
-  flex-wrap: wrap;
-}
 /* ---------------- NAV ---------------- */
-
-nav {
-  overflow: hidden;
-}
 
 nav ul.menu {
   list-style: none;
   display: flex;
   gap: 30px;
-  white-space: nowrap;
-  flex-wrap: nowrap;
 }
 
 nav ul.menu li a {
@@ -94,17 +68,16 @@ nav ul.menu li a {
   display: none;
   position: absolute;
   background: white;
-  min-width: 180px;
-  padding: 10px 0;
+  min-width: 200px;
   top: 100%;
   left: 0;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
   z-index: 2000;
 }
 
 .dropdown-content a {
   display: block;
-  padding: 8px 16px;
+  padding: 10px 16px;
   color: black;
 }
 
@@ -281,13 +254,15 @@ nav ul.menu li a {
 
   nav ul.menu {
     position: fixed;
-    right: -100%;
     top: 80px;
+    right: -100%;
     width: 260px;
     height: calc(100vh - 80px);
     background: white;
     flex-direction: column;
-    transition: 0.3s;
+    padding: 20px;
+    gap: 10px;
+    transition: right 0.3s ease;
     z-index: 9999;
   }
 
@@ -311,7 +286,6 @@ nav ul.menu li a {
 
   .hero h2 {
     font-size: 1rem;
-    white-space: normal;
   }
 
   .contact-wrapper {
