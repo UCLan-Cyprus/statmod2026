@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <title>Topics | ΣtatMod2026</title>
 <meta name="robots" content="max-image-preview:large">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" href="style.css">
 
@@ -75,50 +76,59 @@ body {
 
 <body>
 
+<!-- ================= HEADER - SAME AS INDEX.HTML ================= -->
 <header>
-        <a href="index.html">
-            <div class="logo">
-                <img src="https://keystoneacademic-res.cloudinary.com/image/upload/element/15/155464_UCLan_Cyprus_logo_rgb.png">
-                <img src="statmodpng2.png">
-            </div>
-        </a>
+    <!-- LOGO - LEFT SIDE -->
+    <div class="logo-container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logosheader.png" alt="UCLan Cyprus and ΣtatMod2026 Logo" class="combined-logo">
+            </a>
+        </div>
+    </div>
+
+    <!-- HAMBURGER - RIGHT SIDE (Hidden on desktop) -->
+    <div class="hamburger-container">
         <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
             <span></span>
         </div>
+    </div>
 
-  <nav>
-            <ul class="menu">
-                <li class="dropdown">
-                    <a class="dropbtn">Committees</a>
-                    <ul class="dropdown-content">
-                        <li><a>Co-organizers</a></li>
-                        <li><a href="steeringc.html">Steering Committee</a></li>
-                        <li><a>Scientific Committee</a></li>
-                        <li><a href="committees.html">Organizing Committee</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a class="dropbtn">About the Conference</a>
-                    <ul class="dropdown-content">
-                        <li><a >Plenary Speakers</a></li>
-                        <li><a >Invited Speakers</a></li>
-                        <li><a >Contributed Speakers</a></li>
-                        <li><a href="topics.html">Topics</a></li>
-                        <li><a >Scientific Program</a></li>
-                        <li><a>Social Events</a></li>
-                        <li><a >Past Conferences</a></li>
-                        <li><a href="partners.html">Partners</a></li>
-                    </ul>
-                </li>
-                <li><a href="bookofabs.html">Book of Abstracts</a></li>
-                <li><a href="sponsors.html">Sponsors</a></li>
-                <li><a href="registration.html">Registration/Abstraction Submission</a></li>
-                 <li><a href="uclangallery.html"> UCLAN Photo Gallery</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- NAV MENU -->
+    <nav>
+        <ul class="menu">
+            <li class="dropdown">
+                <a href="#">Committees</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Co-organizers</a></li>
+                    <li><a href="steeringc.html">Steering Committee</a></li>
+                    <li><a href="#">Scientific Committee</a></li>
+                    <li><a href="committees.html">Organizing Committee</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">About the Conference</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Plenary Speakers</a></li>
+                    <li><a href="#">Invited Speakers</a></li>
+                    <li><a href="#">Contributed Speakers</a></li>
+                    <li><a href="topics.html">Topics</a></li>
+                    <li><a href="#">Scientific Program</a></li>
+                    <li><a href="#">Social Events</a></li>
+                    <li><a href="#">Past Conferences</a></li>
+                    <li><a href="partners.html">Partners</a></li>
+                </ul>
+            </li>
+            <li><a href="bookofabs.html">Book of Abstracts</a></li>
+            <li><a href="sponsors.html">Sponsors</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="uclangallery.html">UCLAN Gallery</a></li>
+        </ul>
+    </nav>
+</header>
+
 <main>
 
 <section class="committee-section">
@@ -186,61 +196,107 @@ body {
 </section>
 
 </main>
-   <section class="contact-section">
-            <div class="contact-wrapper">
-                <!-- LEFT SIDE -->
-                <div class="contact-details">
-                    <h2>Contact details</h2>
-                    <p>University Of Central Lancashire</p>
-                    <h3>📍 Location</h3>
-                    <p>
-                        University Ave 12-14, Pyla 7080<br>
-                        <a href="https://www.google.com/maps/place/University+of+Central+Lancashire,+Cyprus+(UCLan+Cyprus)/" target="_blank">
-                            View on Google Maps
-                        </a>
-                    </p>
 
-                    <h3>📞 Info</h3>
-                    <p>
-                        Email: <a href="mailto:mhadjikyriakou@uclan.ac.uk">mhadjikyriakou@uclan.ac.uk</a><br>
-                        Phone: +357 24 694000
-                    </p>
-                </div>
+<section class="contact-section">
+    <div class="contact-wrapper">
+        <!-- LEFT SIDE -->
+        <div class="contact-details">
+            <h2>Contact details</h2>
+            <p>University Of Central Lancashire</p>
+            <h3>📍 Location</h3>
+            <p>
+                University Ave 12-14, Pyla 7080<br>
+                <a href="https://www.google.com/maps/place/University+of+Central+Lancashire,+Cyprus+(UCLan+Cyprus)/" target="_blank">
+                    View on Google Maps
+                </a>
+            </p>
 
-                <!-- RIGHT SIDE -->
-                <div class="contact-form">
-                    <h2>Contact Us</h2>
+            <h3>📞 Info</h3>
+            <p>
+                Email: <a href="mailto:mhadjikyriakou@uclan.ac.uk">mhadjikyriakou@uclan.ac.uk</a><br>
+                Phone: +357 24 694000
+            </p>
+        </div>
 
-                    <div class="form-row">
-                        <input id="name" type="text" placeholder="Your Name" required>
-                        <input id="surname" type="text" placeholder="Your Surname" required>
-                    </div>
+        <!-- RIGHT SIDE -->
+        <div class="contact-form">
+            <h2>Contact Us</h2>
 
-                    <input id="subject" type="text" placeholder="Subject" required>
-                    <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
-
-                    <button id="send-btn" class="send-btn">SEND MESSAGE</button>
-                </div>
+            <div class="form-row">
+                <input id="name" type="text" placeholder="Your Name" required>
+                <input id="surname" type="text" placeholder="Your Surname" required>
             </div>
-        </section>
 
-    </main>
+            <input id="subject" type="text" placeholder="Subject" required>
+            <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
 
-    <script>
-        document.querySelectorAll(".read-more-btn").forEach(button => {
-            button.addEventListener("click", () => {
-                const cardText = button.previousElementSibling; // the <p> element
-                cardText.classList.toggle("expanded");
+            <button id="send-btn" class="send-btn">SEND MESSAGE</button>
+        </div>
+    </div>
+</section>
 
-                if (cardText.classList.contains("expanded")) {
-                    button.textContent = "Read Less";
-                } else {
-                    button.textContent = "Read More";
-                }
-            });
+<!-- ================= SAME JAVASCRIPT AS INDEX.HTML ================= -->
+<script>
+// SIMPLE HAMBURGER TOGGLE
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.getElementById("hamburger");
+    const menu = document.querySelector(".menu");
+    const body = document.body;
+
+    hamburger.addEventListener("click", function(e) {
+        e.stopPropagation();
+        menu.classList.toggle("active");
+        hamburger.classList.toggle("active");
+        body.classList.toggle("menu-open");
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", function(e) {
+        if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+            menu.classList.remove("active");
+            hamburger.classList.remove("active");
+            body.classList.remove("menu-open");
+        }
+    });
+
+    // Mobile dropdowns
+    document.querySelectorAll(".dropdown > a").forEach(link => {
+        link.addEventListener("click", function(e) {
+            if (window.innerWidth <= 1250) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                // Close other dropdowns
+                document.querySelectorAll(".dropdown").forEach(item => {
+                    if (item !== this.parentElement) {
+                        item.classList.remove("open");
+                    }
+                });
+                
+                // Toggle current dropdown
+                this.parentElement.classList.toggle("open");
+            }
         });
-    </script>
+    });
+
+    // Email form script
+    document.getElementById("send-btn").addEventListener("click", function () {
+        const name = document.getElementById("name").value;
+        const surname = document.getElementById("surname").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value;
+
+        const body =
+            "Name: " + name + " " + surname + "%0D%0A%0D%0A" +
+            "Message:%0D%0A" + message;
+
+        window.location.href =
+            "mailto:mhadjikyriakou@uclan.ac.uk" +
+            "?subject=" + encodeURIComponent(subject) +
+            "&body=" + body;
+    });
+});
+</script>
 
 </body>
 </html>
-
