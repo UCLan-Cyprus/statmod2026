@@ -208,12 +208,15 @@ nav ul.menu li a {
 }
 
 .card img {
-  width: 60px;
+ width: 60px;
   margin-bottom: 15px;
+  display: block; /* Change from default inline */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
 }
 
 .card p {
-  max-height: none; /* REMOVED fixed height */
+max-height: none; /* REMOVED fixed height */
   overflow: visible; /* Changed from hidden */
   flex-grow: 1; /* Allows text to expand */
   text-align: center; /* Center text */
@@ -223,7 +226,7 @@ nav ul.menu li a {
 
 /* Center the UCLan Cyprus text specifically */
 .card p.card-text {
-  text-align: center;
+ text-align: center;
   margin: 15px auto;
   display: flex;
   align-items: center;
@@ -234,7 +237,9 @@ nav ul.menu li a {
 .card-text.expanded {
   max-height: 500px;
 }
-
+.card h3 {
+  margin-bottom: 15px;
+}
 /* ---------------- BUTTONS ---------------- */
 .read-more-btn, .send-btn {
   margin-top: 15px;
