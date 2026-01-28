@@ -26,6 +26,43 @@
     font-size: 1.4rem;
   }
   
+  /* Styles for larger, more spaced-out conference description */
+  .details .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .details h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #0a6c6d;
+  }
+  
+  .details p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+    margin-bottom: 2.5rem;
+    text-align: justify;
+  }
+  
+  /* Add spacing between paragraphs if you have multiple p tags */
+  .details p + p {
+    margin-top: 2rem;
+  }
+  
+  /* Make the text container more spacious */
+  .details .container {
+    padding: 60px 20px;
+  }
+  
+  /* Card adjustments for consistency */
+  .cards {
+    margin-top: 60px;
+  }
+  
   @media (max-width: 768px) {
     .hero {
       height: 50vh;
@@ -38,6 +75,20 @@
     
     .hero h2 {
       font-size: 1.2rem;
+    }
+    
+    .details h2 {
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+    }
+    
+    .details p {
+      font-size: 1.15rem;
+      line-height: 1.7;
+    }
+    
+    .details .container {
+      padding: 40px 15px;
     }
   }
   
@@ -53,6 +104,17 @@
     
     .hero h2 {
       font-size: 1rem;
+    }
+    
+    .details h2 {
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+    }
+    
+    .details p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      text-align: left;
     }
   }
 </style>
@@ -120,11 +182,12 @@
 
 <section class="details">
   <div class="container">
-    <h2>ΣtatMod2026 Conference</h2><br><br>
+    <h2>ΣtatMod2026 Conference</h2>
     <p>
-     StatMod2026 brings together researchers, academics, and practitioners working on modern statistical modeling and its applications across a wide range of fields, including data science, finance, economics, engineering, reliability, risk analysis, and applied probability. The conference places particular emphasis on the interaction between theoretical developments and real-world applications, making it highly relevant to organisations operating in data-driven environments.<br><br>
-
-The conference is organised with the support of the University of Central Lancashire (UCLan) Cyprus and is backed by a strong network of international scientific societies and research institutions. These include the Cyprus Statistical Society, the Greek Statistical Institute, the Laboratory of Mathematics Raphaël Salem (France) and the University of Rouen Normandy (France), the French National Centre for Scientific Research (CNRS) and the Fédération Normandie-Mathématiques, as well as leading Romanian institutions such as the Romanian Society of Probability and Statistics, the Romanian Society of Applied and Industrial Mathematics, the "Costin C. Kirițescu" National Institute of Economic Research of the Romanian Academy, and the "Gheorghe Mihoc – Caius Iacob" Institute of Mathematical Statistics and Applied Mathematics of the Romanian Academy.
+      StatMod2026 brings together researchers, academics, and practitioners working on modern statistical modeling and its applications across a wide range of fields, including data science, finance, economics, engineering, reliability, risk analysis, and applied probability. The conference places particular emphasis on the interaction between theoretical developments and real-world applications, making it highly relevant to organisations operating in data-driven environments.
+    </p>
+    <p>
+      The conference is organised with the support of the University of Central Lancashire (UCLan) Cyprus and is backed by a strong network of international scientific societies and research institutions. These include the Cyprus Statistical Society, the Greek Statistical Institute, the Laboratory of Mathematics Raphaël Salem (France) and the University of Rouen Normandy (France), the French National Centre for Scientific Research (CNRS) and the Fédération Normandie-Mathématiques, as well as leading Romanian institutions such as the Romanian Society of Probability and Statistics, the Romanian Society of Applied and Industrial Mathematics, the "Costin C. Kirițescu" National Institute of Economic Research of the Romanian Academy, and the "Gheorghe Mihoc – Caius Iacob" Institute of Mathematical Statistics and Applied Mathematics of the Romanian Academy.
     </p>
 
     <div class="cards">
