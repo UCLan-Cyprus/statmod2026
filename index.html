@@ -5,6 +5,57 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ΣtatMod2026</title>
 <link rel="stylesheet" href="style.css">
+<style>
+  /* Additional styles for shorter hero section */
+  .hero {
+    height: 60vh;
+    min-height: 400px;
+    max-height: 500px;
+  }
+  
+  .hero .content {
+    padding: 30px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .hero h2 {
+    font-size: 1.4rem;
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      height: 50vh;
+      min-height: 350px;
+    }
+    
+    .hero h1 {
+      font-size: 2rem;
+    }
+    
+    .hero h2 {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero {
+      height: 45vh;
+      min-height: 300px;
+    }
+    
+    .hero h1 {
+      font-size: 1.8rem;
+    }
+    
+    .hero h2 {
+      font-size: 1rem;
+    }
+  }
+</style>
 </head>
 <body>
 
@@ -58,9 +109,6 @@
     </ul>
   </nav>
 </header>
-<!-- ... rest of your HTML remains the same ... -->
-
-<!-- ... rest of your HTML remains the same ... -->
 
 <section class="hero">
   <div class="overlay"></div>
@@ -76,7 +124,7 @@
     <p>
      StatMod2026 brings together researchers, academics, and practitioners working on modern statistical modeling and its applications across a wide range of fields, including data science, finance, economics, engineering, reliability, risk analysis, and applied probability. The conference places particular emphasis on the interaction between theoretical developments and real-world applications, making it highly relevant to organisations operating in data-driven environments.<br><br>
 
-The conference is organised with the support of the University of Central Lancashire (UCLan) Cyprus and is backed by a strong network of international scientific societies and research institutions. These include the Cyprus Statistical Society, the Greek Statistical Institute, the Laboratory of Mathematics Raphaël Salem (France) and the University of Rouen Normandy (France), the French National Centre for Scientific Research (CNRS) and the Fédération Normandie-Mathématiques, as well as leading Romanian institutions such as the Romanian Society of Probability and Statistics, the Romanian Society of Applied and Industrial Mathematics, the “Costin C. Kirițescu” National Institute of Economic Research of the Romanian Academy, and the “Gheorghe Mihoc – Caius Iacob” Institute of Mathematical Statistics and Applied Mathematics of the Romanian Academy.
+The conference is organised with the support of the University of Central Lancashire (UCLan) Cyprus and is backed by a strong network of international scientific societies and research institutions. These include the Cyprus Statistical Society, the Greek Statistical Institute, the Laboratory of Mathematics Raphaël Salem (France) and the University of Rouen Normandy (France), the French National Centre for Scientific Research (CNRS) and the Fédération Normandie-Mathématiques, as well as leading Romanian institutions such as the Romanian Society of Probability and Statistics, the Romanian Society of Applied and Industrial Mathematics, the "Costin C. Kirițescu" National Institute of Economic Research of the Romanian Academy, and the "Gheorghe Mihoc – Caius Iacob" Institute of Mathematical Statistics and Applied Mathematics of the Romanian Academy.
     </p>
 
     <div class="cards">
@@ -128,8 +176,6 @@ The conference is organised with the support of the University of Central Lancas
     </div>
   </div>
 </section>
-   
-
 
 <script>
 // SIMPLE HAMBURGER TOGGLE
