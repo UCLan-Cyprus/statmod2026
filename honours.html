@@ -22,10 +22,15 @@
 
     main {
       flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
     }
 
     .coming-soon-section {
-      padding: 80px 20px;
+      width: 100%;
+      max-width: 800px;
     }
 
     .coming-soon-header {
@@ -38,7 +43,8 @@
       color: #ffffff;
       text-align: center;
       padding: 100px 20px;
-      position: relative;
+      border-radius: 12px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
     }
 
     .coming-soon-header h1 {
@@ -51,148 +57,16 @@
 
     .coming-soon-header p {
       font-size: 1.4rem;
-      max-width: 800px;
-      margin: 0 auto 40px;
+      max-width: 700px;
+      margin: 0 auto;
       line-height: 1.6;
     }
 
-    .content-card {
-      max-width: 900px;
-      margin: 40px auto 0;
-      background: #ffffff;
-      padding: 50px;
-      border-radius: 12px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    .content-card h2 {
-      color: #0a6c6d;
-      margin-bottom: 25px;
-      font-size: 2rem;
-    }
-
-    .content-card p {
-      color: #555;
-      line-height: 1.7;
-      font-size: 1.1rem;
-      margin-bottom: 30px;
-    }
-
-    .countdown {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin: 50px 0;
-      flex-wrap: wrap;
-    }
-
-    .countdown-item {
-      background: #0a6c6d;
-      color: white;
-      padding: 25px 20px;
-      border-radius: 10px;
-      min-width: 120px;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(10, 108, 109, 0.3);
-    }
-
-    .countdown-number {
-      font-size: 2.8rem;
-      font-weight: bold;
-      display: block;
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-
-    .countdown-label {
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .coming-soon-icon {
-      font-size: 5rem;
-      color: #0a6c6d;
-      margin-bottom: 30px;
-      display: inline-block;
-    }
-
-    .notification-form {
-      max-width: 500px;
-      margin: 40px auto 0;
-      padding: 30px;
-      background: #f8f9fa;
-      border-radius: 10px;
-      text-align: center;
-    }
-
-    .notification-form h3 {
-      color: #0a6c6d;
-      margin-bottom: 20px;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-group input {
-      width: 100%;
-      padding: 15px;
-      border: 2px solid #ddd;
-      border-radius: 8px;
-      font-size: 1rem;
-      transition: border-color 0.3s;
-    }
-
-    .form-group input:focus {
-      border-color: #0a6c6d;
-      outline: none;
-    }
-
-    .btn-subscribe {
-      background: #0a6c6d;
-      color: white;
-      border: none;
-      padding: 15px 40px;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s, transform 0.3s;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .btn-subscribe:hover {
-      background: #084e4e;
-      transform: translateY(-2px);
-    }
-
-    .social-links {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .social-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 50px;
-      height: 50px;
-      background: #0a6c6d;
-      color: white;
-      border-radius: 50%;
-      font-size: 1.3rem;
-      text-decoration: none;
-      transition: all 0.3s;
-    }
-
-    .social-link:hover {
-      background: #084e4e;
-      transform: translateY(-3px);
+    .coming-soon-header .subtitle {
+      font-size: 1.2rem;
+      margin-top: 30px;
+      opacity: 0.9;
+      font-style: italic;
     }
 
     @media (max-width: 768px) {
@@ -208,51 +82,25 @@
         font-size: 1.1rem;
       }
       
-      .content-card {
-        padding: 30px 20px;
-        margin: 20px auto 0;
-      }
-      
-      .countdown {
-        gap: 15px;
-      }
-      
-      .countdown-item {
-        min-width: 80px;
-        padding: 20px 15px;
-      }
-      
-      .countdown-number {
-        font-size: 2rem;
-      }
-      
-      .coming-soon-icon {
-        font-size: 4rem;
+      .coming-soon-header .subtitle {
+        font-size: 1rem;
       }
     }
     
     @media (max-width: 480px) {
-      .countdown {
-        gap: 10px;
-      }
-      
-      .countdown-item {
-        min-width: 70px;
-        padding: 15px 10px;
-      }
-      
-      .countdown-number {
-        font-size: 1.8rem;
-      }
-      
       .coming-soon-header h1 {
         font-size: 1.8rem;
       }
+      
+      .coming-soon-header p {
+        font-size: 1rem;
+      }
+      
+      main {
+        padding: 20px 15px;
+      }
     }
   </style>
-  
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -314,74 +162,11 @@
 <main>
 
   <section class="coming-soon-section">
-
     <div class="coming-soon-header">
       <h1>Coming Soon</h1>
       <p>The ΣtatMod2026 website is currently under construction. We're working hard to bring you an amazing experience!</p>
-      
-      <div class="countdown">
-        <div class="countdown-item">
-          <span class="countdown-number" id="days">00</span>
-          <span class="countdown-label">Days</span>
-        </div>
-        <div class="countdown-item">
-          <span class="countdown-number" id="hours">00</span>
-          <span class="countdown-label">Hours</span>
-        </div>
-        <div class="countdown-item">
-          <span class="countdown-number" id="minutes">00</span>
-          <span class="countdown-label">Minutes</span>
-        </div>
-        <div class="countdown-item">
-          <span class="countdown-number" id="seconds">00</span>
-          <span class="countdown-label">Seconds</span>
-        </div>
-      </div>
+      <p class="subtitle">Please check back soon for updates and complete information.</p>
     </div>
-
-    <div class="content-card">
-      <div class="coming-soon-icon">
-        <i class="fas fa-tools"></i>
-      </div>
-      
-      <h2>We're Building Something Great!</h2>
-      <p>
-        The official website for ΣtatMod2026 Conference is being meticulously prepared to provide you with 
-        all the information you need about the event, registration, speakers, schedule, and more.
-      </p>
-      <p>
-        Our team is working diligently to ensure that when we launch, you'll have access to a seamless, 
-        informative, and engaging platform. Thank you for your patience!
-      </p>
-      
-      <div class="notification-form">
-        <h3>Stay Updated</h3>
-        <p>Be the first to know when we launch! Enter your email below.</p>
-        
-        <form id="notify-form">
-          <div class="form-group">
-            <input type="email" placeholder="Enter your email address" required>
-          </div>
-          <button type="submit" class="btn-subscribe">Notify Me</button>
-        </form>
-      </div>
-      
-      <div class="social-links">
-        <a href="#" class="social-link" title="Facebook">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="#" class="social-link" title="Twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="#" class="social-link" title="LinkedIn">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="#" class="social-link" title="Email">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </div>
-    </div>
-
   </section>
 
 </main>
@@ -455,50 +240,6 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   });
-
-  // Countdown timer
-  function updateCountdown() {
-    const targetDate = new Date('2026-06-01T00:00:00').getTime();
-    const now = new Date().getTime();
-    const timeLeft = targetDate - now;
-
-    if (timeLeft < 0) {
-      document.getElementById('days').textContent = '00';
-      document.getElementById('hours').textContent = '00';
-      document.getElementById('minutes').textContent = '00';
-      document.getElementById('seconds').textContent = '00';
-      return;
-    }
-
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-    document.getElementById('days').textContent = days.toString().padStart(2, '0');
-    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-  }
-
-  // Initialize countdown
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-
-  // Notification form submission
-  const notifyForm = document.getElementById('notify-form');
-  if (notifyForm) {
-    notifyForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const emailInput = this.querySelector('input[type="email"]');
-      const email = emailInput.value;
-      
-      if (email) {
-        alert(`Thank you! We'll notify you at ${email} when we launch.`);
-        emailInput.value = '';
-      }
-    });
-  }
 });
 </script>
 
