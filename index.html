@@ -46,6 +46,7 @@
     letter-spacing: 0.3px;
     margin-bottom: 2.5rem;
     text-align: justify;
+    text-align-last: center; /* Centers the last line of each paragraph */
   }
   
   /* Add spacing between paragraphs if you have multiple p tags */
@@ -61,6 +62,25 @@
   /* Card adjustments for consistency */
   .cards {
     margin-top: 60px;
+  }
+  
+  /* Center the entire contact section text */
+  .contact-section {
+    text-align: center;
+  }
+  
+  .contact-details p, 
+  .contact-details h3 {
+    text-align: center;
+  }
+  
+  /* Center align card text */
+  .card {
+    text-align: center;
+  }
+  
+  .card-text {
+    text-align: center;
   }
   
   @media (max-width: 768px) {
@@ -85,6 +105,8 @@
     .details p {
       font-size: 1.15rem;
       line-height: 1.7;
+      text-align: justify;
+      text-align-last: center;
     }
     
     .details .container {
@@ -114,7 +136,8 @@
     .details p {
       font-size: 1.05rem;
       line-height: 1.6;
-      text-align: left;
+      text-align: justify;
+      text-align-last: center;
     }
   }
 </style>
