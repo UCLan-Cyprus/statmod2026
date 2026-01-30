@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Scientific Committee | ΣtatMod2026</title>
+  <meta name="robots" content="max-image-preview:large">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- MAIN SITE CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- PAGE-SPECIFIC CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+    }
+
+    .committee-section {
+      padding-bottom: 60px;
+    }
+
+    .committee-header {
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("https://ik.imagekit.io/edtechdigit/usdsi/content/images/articles/explore-the-vital-role-of-data-visualisation-in-data-science.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #ffffff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .committee-header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .committee-card {
+      max-width: 900px;
+      margin: -40px auto 0;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .committee-card h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .committee-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .committee-list li {
+      line-height: 1.6;
+      color: #333;
+      font-size: 1rem;
+      margin-bottom: 15px; /* Space between each item */
+    }
+
+    .committee-list li strong {
+      font-weight: bold;
+    }
+
+    /* Ensure the layout remains a single column on all screen sizes */
+    @media (min-width: 900px) {
+      .committee-list {
+        grid-template-columns: 1fr; /* Force single column */
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER - SAME AS INDEX.HTML ================= -->
+<header>
+  <!-- LOGO - LEFT SIDE -->
+  <div class="logo-container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="logosheader.png" alt="UCLan Cyprus and ΣtatMod2026 Logo" class="combined-logo">
+      </a>
+    </div>
+  </div>
+
+  <!-- HAMBURGER - RIGHT SIDE (Hidden on desktop) -->
+  <div class="hamburger-container">
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- NAV MENU -->
+   <nav>
+    <ul class="menu">
+      <li class="dropdown">
+        <a href="#">Committees</a>
+        <ul class="dropdown-content">
+          <li><a href="steeringc.html">Steering Committee</a></li>
+          <li><a href="honours.html">Scientific Committee</a></li>
+          <li><a href="committees.html">Organizing Committee</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">About the Conference</a>
+        <ul class="dropdown-content">
+          <li><a href="honours.html">Plenary Speakers</a></li>
+          <li><a href="honours.html">Invited Speakers</a></li>
+          <li><a href="honours.html">Contributed Speakers</a></li>
+          <li><a href="topics.html">Topics</a></li>
+          <li><a href="honours.html">Scientific Program</a></li>
+          <li><a href="honours.html">Social Events</a></li>
+          <li><a href="honours.html">Past Conferences</a></li>
+          <li><a href="partners.html">Partners</a></li>
+        </ul>
+      </li>
+      <li><a href="bookofabs.html">Book of Abstracts</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+      <li><a href="registration-form.html">Registration/Abstract Submission</a></li>
+      <li><a href="honours.html">UCLAN Gallery</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main>
+  <section class="committee-section">
+    <div class="committee-header">
+      <h1>Scientific Committee</h1>
+    </div>
+
+    <div class="committee-card">
+      <h2>Scientific committee of StatMod</h2>
+
+      <ul class="committee-list">
+        <li><strong>Christophe CHESNEAU</strong>,LMNO, Univ. of Caen-Normandy, France<br>Luminița CHIVU (INCE, Romania)</li>
+        <li><strong>Luminița CHIVU</strong>,INCE, Romania</li>
+        <li><strong>Mitra FOULADIRAD</strong>, École Centrale Marseille, France</li>
+        <li><strong>Gabriela MARINOSCHI</strong>, Romanian Academy & ISMMA, Romania</li>
+        <li><strong>Valentin PATILEA</strong>,ENSAI Rennes & CREST, France</li>
+        <li><strong>Serguei PERGAMENCHTCHIKOV</strong>,LMRS, Univ. of Rouen-Normandy, France</li>
+        <li><strong>Ionel POPESCU </strong>, Univ. of Bucharest & IMAR, Romania</li>
+        <li><strong>Razvan SFETCU</strong>,Univ. of Bucharest, Romania</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER / CONTACT ================= -->
+<section class="contact-section">
+  <div class="contact-wrapper">
+    <div class="contact-details">
+      <h2>Contact details</h2>
+      <p>University Of Central Lancashire</p>
+
+      <h3>📍 Location</h3>
+      <p>
+        University Ave 12-14, Pyla 7080<br>
+        <a href="https://www.google.com/maps/place/University+of+Central+Lancashire,+Cyprus+(UCLan+Cyprus)/" target="_blank">
+          View on Google Maps
+        </a>
+      </p>
+
+      <h3>📞 Info</h3>
+      <p>
+        Email: <a href="mailto:mhadjikyriakou@uclan.ac.uk">mhadjikyriakou@uclan.ac.uk</a><br>
+        Phone: +357 24 694000
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SAME JAVASCRIPT AS INDEX.HTML ================= -->
+<script>
+// SIMPLE HAMBURGER TOGGLE
+document.addEventListener("DOMContentLoaded", function() {
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.querySelector(".menu");
+  const body = document.body;
+
+  hamburger.addEventListener("click", function(e) {
+    e.stopPropagation();
+    menu.classList.toggle("active");
+    hamburger.classList.toggle("active");
+    body.classList.toggle("menu-open");
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", function(e) {
+    if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+      menu.classList.remove("active");
+      hamburger.classList.remove("active");
+      body.classList.remove("menu-open");
+    }
+  });
+
+  // Mobile dropdowns
+  document.querySelectorAll(".dropdown > a").forEach(link => {
+    link.addEventListener("click", function(e) {
+      if (window.innerWidth <= 1250) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // Close other dropdowns
+        document.querySelectorAll(".dropdown").forEach(item => {
+          if (item !== this.parentElement) {
+            item.classList.remove("open");
+          }
+        });
+        
+        // Toggle current dropdown
+        this.parentElement.classList.toggle("open");
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>
