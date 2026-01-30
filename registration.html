@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration/Abstract Submission | ΣtatMod2026</title>
+  <title>Conference Registration | ΣtatMod2026</title>
   <meta name="robots" content="max-image-preview:large">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <!-- MAIN SITE CSS -->
   <link rel="stylesheet" href="style.css">
 
@@ -18,7 +18,7 @@
     }
 
     .form-section {
-      padding: 60px 20px;
+      padding-bottom: 60px;
     }
 
     .form-header {
@@ -31,7 +31,6 @@
       color: #ffffff;
       text-align: center;
       padding: 80px 20px;
-      margin-bottom: 40px;
     }
 
     .form-header h1 {
@@ -40,47 +39,94 @@
     }
 
     .form-container {
-      max-width: 900px;
-      margin: 0 auto;
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+      max-width: 1200px;
+      margin: -40px auto 0;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
 
-    .form-container iframe {
+    .form-container h2 {
+      color: #333;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #eaeaea;
+    }
+
+    .form-intro {
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      font-size: 1.05rem;
+    }
+
+    .iframe-wrapper {
       width: 100%;
-      height: 1200px;
-      border: none;
-      border-radius: 10px;
+      height: 1024px;
+      margin: 30px 0;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
-    /* Mobile adjustments */
+    .iframe-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .form-instructions {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 6px;
+      margin-top: 30px;
+      border-left: 4px solid #2c80c9;
+    }
+
+    .form-instructions h3 {
+      color: #2c80c9;
+      margin-top: 0;
+    }
+
+    .form-instructions ul {
+      padding-left: 20px;
+      color: #555;
+    }
+
+    .form-instructions li {
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    /* Responsive adjustments */
     @media (max-width: 768px) {
+      .form-header {
+        padding: 60px 20px;
+      }
+      
       .form-header h1 {
         font-size: 2rem;
       }
       
       .form-container {
-        padding: 15px;
+        padding: 20px;
+        margin: -30px 15px 0;
       }
       
-      .form-container iframe {
-        height: 1000px;
+      .iframe-wrapper {
+        height: 800px;
       }
     }
-    
+
     @media (max-width: 480px) {
-      .form-header {
-        padding: 60px 15px;
+      .iframe-wrapper {
+        height: 600px;
       }
       
-      .form-header h1 {
-        font-size: 1.8rem;
-      }
-      
-      .form-container iframe {
-        height: 900px;
+      .form-instructions {
+        padding: 15px;
       }
     }
   </style>
@@ -88,7 +134,7 @@
 
 <body>
 
-<!-- ================= HEADER - SAME AS INDEX.HTML ================= -->
+<!-- ================= HEADER - SAME AS STEERINGC.HTML ================= -->
 <header>
   <!-- LOGO - LEFT SIDE -->
   <div class="logo-container">
@@ -109,7 +155,7 @@
   </div>
 
   <!-- NAV MENU -->
- <nav>
+  <nav>
     <ul class="menu">
       <li class="dropdown">
         <a href="#">Committees</a>
@@ -134,26 +180,54 @@
       </li>
       <li><a href="bookofabs.html">Book of Abstracts</a></li>
       <li><a href="sponsors.html">Sponsors</a></li>
-      <li><a href="registration.html">Registration/Abstract Submission</a></li>
+      <li><a href="registration-form.html">Registration/Abstract Submission</a></li>
       <li><a href="uclangallery.html">UCLAN Gallery</a></li>
     </ul>
   </nav>
 </header>
 
-<!-- ================= HERO BANNER WITH BACKGROUND IMAGE ================= -->
-<section class="hero-banner">
-  <div class="banner-overlay"></div>
-  <div class="banner-content">
-    <h1>Registration/Abstract Submission</h1>
-  </div>
-</section>
+<!-- ================= MAIN ================= -->
+<main>
+  <section class="form-section">
+    <div class="form-header">
+      <h1>Registration & Abstract Submission</h1>
+    </div>
 
-<!-- ================= FORM SECTION ================= -->
-<section class="form-section">
-  <div class="form-container">
-    <iframe width="100%" height="1024px" src="https://forms.cloud.microsoft/e/bJeWt2jUdj?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
-  </div>
-</section>
+    <div class="form-container">
+      <h2>Online Registration Form</h2>
+      
+      <div class="form-intro">
+        <p>Please use the form below to register for ΣtatMod2026 and submit your abstract. All fields marked with an asterisk (*) are required. After submission, you will receive a confirmation email with further instructions.</p>
+        <p>For any questions or issues with the form, please contact the organizing committee at <a href="mailto:mhadjikyriakou@uclan.ac.uk">mhadjikyriakou@uclan.ac.uk</a>.</p>
+      </div>
+
+      <div class="iframe-wrapper">
+        <iframe 
+          src="https://forms.cloud.microsoft/e/bJeWt2jUdj?embed=true" 
+          frameborder="0" 
+          marginwidth="0" 
+          marginheight="0" 
+          allowfullscreen 
+          webkitallowfullscreen 
+          mozallowfullscreen 
+          msallowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="form-instructions">
+        <h3>Important Information</h3>
+        <ul>
+          <li>Please complete all required fields before submitting the form</li>
+          <li>Abstracts should be in English and not exceed 300 words</li>
+          <li>You will receive a confirmation email within 24 hours of submission</li>
+          <li>Early bird registration deadline: March 31, 2026</li>
+          <li>Abstract submission deadline: May 15, 2026</li>
+          <li>If you encounter technical issues, try refreshing the page or using a different browser</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
 
 <!-- ================= FOOTER / CONTACT ================= -->
 <section class="contact-section">
@@ -224,91 +298,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
-
-<!-- ================= ADDED CSS FOR HERO BANNER ================= -->
-<style>
-  /* Hero Banner Styles */
-  .hero-banner {
-    position: relative;
-    height: 300px;
-    background: url("https://ik.imagekit.io/edtechdigit/usdsi/content/images/articles/explore-the-vital-role-of-data-visualisation-in-data-science.jpeg") no-repeat center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 40px;
-    overflow: hidden;
-  }
-
-  .banner-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 50, 100, 0.7), rgba(0, 30, 70, 0.8));
-  }
-
-  .banner-content {
-    position: relative;
-    z-index: 2;
-    padding: 20px;
-    max-width: 800px;
-  }
-
-  .banner-content h1 {
-    color: white;
-    font-size: 3rem;
-    margin: 0;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-    letter-spacing: 1px;
-    font-family: "Times New Roman", Times, serif;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-
-  /* Update form-section to remove extra padding */
-  .form-section {
-    padding: 0 20px 60px;
-  }
-
-  /* Responsive adjustments for hero banner */
-  @media (max-width: 900px) {
-    .hero-banner {
-      height: 250px;
-    }
-    
-    .banner-content h1 {
-      font-size: 2.5rem;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .hero-banner {
-      height: 200px;
-    }
-    
-    .banner-content h1 {
-      font-size: 2rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .hero-banner {
-      height: 180px;
-      margin-bottom: 30px;
-    }
-    
-    .banner-content h1 {
-      font-size: 1.8rem;
-    }
-    
-    .form-section {
-      padding: 0 15px 40px;
-    }
-  }
-</style>
 
 </body>
 </html>
