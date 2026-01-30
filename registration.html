@@ -140,20 +140,20 @@
   </nav>
 </header>
 
-<!-- ================= MAIN ================= -->
-<!-- <main>
-  <section class="form-section">
-    <div class="form-header">
-      <h1>Registration & Abstract Submission</h1>
-    </div>
+<!-- ================= HERO BANNER WITH BACKGROUND IMAGE ================= -->
+<section class="hero-banner">
+  <div class="banner-overlay"></div>
+  <div class="banner-content">
+    <h1>Registration/Abstract Submission</h1>
+  </div>
+</section>
 
-    <div class="form-container">
-        <iframe width="1200px" height="1024px" src="https://forms.cloud.microsoft/e/bJeWt2jUdj?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
-    </div>
-  </section>
-</main> -->
-
-        <iframe width="100%" height="1024px" src="https://forms.cloud.microsoft/e/bJeWt2jUdj?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+<!-- ================= FORM SECTION ================= -->
+<section class="form-section">
+  <div class="form-container">
+    <iframe width="100%" height="1024px" src="https://forms.cloud.microsoft/e/bJeWt2jUdj?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+  </div>
+</section>
 
 <!-- ================= FOOTER / CONTACT ================= -->
 <section class="contact-section">
@@ -224,6 +224,88 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
+
+<!-- ================= ADDED CSS FOR HERO BANNER ================= -->
+<style>
+  /* Hero Banner Styles */
+  .hero-banner {
+    position: relative;
+    height: 300px;
+    background: url("https://ik.imagekit.io/edtechdigit/usdsi/content/images/articles/explore-the-vital-role-of-data-visualisation-in-data-science.jpeg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+    overflow: hidden;
+  }
+
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 50, 100, 0.7), rgba(0, 30, 70, 0.8));
+  }
+
+  .banner-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    max-width: 800px;
+  }
+
+  .banner-content h1 {
+    color: white;
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+  }
+
+  /* Update form-section to remove extra padding */
+  .form-section {
+    padding: 0 20px 60px;
+  }
+
+  /* Responsive adjustments for hero banner */
+  @media (max-width: 900px) {
+    .hero-banner {
+      height: 250px;
+    }
+    
+    .banner-content h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-banner {
+      height: 200px;
+    }
+    
+    .banner-content h1 {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-banner {
+      height: 180px;
+      margin-bottom: 30px;
+    }
+    
+    .banner-content h1 {
+      font-size: 1.8rem;
+    }
+    
+    .form-section {
+      padding: 0 15px 40px;
+    }
+  }
+</style>
 
 </body>
 </html>
