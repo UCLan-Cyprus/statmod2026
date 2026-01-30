@@ -1,36 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coming Soon</title>
-    <style>
-        body {
-            background-color: #0d1117;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-            flex-direction: column;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon | ΣtatMod2026</title>
+  <meta name="robots" content="max-image-preview:large">
 
-        h1 {
-            font-size: 3em;
-            margin-bottom: 0.3em;
-        }
+  <!-- MAIN SITE CSS -->
+  <link rel="stylesheet" href="style.css">
 
-        p {
-            font-size: 1.2em;
-            color: #c9d1d9;
-        }
-    </style>
+  <!-- PAGE-SPECIFIC CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .coming-soon-section {
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .coming-soon-header {
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url("https://ik.imagekit.io/edtechdigit/usdsi/content/images/articles/explore-the-vital-role-of-data-visualisation-in-data-science.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #ffffff;
+      text-align: center;
+      padding: 100px 20px;
+      border-radius: 12px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+
+    .coming-soon-header h1 {
+      margin: 0;
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .coming-soon-header p {
+      font-size: 1.4rem;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .coming-soon-header .subtitle {
+      font-size: 1.2rem;
+      margin-top: 30px;
+      opacity: 0.9;
+      font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+      .coming-soon-header {
+        padding: 60px 20px;
+      }
+      
+      .coming-soon-header h1 {
+        font-size: 2.2rem;
+      }
+      
+      .coming-soon-header p {
+        font-size: 1.1rem;
+      }
+      
+      .coming-soon-header .subtitle {
+        font-size: 1rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .coming-soon-header h1 {
+        font-size: 1.8rem;
+      }
+      
+      .coming-soon-header p {
+        font-size: 1rem;
+      }
+      
+      main {
+        padding: 20px 15px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Coming Soon</h1>
-    <p>Our website is under construction. Stay tuned!</p>
+
+<!-- ================= HEADER - SAME AS INDEX.HTML ================= -->
+<header>
+  <!-- LOGO - LEFT SIDE -->
+  <div class="logo-container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="logosheader.png" alt="UCLan Cyprus and ΣtatMod2026 Logo" class="combined-logo">
+      </a>
+    </div>
+  </div>
+
+  <!-- HAMBURGER - RIGHT SIDE (Hidden on desktop) -->
+  <div class="hamburger-container">
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- NAV MENU -->
+    <nav>
+    <ul class="menu">
+      <li class="dropdown">
+        <a href="#">Committees</a>
+        <ul class="dropdown-content">
+          <li><a href="steeringc.html">Steering Committee</a></li>
+          <li><a href="scientific.html">Scientific Committee</a></li>
+          <li><a href="committees.html">Organizing Committee</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">About the Conference</a>
+        <ul class="dropdown-content">
+          <li><a href="honours.html">Plenary Speakers</a></li>
+          <li><a href="honours.html">Invited Speakers</a></li>
+          <li><a href="honours.html">Contributed Speakers</a></li>
+          <li><a href="topics.html">Topics</a></li>
+          <li><a href="honours.html">Scientific Program</a></li>
+          <li><a href="honours.html">Social Events</a></li>
+          <li><a href="pastconf.html">Past Conferences</a></li>
+          <li><a href="partners.html">Partners</a></li>
+        </ul>
+      </li>
+      <li><a href="bookofabs.html">Book of Abstracts</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+      <li><a href="registration-form.html">Registration/Abstract Submission</a></li>
+      <li><a href="honours.html">UCLAN Gallery</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main>
+
+  <section class="coming-soon-section">
+    <div class="coming-soon-header">
+      <h1>Coming Soon</h1>
+      <p>The ΣtatMod2026 website is currently under construction. We're working hard to bring you an amazing experience!</p>
+      <p class="subtitle">Please check back soon for updates and complete information.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER / CONTACT ================= -->
+<section class="contact-section">
+  <div class="contact-wrapper">
+
+    <div class="contact-details">
+      <h2>Contact details</h2>
+      <p>University Of Central Lancashire</p>
+
+      <h3>📍 Location</h3>
+      <p>
+        University Ave 12-14, Pyla 7080<br>
+        <a href="https://www.google.com/maps/place/University+of+Central+Lancashire,+Cyprus+(UCLan+Cyprus)/" target="_blank">
+          View on Google Maps
+        </a>
+      </p>
+
+      <h3>📞 Info</h3>
+      <p>
+        Email: <a href="mailto:mhadjikyriakou@uclan.ac.uk">mhadjikyriakou@uclan.ac.uk</a><br>
+        Phone: +357 24 694000
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= SAME JAVASCRIPT AS INDEX.HTML ================= -->
+<script>
+// SIMPLE HAMBURGER TOGGLE
+document.addEventListener("DOMContentLoaded", function() {
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.querySelector(".menu");
+  const body = document.body;
+
+  hamburger.addEventListener("click", function(e) {
+    e.stopPropagation();
+    menu.classList.toggle("active");
+    hamburger.classList.toggle("active");
+    body.classList.toggle("menu-open");
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", function(e) {
+    if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+      menu.classList.remove("active");
+      hamburger.classList.remove("active");
+      body.classList.remove("menu-open");
+    }
+  });
+
+  // Mobile dropdowns
+  document.querySelectorAll(".dropdown > a").forEach(link => {
+    link.addEventListener("click", function(e) {
+      if (window.innerWidth <= 1250) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // Close other dropdowns
+        document.querySelectorAll(".dropdown").forEach(item => {
+          if (item !== this.parentElement) {
+            item.classList.remove("open");
+          }
+        });
+        
+        // Toggle current dropdown
+        this.parentElement.classList.toggle("open");
+      }
+    });
+  });
+});
+</script>
+
 </body>
 </html>
