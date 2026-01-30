@@ -56,21 +56,16 @@
       list-style: none;
       padding: 0;
       margin: 0;
-      display: grid;
-     
-      row-gap: 16px;
     }
 
     .committee-list li {
       line-height: 1.4;
       color: #333;
+      margin-bottom: 16px;
     }
 
-    @media (min-width: 900px) {
-      .committee-list {
-        grid-template-columns: 1fr 1fr;
-        column-gap: 40px;
-      }
+    .committee-list li:last-child {
+      margin-bottom: 0;
     }
     
     @media (max-width: 768px) {
