@@ -61,6 +61,24 @@
       font-size: 1.05rem;
     }
 
+    /* NEW: Registration fee message - centered outside the box */
+    .registration-message {
+      text-align: center;
+      max-width: 1200px;
+      margin: 30px auto 20px;
+      padding: 15px 20px;
+      background: transparent;
+    }
+    
+    .registration-message h4 {
+      color: #2c80c9;
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin: 0;
+      line-height: 1.5;
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+    }
+
     .iframe-wrapper {
       width: 100%;
       height: 1024px;
@@ -118,6 +136,15 @@
       .iframe-wrapper {
         height: 800px;
       }
+      
+      .registration-message {
+        margin: 20px 15px;
+        padding: 10px 15px;
+      }
+      
+      .registration-message h4 {
+        font-size: 1.2rem;
+      }
     }
 
     @media (max-width: 480px) {
@@ -127,6 +154,10 @@
       
       .form-instructions {
         padding: 15px;
+      }
+      
+      .registration-message h4 {
+        font-size: 1.1rem;
       }
     }
     .heading2 {
@@ -197,11 +228,12 @@
       <h1>Registration & Abstract Submission</h1>
     </div>
 
+    <!-- MOVED TEXT OUTSIDE THE BOX - CENTERED -->
+    <div class="registration-message">
+      <h4>There is no registration fee for the conference. However, all participants are required to register in advance.</h4>
+    </div>
+
     <div class="form-container">
-
-
-   
-    <h4 >There is no registration fee for the conference. However, all participants are required to register in advance.</h4>
       <div class="iframe-wrapper">
         <iframe 
           src="https://forms.cloud.microsoft/e/bJeWt2jUdj?embed=true" 
@@ -214,8 +246,7 @@
           msallowfullscreen>
         </iframe>
       </div>
-
-    
+    </div>
   </section>
 </main>
 
