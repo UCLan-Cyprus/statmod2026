@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="robots" content="max-image-preview:large">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travelling and accommodation | ΣtatMod2026</title>
+    <title>Venue Location | ΣtatMod2026</title>
     <link rel="stylesheet" href="style.css">
     <style>
         /* Page-specific styles */
@@ -81,7 +81,8 @@
 
         .accommodation-intro p {
             text-align: justify;
-            margin-bottom: 20px;
+            margin-bottom: 12px;  /* Reduced from 20px to decrease line spacing significantly */
+            line-height: 1.3;     /* Tighter line height for introduction */
         }
 
         .hotels-list {
@@ -98,7 +99,7 @@
 
         .hotel-item h3 {
             font-size: 1.4rem;
-            color: #2c3e66;
+            color: #1986bd;  /* Updated accent color */
             margin-bottom: 10px;
         }
 
@@ -108,7 +109,7 @@
         }
 
         .hotel-item a {
-            color: #0066cc;
+            color: #1986bd;  /* Updated accent color */
             text-decoration: none;
         }
 
@@ -121,13 +122,13 @@
             font-weight: 600;
             color: #444;
             margin: 30px 0 15px 0;
-            border-left: 4px solid #2c3e66;
+            border-left: 4px solid #1986bd;  /* Updated accent color */
             padding-left: 15px;
         }
 
         .note-box {
             background-color: #f9f9f9;
-            border-left: 4px solid #ff9800;
+            border-left: 4px solid #1986bd;  /* Updated accent color */
             padding: 15px 20px;
             margin: 30px 0;
             text-align: left;
@@ -137,11 +138,20 @@
         .note-box p {
             margin: 5px 0;
             text-align: left;
+            line-height: 1.4;
         }
 
         .strong-text {
             font-weight: 600;
             color: #333;
+        }
+
+        /* Update notice styling */
+        .update-notice {
+            margin-top: 20px;
+            font-style: italic;
+            color: #1986bd;  /* Updated accent color */
+            font-weight: 500;
         }
     </style>
 </head>
@@ -203,11 +213,12 @@
 <main>
 
     <section class="details">
-        <h1>Travelling and accommodation</h1>
+        <h1>Accommodation Information</h1>
 
         <div class="accommodation-intro">
             <p>Participants are welcome to arrange their own accommodation. For your convenience, we provide below a selection of hotels located near the conference venue:</p>
             <p>These hotels offer a range of room types and pricing options, including bed & breakfast arrangements.</p>
+            <p class="update-notice">The list of hotels will be updated regularly.</p>
         </div>
 
         <div class="note-box">
@@ -337,21 +348,25 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// EMAIL SCRIPT
-document.getElementById("send-btn").addEventListener("click", function () {
-    const name = document.getElementById("name").value;
-    const surname = document.getElementById("surname").value;
-    const subject = document.getElementById("subject").value;
-    const message = document.getElementById("message").value;
+// EMAIL SCRIPT - Note: send-btn element exists in original page structure but we keep script as is
+// Adding null check to prevent errors if element not present
+document.addEventListener("DOMContentLoaded", function() {
+    const sendBtn = document.getElementById("send-btn");
+    if (sendBtn) {
+        sendBtn.addEventListener("click", function () {
+            const name = document.getElementById("name")?.value || "";
+            const surname = document.getElementById("surname")?.value || "";
+            const subject = document.getElementById("subject")?.value || "";
+            const message = document.getElementById("message")?.value || "";
 
-    const body =
-        "Name: " + name + " " + surname + "%0D%0A%0D%0A" +
-        "Message:%0D%0A" + message;
+            const body = "Name: " + name + " " + surname + "%0D%0A%0D%0A" +
+                "Message:%0D%0A" + message;
 
-    window.location.href =
-        "mailto:mhadjikyriakou@uclan.ac.uk" +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + body;
+            window.location.href = "mailto:mhadjikyriakou@uclan.ac.uk" +
+                "?subject=" + encodeURIComponent(subject) +
+                "&body=" + body;
+        });
+    }
 });
 </script>
 
