@@ -19,23 +19,36 @@
             font-size: 2.5rem;
             margin-bottom: 30px;
             color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
-        /* Consistent paragraph styling - same font and alignment throughout */
+        /* Consistent paragraph styling - same font throughout */
+        body, html, main, section, div, p, span, li, a, strong, h1, h2, h3, h4, .menu, .dropdown-content {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
         main .details p,
         .accommodation-info p,
-        .intro-text,
-        .info-highlight p,
-        .hotel-item .rate,
+        .support-text p,
         .contact-details p,
-        .info-highlight li {
-            font-family: inherit;
-            font-size: 1.1rem;
+        .contact-details h2,
+        .contact-details h3,
+        .info-highlight p,
+        .info-highlight li,
+        .hotel-item .rate,
+        .hotel-item strong {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        main .details p {
+            max-width: 900px;
+            margin: 0 auto 20px;
+            text-align: left;
             line-height: 1.6;
+            font-size: 1.1rem;
             color: #555;
         }
         
-        /* Ensure text alignment is consistent */
         .accommodation-info {
             text-align: left;
             max-width: 900px;
@@ -45,6 +58,9 @@
         .accommodation-info p {
             text-align: left;
             margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
         }
         
         .gallery {
@@ -105,6 +121,9 @@
         
         .info-highlight li {
             margin: 8px 0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
         }
         
         .hotel-list {
@@ -140,25 +159,96 @@
             color: #555;
         }
         
-        .update-note {
-            margin-top: 25px;
-            font-style: italic;
-            color: #1a86ad;
-            font-weight: 500;
+        /* Support text styling */
+        .support-section {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding: 0 20px;
         }
         
-        .sub-heading {
+        .support-text {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid #1a86ad;
+        }
+        
+        .support-text p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            text-align: justify;
+        }
+        
+        /* Contact section - exactly as provided */
+        .contact-section {
+            background: #f5f5f5;
+            padding: 50px 20px;
+            margin-top: 40px;
+        }
+        
+        .contact-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+        }
+        
+        .contact-details {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .contact-details h2 {
+            color: #2c3e66;
+            margin-bottom: 20px;
             font-size: 1.8rem;
-            margin: 40px 0 20px 0;
-            text-align: left;
-            color: #333;
-            font-weight: 600;
+        }
+        
+        .contact-details h3 {
+            margin-top: 20px;
+            color: #1a86ad;
+            font-size: 1.2rem;
+        }
+        
+        .contact-details p {
+            margin: 8px 0;
+            line-height: 1.5;
+            font-size: 1rem;
+            color: #555;
+        }
+        
+        .contact-details a {
+            color: #1a86ad;
+            text-decoration: none;
+        }
+        
+        .contact-details a:hover {
+            text-decoration: underline;
         }
         
         @media (max-width: 768px) {
-            .sub-heading {
-                font-size: 1.5rem;
+            .contact-wrapper {
+                flex-direction: column;
             }
+        }
+        
+        /* Header navigation styling */
+        nav ul.menu li a {
+            color: #2c3e66;
+            transition: color 0.3s;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        nav ul.menu li a:hover {
+            color: #1a86ad;
+        }
+        
+        .dropdown-content li a:hover {
+            color: #1a86ad;
         }
     </style>
 </head>
@@ -237,7 +327,6 @@
                 <p style="margin-top: 15px; font-style: italic;">The conference organisers do not have special agreements with the above hotels, unless otherwise stated.</p>
             </div>
             
-            <!-- Added the requested sentence -->
             <p><strong>The list of hotels will be updated regularly.</strong></p>
 
             <!-- Hotels list -->
@@ -290,10 +379,18 @@
         </div>
     </section>
 
+    <!-- Support Text Section - Added before footer -->
+    <div class="support-section">
+        <div class="support-text">
+            <p>The conference is organised with the support of the University of Central Lancashire (UCLan) Cyprus and is backed by a strong network of international scientific societies and research institutions. These include the Cyprus Statistical Society, the Greek Statistical Institute, the Laboratory of Mathematics Raphaël Salem (France) and the University of Rouen Normandy (France), the French National Centre for Scientific Research (CNRS) and the Fédération Normandie-Mathématiques, as well as leading Romanian institutions such as the Romanian Society of Probability and Statistics, the Romanian Society of Applied and Industrial Mathematics, the "Costin C. Kirițescu" National Institute of Economic Research of the Romanian Academy, and the "Gheorghe Mihoc – Caius Iacob" Institute of Mathematical Statistics and Applied Mathematics of the Romanian Academy.</p>
+        </div>
+    </div>
+
+    <!-- EXACT FOOTER AS PROVIDED - UNCHANGED -->
     <section class="contact-section">
         <div class="contact-wrapper">
             <div class="contact-details">
-                <h2>Contact Details</h2>
+                <h2>Contact details</h2>
                 <p>University Of Central Lancashire</p>
 
                 <h3>📍 Location</h3>
@@ -306,10 +403,7 @@
 
                 <h3>📞 Info</h3>
                 <p>
-                    Email:
-                    <a href="mailto:mhadjikyriakou@uclan.ac.uk">
-                        mhadjikyriakou@uclan.ac.uk
-                    </a><br>
+                    Email: <a href="/cdn-cgi/l/email-protection#89e4e1e8ede2e4e6f4efe4ece6e2f8c9fceae5e8e7a7e8eaa7fde3"><span class="__cf_email__" data-cfemail="80ede8e1e4ebecededffe4efe7ede9f3c0f5e3ece1eeaee1e3aef4ea">[email&#160;protected]</span></a><br>
                     Phone: +357 24 694000
                 </p>
             </div>
@@ -319,6 +413,7 @@
 </main>
 
 <!-- ================= SAME JAVASCRIPT AS INDEX.HTML ================= -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script>
 // SIMPLE HAMBURGER TOGGLE
 document.addEventListener("DOMContentLoaded", function() {
@@ -364,88 +459,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
-
-// EMAIL SCRIPT (safe check)
-if(document.getElementById("send-btn")) {
-    document.getElementById("send-btn").addEventListener("click", function () {
-        const name = document.getElementById("name")?.value || '';
-        const surname = document.getElementById("surname")?.value || '';
-        const subject = document.getElementById("subject")?.value || '';
-        const message = document.getElementById("message")?.value || '';
-
-        const body = "Name: " + name + " " + surname + "%0D%0A%0D%0A" +
-            "Message:%0D%0A" + message;
-
-        window.location.href = "mailto:mhadjikyriakou@uclan.ac.uk" +
-            "?subject=" + encodeURIComponent(subject) +
-            "&body=" + body;
-    });
-}
 </script>
-
-<style>
-    /* Preserve contact section styling with #1a86ad accents */
-    .contact-section {
-        background: #f5f5f5;
-        padding: 50px 20px;
-        margin-top: 20px;
-    }
-    .contact-wrapper {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 40px;
-        justify-content: space-between;
-    }
-    .contact-details {
-        flex: 1;
-        min-width: 250px;
-    }
-    .contact-details h2 {
-        color: #2c3e66;
-        margin-bottom: 20px;
-        font-size: 1.8rem;
-    }
-    .contact-details h3 {
-        margin-top: 20px;
-        color: #1a86ad;
-        font-size: 1.2rem;
-    }
-    .contact-details p {
-        margin: 8px 0;
-        line-height: 1.5;
-    }
-    .contact-details a {
-        color: #1a86ad;
-        text-decoration: none;
-    }
-    .contact-details a:hover {
-        text-decoration: underline;
-    }
-    @media (max-width: 768px) {
-        .contact-wrapper {
-            flex-direction: column;
-        }
-    }
-    
-    /* Ensure header navigation links also use consistent styling */
-    nav ul.menu li a {
-        color: #2c3e66;
-        transition: color 0.3s;
-    }
-    nav ul.menu li a:hover {
-        color: #1a86ad;
-    }
-    .dropdown-content li a:hover {
-        color: #1a86ad;
-    }
-    
-    /* Consistent font for all text elements */
-    body, html, main, section, div, p, span, li, a, strong, h1, h2, h3, h4, .menu, .dropdown-content {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-</style>
 
 </body>
 </html>
