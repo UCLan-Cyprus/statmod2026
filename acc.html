@@ -1,610 +1,522 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="robots" content="max-image-preview:large">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travelling and accommodation | ΣtatMod2026</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* ===== GLOBAL FONT CONSISTENCY - Helvetica Neue ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html, body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            font-size: 16px;
-            line-height: 1.5;
-            color: #1a1a2e;
-            background: #fff;
-            scroll-behavior: smooth;
-        }
-        
-        /* No italics anywhere - force normal font style */
-        em, i, .italic, .update-notice, .small-meta, .booking-method {
-            font-style: normal !important;
-        }
-        
-        /* No text indentation */
-        p, .details p, .travel-section p, .accommodation-intro p, .hotel-item p, .note-box p, 
-        .contact-details p, li, .airport-warning p, .contact-info p {
-            text-indent: 0 !important;
-            text-align: left;
-        }
-        
-        /* All text elements inherit consistent font - NO BLUE anywhere */
-        body, main, section, div, p, h1, h2, h3, h4, h5, li, ul, ol, table, th, td, span, a, 
-        .hotel-item, .travel-section, .note-box, .contact-details, .menu, .dropdown-content, 
-        .menu li a, header, nav, .contact-section, .details, .accommodation-intro,
-        .corporate-table th, .corporate-table td, .small-meta, .booking-method, .update-notice,
-        .airport-warning, .contact-info, .note-box {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            font-style: normal;
-        }
-        
-        /* All links - no blue, use dark gray/black */
-        a, a:visited, a:hover, a:active, .hotel-item a, .contact-details a, .travel-section a {
-            color: #2d2d3a !important;
-            text-decoration: underline;
-            text-decoration-color: #aaa;
-        }
-        
-        a:hover {
-            color: #000 !important;
-            text-decoration-color: #2d2d3a;
-        }
-        
-        /* No blue borders or accents - replace with dark gray */
-        .travel-section h2, .subheading {
-            border-left-color: #333 !important;
-        }
-        
-        /* Base paragraph text */
-        body, p, .travel-section p, .accommodation-intro p, .hotel-item p, .note-box p, 
-        .contact-details p, .corporate-table td, .corporate-table th, li, .small-meta, 
-        .booking-method, .update-notice, .airport-warning p, .contact-info p {
-            font-size: 1rem;
-            line-height: 1.5;
-            font-weight: 400;
-            color: #2d2d3a;
-        }
-        
-        /* Heading styles - no blue */
-        main .details h1 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            color: #1a1a2e;
-            font-weight: 600;
-            letter-spacing: -0.01em;
-        }
-        
-        .travel-section h2 {
-            font-size: 1.5rem;
-            color: #1a1a2e;
-            margin: 35px 0 16px 0;
-            border-left: 4px solid #333;
-            padding-left: 16px;
-            font-weight: 600;
-            letter-spacing: -0.3px;
-        }
-        
-        .travel-section h3 {
-            font-size: 1.2rem;
-            color: #1a1a2e;
-            margin: 24px 0 12px 0;
-            font-weight: 600;
-            letter-spacing: -0.2px;
-        }
-        
-        .hotel-item h3 {
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #1a1a2e;
-            letter-spacing: -0.2px;
-        }
-        
-        .subheading {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #1a1a2e;
-            margin: 30px 0 15px 0;
-            border-left: 4px solid #333;
-            padding-left: 16px;
-        }
-        
-        /* Lists */
-        ul, ol {
-            margin: 10px 0 10px 0;
-            padding-left: 20px;
-        }
-        
-        li {
-            margin-bottom: 4px;
-        }
-        
-        /* Table styling - no blue */
-        .corporate-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-            font-size: 1rem;
-        }
-        
-        .corporate-table th,
-        .corporate-table td {
-            border: 1px solid #ccc;
-            padding: 10px 12px;
-            text-align: left;
-            vertical-align: top;
-            font-size: 1rem;
-        }
-        
-        .corporate-table th {
-            background-color: #f0f0f0;
-            font-weight: 600;
-        }
-        
-        /* Contact info - no blue */
-        .contact-info {
-            background-color: #f5f5f5;
-            padding: 12px 15px;
-            border-radius: 5px;
-            margin: 15px 0;
-        }
-        
-        .contact-info p {
-            margin: 5px 0;
-            text-align: left;
-        }
-        
-        /* Warning box - no blue */
-        .airport-warning {
-            background-color: #fff3cd;
-            border-left: 4px solid #ccaa00;
-            padding: 12px 15px;
-            margin: 15px 0;
-            border-radius: 5px;
-        }
-        
-        .airport-warning p {
-            margin: 0;
-        }
-        
-        /* Note boxes - no blue */
-        .note-box {
-            background-color: #f5f5f5;
-            padding: 15px 18px;
-            margin: 15px 0;
-            text-align: left;
-            border-radius: 5px;
-        }
-        
-        .note-box p {
-            margin: 5px 0;
-            text-align: left;
-        }
-        
-        .strong-text {
-            font-weight: 600;
-            color: #1a1a2e;
-        }
-        
-        /* No italics, no blue */
-        .update-notice, .small-meta, .booking-method {
-            font-style: normal !important;
-            font-size: 0.85rem;
-            color: #5b5b6e;
-            margin-top: 5px;
-        }
-        
-        /* Layout containers */
-        main .details {
-            padding: 50px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .travel-section {
-            max-width: 900px;
-            margin: 0 auto 40px auto;
-        }
-        
-        .accommodation-intro {
-            max-width: 900px;
-            margin: 30px auto 15px auto;
-        }
-        
-        .accommodation-intro p {
-            margin-bottom: 8px;
-        }
-        
-        .hotels-list {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .hotel-item {
-            margin-bottom: 20px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .hotel-item p {
-            margin: 5px 0;
-        }
-        
-        hr {
-            margin: 30px auto;
-            max-width: 900px;
-            border: 0;
-            border-top: 1px solid #ddd;
-        }
-        
-        .contact-section {
-            background-color: #f8f9fa;
-            padding: 40px 20px;
-            margin-top: 40px;
-        }
-        
-        .contact-wrapper {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .contact-details h2 {
-            font-size: 1.5rem;
-            color: #1a1a2e;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-        
-        .contact-details h3 {
-            font-size: 1.1rem;
-            color: #1a1a2e;
-            margin: 15px 0 5px 0;
-            font-weight: 600;
-        }
-        
-        .contact-details p, .contact-details a {
-            font-size: 1rem;
-            color: #2d2d3a;
-            text-decoration: none;
-        }
-        
-        .contact-details a:hover {
-            text-decoration: underline;
-            color: #000;
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            main .details h1 {
-                font-size: 1.8rem;
-            }
-            
-            .travel-section h2 {
-                font-size: 1.3rem;
-            }
-            
-            .travel-section h3 {
-                font-size: 1.1rem;
-            }
-            
-            .corporate-table th,
-            .corporate-table td {
-                padding: 8px 10px;
-                font-size: 0.9rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travelling and accommodation | ΣtatMod2026</title>
+  <meta name="robots" content="max-image-preview:large">
+
+  <!-- MAIN SITE CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- PAGE-SPECIFIC CSS - Simple, clean, no italics, no indentation -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+    }
+
+    .travel-section {
+      padding-bottom: 60px;
+    }
+
+    .travel-header {
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("https://ik.imagekit.io/edtechdigit/usdsi/content/images/articles/explore-the-vital-role-of-data-visualisation-in-data-science.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #ffffff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .travel-header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .travel-card {
+      max-width: 1000px;
+      margin: -40px auto 0;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .travel-card h2 {
+      color: #0a6c6d;
+      margin: 25px 0 15px 0;
+      font-size: 1.5rem;
+      border-left: 4px solid #0a6c6d;
+      padding-left: 15px;
+    }
+
+    .travel-card h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .travel-card h3 {
+      color: #0a6c6d;
+      margin: 20px 0 10px 0;
+      font-size: 1.2rem;
+    }
+
+    .travel-card p {
+      line-height: 1.5;
+      color: #333;
+      margin-bottom: 12px;
+      text-indent: 0;
+    }
+
+    .travel-card ul {
+      margin: 10px 0 15px 25px;
+      padding: 0;
+    }
+
+    .travel-card li {
+      line-height: 1.5;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .travel-card a {
+      color: #0a6c6d;
+      text-decoration: none;
+    }
+
+    .travel-card a:hover {
+      text-decoration: underline;
+    }
+
+    .warning-box {
+      background-color: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+
+    .warning-box p {
+      margin: 0;
+      color: #856404;
+    }
+
+    .info-box {
+      background-color: #f5f5f5;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+
+    .info-box p {
+      margin: 5px 0;
+    }
+
+    .corporate-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+
+    .corporate-table th,
+    .corporate-table td {
+      border: 1px solid #ddd;
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .corporate-table th {
+      background-color: #f5f5f5;
+      font-weight: 600;
+    }
+
+    .hotel-item {
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .hotel-item h3 {
+      color: #0a6c6d;
+      margin: 0 0 8px 0;
+      font-size: 1.2rem;
+    }
+
+    .hotel-item p {
+      margin: 5px 0;
+    }
+
+    .note-box {
+      background-color: #f5f5f5;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+
+    .note-box p {
+      margin: 5px 0;
+    }
+
+    .small-meta {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 5px;
+    }
+
+    .update-notice {
+      font-size: 0.9rem;
+      color: #0a6c6d;
+      margin-top: 5px;
+    }
+
+    hr {
+      margin: 25px 0;
+      border: 0;
+      border-top: 1px solid #ddd;
+    }
+
+    @media (max-width: 768px) {
+      .travel-header h1 {
+        font-size: 2rem;
+      }
+      
+      .travel-header {
+        padding: 60px 20px;
+      }
+      
+      .travel-card {
+        padding: 20px;
+        margin: -30px auto 0;
+      }
+
+      .travel-card h2 {
+        font-size: 1.3rem;
+      }
+
+      .corporate-table th,
+      .corporate-table td {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <!-- ================= HEADER - SAME AS INDEX.HTML ================= -->
 <header>
-    <div class="logo-container">
-        <div class="logo">
-            <a href="index.html">
-                <img src="logosheader.png" alt="UCLan Cyprus and ΣtatMod2026 Logo" class="combined-logo">
-            </a>
-        </div>
+  <div class="logo-container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="logosheader.png" alt="UCLan Cyprus and ΣtatMod2026 Logo" class="combined-logo">
+      </a>
     </div>
+  </div>
 
-    <div class="hamburger-container">
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+  <div class="hamburger-container">
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+  </div>
 
-    <nav>
-        <ul class="menu">
-            <li class="dropdown">
-                <a href="#">Committees</a>
-                <ul class="dropdown-content">
-                    <li><a href="steeringc.html">Steering Committee</a></li>
-                    <li><a href="scientific.html">Scientific Committee</a></li>
-                    <li><a href="committees.html">Organizing Committee</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#">About the Conference</a>
-                <ul class="dropdown-content">
-                    <li><a href="honours.html">Plenary Speakers</a></li>
-                    <li><a href="honours.html">Invited Speakers</a></li>
-                    <li><a href="honours.html">Contributed Speakers</a></li>
-                    <li><a href="topics.html">Topics</a></li>
-                    <li><a href="honours.html">Scientific Program</a></li>
-                    <li><a href="honours.html">Social Events</a></li>
-                    <li><a href="pastconf.html">Past Conferences</a></li>
-                    <li><a href="partners.html">Partners</a></li>
-                </ul>
-            </li>
-            <li><a href="bookofabs.html">Book of Abstracts</a></li>
-            <li><a href="sponsors.html">Sponsors</a></li>
-            <li><a href="registration.html">Registration/Abstract Submission</a></li>
-            <li><a href="honours.html">UCLAN Gallery</a></li>
+  <nav>
+    <ul class="menu">
+      <li class="dropdown">
+        <a href="#">Committees</a>
+        <ul class="dropdown-content">
+          <li><a href="steeringc.html">Steering Committee</a></li>
+          <li><a href="scientific.html">Scientific Committee</a></li>
+          <li><a href="committees.html">Organizing Committee</a></li>
         </ul>
-    </nav>
+      </li>
+      <li class="dropdown">
+        <a href="#">About the Conference</a>
+        <ul class="dropdown-content">
+          <li><a href="honours.html">Plenary Speakers</a></li>
+          <li><a href="honours.html">Invited Speakers</a></li>
+          <li><a href="honours.html">Contributed Speakers</a></li>
+          <li><a href="topics.html">Topics</a></li>
+          <li><a href="honours.html">Scientific Program</a></li>
+          <li><a href="honours.html">Social Events</a></li>
+          <li><a href="pastconf.html">Past Conferences</a></li>
+          <li><a href="partners.html">Partners</a></li>
+        </ul>
+      </li>
+      <li><a href="bookofabs.html">Book of Abstracts</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+      <li><a href="registration.html">Registration/Abstract Submission</a></li>
+      <li><a href="honours.html">UCLAN Gallery</a></li>
+    </ul>
+  </nav>
 </header>
 
+<!-- ================= MAIN ================= -->
 <main>
-    <section class="details">
-        <h1>Travelling and accommodation</h1>
 
-        <!-- ===== TRAVEL INFORMATION SECTION ===== -->
-        <div class="travel-section">
-            <!-- Airports -->
-            <h2>Airports</h2>
-            <p>There are two international airports in Cyprus: the Larnaca International Airport (LCA) (about 15-20 minutes from UCLan Cyprus and the Larnaka hotel area) and the Paphos International Airport (PFO) (about 1 hour 30 minutes from Larnaka). The Larnaca International Airport is the recommended and most convenient airport to travel to.</p>
-            
-            <div class="airport-warning">
-                <p><strong>Important notice:</strong> There is another airport in Nicosia (Ercan - ECN). However, the ECN airport is situated in the northern occupied part of the country, for which reason you should not use it, as this region is not recognised by the Republic of Cyprus and the EU, and you risk your travelling expenses not to be reimbursed by the European Commission.</p>
-            </div>
+  <section class="travel-section">
 
-            <!-- Transportation -->
-            <h2>Transportation</h2>
-            <h3>By private transfer (taxi)</h3>
-            <p>UCLan Cyprus has secured corporate rates with the local Karatzias Taxi Company for your transfers.</p>
-            
-            <table class="corporate-table">
-                <thead>
-                    <tr>
-                        <th>Route</th>
-                        <th>Vehicle Type</th>
-                        <th>Corporate Rate (One Way)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Larnaca Airport (LCA) ↔ Larnaka Town/Bay Hotels</td>
-                        <td>1-4 Passenger Car</td>
-                        <td>EUR 30</td>
-                    </tr>
-                    <tr>
-                        <td>Larnaca Airport (LCA) ↔ Larnaka Town/Bay Hotels</td>
-                        <td>1-6 Passenger Minivan</td>
-                        <td>EUR 45</td>
-                    </tr>
-                    <tr>
-                        <td>Larnaca Airport (LCA) ↔ Larnaka Town/Bay Hotels</td>
-                        <td>1-10 Passenger Minibus</td>
-                        <td>EUR 65</td>
-                    </tr>
-                    <tr>
-                        <td>UCLan Cyprus Campus ↔ Larnaka Town/Bay Hotels</td>
-                        <td>55-seater Bus (for group transfer)</td>
-                        <td>EUR 110</td>
-                    </tr>
-                </tbody>
-            </table>
-            
-            <div class="contact-info">
-                <p><strong>To book your transfer:</strong> Please contact Karatzias Taxi Company directly, mentioning UCLan Cyprus to secure the corporate rate.</p>
-                <p>Email: <a href="mailto:info@karatzias.com">info@karatzias.com</a></p>
-                <p>Phone: <a href="tel:+35724644700">+357 24644700</a>, <a href="tel:+35799617492">+357 99617492</a></p>
-            </div>
+    <div class="travel-header">
+      <h1>Travelling and accommodation</h1>
+    </div>
 
-            <h3>Public transportation in Larnaca area</h3>
-            <p>You can use local public buses for your internal transfers around Larnaka. The official provider, Cyprus Public Transport, offers several ways to plan your journey and navigate the city.</p>
-            <ul>
-                <li><strong>Website:</strong> For routes, timetables, and general information, visit <a href="http://www.publictransport.com.cy/" target="_blank">www.publictransport.com.cy</a></li>
-                <li><strong>Mobile App:</strong> Download the Pame App for real-time information, route planning, and navigation via an interactive bus map. Available on Android (Google Play) and iOS (App Store).</li>
-                <li><strong>On the Website:</strong> You can also use the "Plan your trip" feature to find the best routes between your hotel and UCLan Cyprus campus.</li>
-            </ul>
-            <p>For those who prefer transfer by car, town taxis are widely available in Larnaka.</p>
+    <div class="travel-card">
+      
+      <!-- Airports -->
+      <h2>Airports</h2>
+      <p>There are two international airports in Cyprus: the Larnaca International Airport (LCA) (about 15-20 minutes from UCLan Cyprus and the Larnaka hotel area) and the Paphos International Airport (PFO) (about 1 hour 30 minutes from Larnaka). The Larnaca International Airport is the recommended and most convenient airport to travel to.</p>
+      
+      <div class="warning-box">
+        <p><strong>Important notice:</strong> There is another airport in Nicosia (Ercan - ECN). However, the ECN airport is situated in the northern occupied part of the country, for which reason you should not use it, as this region is not recognised by the Republic of Cyprus and the EU, and you risk your travelling expenses not to be reimbursed by the European Commission.</p>
+      </div>
 
-            <!-- Food & Drinks -->
-            <h2>Food & Drinks, other expenses</h2>
-            <p>Larnaka offers a wide variety of dining options, from traditional Cypriot taverns along the famous Mackenzie Beach strip to restaurants in the city center and Finikoudes promenade. A group lunch arrangement will be confirmed in the final agenda. For any special dietary requirements or allergies, please inform us through the registration form.</p>
+      <!-- Transportation -->
+      <h2>Transportation</h2>
+      <h3>By private transfer (taxi)</h3>
+      <p>UCLan Cyprus has secured corporate rates with the local Karatzias Taxi Company for your transfers.</p>
+      
+      <table class="corporate-table">
+        <thead>
+          <tr>
+            <th>Route</th>
+            <th>Vehicle Type</th>
+            <th>Corporate Rate (One Way)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Larnaca Airport (LCA) ↔ Larnaka Town/Bay Hotels</td>
+            <td>1-4 Passenger Car</td>
+            <td>EUR 30</td>
+          </tr>
+          <tr>
+            <td>Larnaca Airport (LCA) ↔ Larnaka Town/Bay Hotels</td>
+            <td>1-6 Passenger Minivan</td>
+            <td>EUR 45</td>
+          </tr>
+          <tr>
+            <td>Larnaca Airport (LCA) ↔ Larnaka Town/Bay Hotels</td>
+            <td>1-10 Passenger Minibus</td>
+            <td>EUR 65</td>
+          </tr>
+          <tr>
+            <td>UCLan Cyprus Campus ↔ Larnaka Town/Bay Hotels</td>
+            <td>55-seater Bus (for group transfer)</td>
+            <td>EUR 110</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div class="info-box">
+        <p><strong>To book your transfer:</strong> Please contact Karatzias Taxi Company directly, mentioning UCLan Cyprus to secure the corporate rate.</p>
+        <p>Email: <a href="mailto:info@karatzias.com">info@karatzias.com</a></p>
+        <p>Phone: <a href="tel:+35724644700">+357 24644700</a>, <a href="tel:+35799617492">+357 99617492</a></p>
+      </div>
 
-            <!-- Weather -->
-            <h2>Weather in Cyprus</h2>
-            <p>For the most accurate and up-to-date weather forecast for Larnaka, please refer to the official source: Cyprus Department of Meteorology (<a href="http://www.moa.gov.cy/dm" target="_blank">www.moa.gov.cy/dm</a>).</p>
+      <h3>Public transportation in Larnaca area</h3>
+      <p>You can use local public buses for your internal transfers around Larnaka. The official provider, Cyprus Public Transport, offers several ways to plan your journey and navigate the city.</p>
+      <ul>
+        <li><strong>Website:</strong> For routes, timetables, and general information, visit <a href="http://www.publictransport.com.cy/" target="_blank">www.publictransport.com.cy</a></li>
+        <li><strong>Mobile App:</strong> Download the Pame App for real-time information, route planning, and navigation via an interactive bus map. Available on Android (Google Play) and iOS (App Store).</li>
+        <li><strong>On the Website:</strong> You can also use the "Plan your trip" feature to find the best routes between your hotel and UCLan Cyprus campus.</li>
+      </ul>
+      <p>For those who prefer transfer by car, town taxis are widely available in Larnaka.</p>
 
-            <!-- Currency -->
-            <h2>Currency</h2>
-            <p>Euro (EUR)</p>
+      <!-- Food & Drinks -->
+      <h2>Food & Drinks, other expenses</h2>
+      <p>Larnaka offers a wide variety of dining options, from traditional Cypriot taverns along the famous Mackenzie Beach strip to restaurants in the city center and Finikoudes promenade. A group lunch arrangement will be confirmed in the final agenda. For any special dietary requirements or allergies, please inform us through the registration form.</p>
 
-            <!-- Things to do -->
-            <h2>Things to do & places to visit</h2>
-            <p>Larnaka is a vibrant coastal city with a rich history and beautiful seafront:</p>
-            <ul>
-                <li><strong>Finikoudes Promenade:</strong> A palm-tree lined seafront with cafes, restaurants, and a Blue Flag sandy beach.</li>
-                <li><strong>Mackenzie Beach:</strong> A trendy area near the airport, famous for its beach clubs, seafood taverns, and lively atmosphere.</li>
-                <li><strong>Larnaka Salt Lake:</strong> A natural habitat for flamingos (winter/spring) and home to the iconic Hala Sultan Tekke mosque.</li>
-                <li><strong>St. Lazarus Church:</strong> A magnificent 9th-century Byzantine church in the city center.</li>
-                <li><strong>Larnaka Marina:</strong> A modern marina with luxury yachts, shops, and dining options.</li>
-            </ul>
-            <p>You can get all info about Cyprus and places to visit by clicking on <a href="http://www.visitcyprus.com" target="_blank">www.visitcyprus.com</a>.</p>
-        </div>
+      <!-- Weather -->
+      <h2>Weather in Cyprus</h2>
+      <p>For the most accurate and up-to-date weather forecast for Larnaka, please refer to the official source: Cyprus Department of Meteorology (<a href="http://www.moa.gov.cy/dm" target="_blank">www.moa.gov.cy/dm</a>).</p>
 
-        <hr>
+      <!-- Currency -->
+      <h2>Currency</h2>
+      <p>Euro (EUR)</p>
 
-        <!-- ===== ACCOMMODATION SECTION ===== -->
-        <div class="accommodation-intro">
-            <p>Participants are welcome to arrange their own accommodation. For your convenience, we provide below a selection of hotels located near the conference venue.</p>
-            <p>These hotels offer a range of room types and pricing options, including bed & breakfast arrangements.</p>
-            <p class="update-notice">The list of hotels has been updated with the latest corporate rates (May 2026).</p>
-        </div>
-        
-        <div class="note-box">
-            <p><span class="strong-text">Indicative Rates:</span> The prices listed are indicative and based on recent quotations provided to the conference organisers. Please note that actual rates may vary depending on availability, booking dates, and booking platforms.</p>
-            <p><span class="strong-text">Participants are strongly encouraged to:</span></p>
-            <p>· Book early to secure better rates and availability</p>
-            <p>· Compare prices across different booking platforms (e.g. hotel websites, travel agencies, online booking platforms)</p>
-            <p><strong>Special conference rates:</strong> Several hotels have negotiated special rates for meeting participants. To benefit from these rates, please book directly using the methods and codes provided below, and mention UCLan Cyprus / Conference Name.</p>
-        </div>
+      <!-- Things to do -->
+      <h2>Things to do & places to visit</h2>
+      <p>Larnaka is a vibrant coastal city with a rich history and beautiful seafront:</p>
+      <ul>
+        <li><strong>Finikoudes Promenade:</strong> A palm-tree lined seafront with cafes, restaurants, and a Blue Flag sandy beach.</li>
+        <li><strong>Mackenzie Beach:</strong> A trendy area near the airport, famous for its beach clubs, seafood taverns, and lively atmosphere.</li>
+        <li><strong>Larnaka Salt Lake:</strong> A natural habitat for flamingos (winter/spring) and home to the iconic Hala Sultan Tekke mosque.</li>
+        <li><strong>St. Lazarus Church:</strong> A magnificent 9th-century Byzantine church in the city center.</li>
+        <li><strong>Larnaka Marina:</strong> A modern marina with luxury yachts, shops, and dining options.</li>
+      </ul>
+      <p>You can get all info about Cyprus and places to visit by clicking on <a href="http://www.visitcyprus.com" target="_blank">www.visitcyprus.com</a>.</p>
 
-        <div class="hotels-list">
-            <div class="hotel-item">
-                <h3>Lordos Beach Hotel & Spa</h3>
-                <p>Single: EUR 150 (breakfast included)</p>
-                <p>Twin/Double: EUR 160 (breakfast included)</p>
-                <p>Booking: By phone +357 24647444</p>
-                <p><a href="https://lordosbeach.com.cy/" target="_blank">lordosbeach.com.cy</a></p>
-                <p class="small-meta">Updated conference rate (May 2026) – mention UCLan Cyprus</p>
-            </div>
+      <hr>
 
-            <div class="hotel-item">
-                <h3>LeBay Beach Hotel</h3>
-                <p>Single/Double Inland View: EUR 140 (breakfast included)</p>
-                <p>Single/Double Sea View: EUR 160 (breakfast included)</p>
-                <p>Booking: Email <a href="mailto:vkailis@lebayhotel.com.cy">vkailis@lebayhotel.com.cy</a></p>
-                <p class="small-meta">Special conference rate – mention UCLan Cyprus</p>
-            </div>
+      <!-- Accommodation Section -->
+      <h2>Accommodation</h2>
+      <p>Participants are welcome to arrange their own accommodation. For your convenience, we provide below a selection of hotels located near the conference venue.</p>
+      <p>These hotels offer a range of room types and pricing options, including bed & breakfast arrangements.</p>
+      <p class="update-notice">The list of hotels has been updated with the latest corporate rates (May 2026).</p>
+      
+      <div class="note-box">
+        <p><strong>Indicative Rates:</strong> The prices listed are indicative and based on recent quotations provided to the conference organisers. Please note that actual rates may vary depending on availability, booking dates, and booking platforms.</p>
+        <p><strong>Participants are strongly encouraged to:</strong></p>
+        <p>· Book early to secure better rates and availability</p>
+        <p>· Compare prices across different booking platforms (e.g. hotel websites, travel agencies, online booking platforms)</p>
+        <p><strong>Special conference rates:</strong> Several hotels have negotiated special rates for meeting participants. To benefit from these rates, please book directly using the methods and codes provided below, and mention UCLan Cyprus / Conference Name.</p>
+      </div>
 
-            <div class="hotel-item">
-                <h3>Radisson Beach Resort</h3>
-                <p>15% discount on flexible rates at the time of booking (breakfast included)</p>
-                <p>Valid until 30 April 2026</p>
-                <p>Booking: By phone +357 24 721110</p>
-                <p>Email: <a href="mailto:lcaza-rsv@radisson.com">lcaza-rsv@radisson.com</a></p>
-                <p><a href="https://www.radissonhotels.com/" target="_blank">www.radissonhotels.com</a></p>
-                <p class="small-meta">Mention UCLan Cyprus to secure discount</p>
-            </div>
+      <div class="hotel-item">
+        <h3>Lordos Beach Hotel & Spa</h3>
+        <p>Single: EUR 150 (breakfast included)</p>
+        <p>Twin/Double: EUR 160 (breakfast included)</p>
+        <p>Booking: By phone +357 24647444</p>
+        <p><a href="https://lordosbeach.com.cy/" target="_blank">lordosbeach.com.cy</a></p>
+        <p class="small-meta">Updated conference rate (May 2026) – mention UCLan Cyprus</p>
+      </div>
 
-            <div class="hotel-item">
-                <h3>Sandy Beach Hotel</h3>
-                <p>Discounts of up to 20% automatically applied via website (breakfast included)</p>
-                <p>Superior side sea view, double occupancy: EUR 250 breakfast included</p>
-                <p>Superior side sea view, single occupancy: EUR 225 breakfast included</p>
-                <p>Website: <a href="https://www.sandybeachhotel.com.cy/" target="_blank">www.sandybeachhotel.com.cy</a></p>
-                <p class="small-meta">No special promo code necessary – automatic discount applied</p>
-            </div>
+      <div class="hotel-item">
+        <h3>LeBay Beach Hotel</h3>
+        <p>Single/Double Inland View: EUR 140 (breakfast included)</p>
+        <p>Single/Double Sea View: EUR 160 (breakfast included)</p>
+        <p>Booking: Email <a href="mailto:vkailis@lebayhotel.com.cy">vkailis@lebayhotel.com.cy</a></p>
+        <p class="small-meta">Special conference rate – mention UCLan Cyprus</p>
+      </div>
 
-            <div class="hotel-item">
-                <h3>Sveltos Hotel</h3>
-                <p>Single Superior Inland View: EUR 100 (breakfast included)</p>
-                <p>Double Superior Inland View: EUR 120 (breakfast included)</p>
-                <p>Valid until 13 March 2026</p>
-                <p>Booking: By phone +357 24824900</p>
-                <p class="small-meta">Special conference rate – mention UCLan Cyprus</p>
-            </div>
+      <div class="hotel-item">
+        <h3>Radisson Beach Resort</h3>
+        <p>15% discount on flexible rates at the time of booking (breakfast included)</p>
+        <p>Valid until 30 April 2026</p>
+        <p>Booking: By phone +357 24 721110</p>
+        <p>Email: <a href="mailto:lcaza-rsv@radisson.com">lcaza-rsv@radisson.com</a></p>
+        <p><a href="https://www.radissonhotels.com/" target="_blank">www.radissonhotels.com</a></p>
+        <p class="small-meta">Mention UCLan Cyprus to secure discount</p>
+      </div>
 
-            <div class="hotel-item">
-                <h3>Mercure Larnaca Beach Hotel</h3>
-                <p>10% discount on public flexible rates (breakfast included)</p>
-                <p>Booking: By phone +00357 24333444</p>
-                <p>Email: <a href="mailto:hc056@accor.com">hc056@accor.com</a></p>
-                <p class="small-meta">Mention UCLan Cyprus conference for discount</p>
-            </div>
+      <div class="hotel-item">
+        <h3>Sandy Beach Hotel</h3>
+        <p>Discounts of up to 20% automatically applied via website (breakfast included)</p>
+        <p>Superior side sea view, double occupancy: EUR 250 breakfast included</p>
+        <p>Superior side sea view, single occupancy: EUR 225 breakfast included</p>
+        <p>Website: <a href="https://www.sandybeachhotel.com.cy/" target="_blank">www.sandybeachhotel.com.cy</a></p>
+        <p class="small-meta">No special promo code necessary – automatic discount applied</p>
+      </div>
 
-            <div class="hotel-item">
-                <h3>Golden Bay Hotel</h3>
-                <p><a href="https://goldenbay.com.cy" target="_blank">goldenbay.com.cy</a></p>
-                <p>Daily rate: EUR 220.00, breakfast included</p>
-                <p class="small-meta">Standard rate – please book early</p>
-            </div>
+      <div class="hotel-item">
+        <h3>Sveltos Hotel</h3>
+        <p>Single Superior Inland View: EUR 100 (breakfast included)</p>
+        <p>Double Superior Inland View: EUR 120 (breakfast included)</p>
+        <p>Valid until 13 March 2026</p>
+        <p>Booking: By phone +357 24824900</p>
+        <p class="small-meta">Special conference rate – mention UCLan Cyprus</p>
+      </div>
 
-            <div class="hotel-item">
-                <h3>Sunhall Hotel</h3>
-                <p><a href="https://www.sunhallhotel.com.cy/" target="_blank">www.sunhallhotel.com.cy</a></p>
-                <p>Single Side Sea View: EUR 156.00 per room/per day (B/B)</p>
-                <p>Twin Side Sea View: EUR 179.00 per room/per day (B/B)</p>
-            </div>
+      <div class="hotel-item">
+        <h3>Mercure Larnaca Beach Hotel</h3>
+        <p>10% discount on public flexible rates (breakfast included)</p>
+        <p>Booking: By phone +00357 24333444</p>
+        <p>Email: <a href="mailto:hc056@accor.com">hc056@accor.com</a></p>
+        <p class="small-meta">Mention UCLan Cyprus conference for discount</p>
+      </div>
 
-            <div class="hotel-item">
-                <h3>Radisson Blu Hotel</h3>
-                <p><a href="https://www.radissonhotels.com/" target="_blank">www.radissonhotels.com</a></p>
-                <p>Single B/B – EUR 180</p>
-                <p>Twin/Double B/B – EUR 200</p>
-            </div>
-        </div>
-        
-        <div class="note-box" style="margin-top: 20px;">
-            <p><span class="strong-text">Important:</span> For hotels with special conference rates (Lordos Beach, LeBay, Radisson Beach Resort, Sandy Beach, Sveltos, Mercure), please mention UCLan Cyprus / StatMod2026 Conference when booking to secure the discounted rate. Rates are subject to availability and may change. We recommend booking well in advance, as May is a popular month in Cyprus.</p>
-        </div>
-    </section>
+      <div class="hotel-item">
+        <h3>Golden Bay Hotel</h3>
+        <p><a href="https://goldenbay.com.cy" target="_blank">goldenbay.com.cy</a></p>
+        <p>Daily rate: EUR 220.00, breakfast included</p>
+        <p class="small-meta">Standard rate – please book early</p>
+      </div>
 
-    <section class="contact-section">
-        <div class="contact-wrapper">
-            <div class="contact-details">
-                <h2>Contact Details</h2>
-                <p>University Of Central Lancashire</p>
+      <div class="hotel-item">
+        <h3>Sunhall Hotel</h3>
+        <p><a href="https://www.sunhallhotel.com.cy/" target="_blank">www.sunhallhotel.com.cy</a></p>
+        <p>Single Side Sea View: EUR 156.00 per room/per day (B/B)</p>
+        <p>Twin Side Sea View: EUR 179.00 per room/per day (B/B)</p>
+      </div>
 
-                <h3>Location</h3>
-                <p>
-                    University Ave 12-14, Pyla 7080<br>
-                    <a href="https://www.google.com/maps/place/University+of+Central+Lancashire,+Cyprus+(UCLan+Cyprus)/" target="_blank">
-                        View on Google Maps
-                    </a>
-                </p>
+      <div class="hotel-item">
+        <h3>Radisson Blu Hotel</h3>
+        <p><a href="https://www.radissonhotels.com/" target="_blank">www.radissonhotels.com</a></p>
+        <p>Single B/B – EUR 180</p>
+        <p>Twin/Double B/B – EUR 200</p>
+      </div>
 
-                <h3>Info</h3>
-                <p>
-                    Email: <a href="mailto:mhadjikyriakou@uclan.ac.uk">mhadjikyriakou@uclan.ac.uk</a><br>
-                    Phone: +357 24 694000
-                </p>
-            </div>
-        </div>
-    </section>
+      <div class="note-box">
+        <p><strong>Important:</strong> For hotels with special conference rates (Lordos Beach, LeBay, Radisson Beach Resort, Sandy Beach, Sveltos, Mercure), please mention UCLan Cyprus / StatMod2026 Conference when booking to secure the discounted rate. Rates are subject to availability and may change. We recommend booking well in advance, as May is a popular month in Cyprus.</p>
+      </div>
+
+    </div>
+  </section>
+
 </main>
 
-<!-- ================= JAVASCRIPT ================= -->
+<!-- ================= FOOTER / CONTACT - SAME STYLE ================= -->
+<section class="contact-section">
+  <div class="contact-wrapper">
+    <div class="contact-details">
+      <h2>Contact details</h2>
+      <p>University Of Central Lancashire</p>
+
+      <h3>Location</h3>
+      <p>
+        University Ave 12-14, Pyla 7080<br>
+        <a href="https://www.google.com/maps/place/University+of+Central+Lancashire,+Cyprus+(UCLan+Cyprus)/" target="_blank">
+          View on Google Maps
+        </a>
+      </p>
+
+      <h3>Info</h3>
+      <p>
+        Email: <a href="mailto:mhadjikyriakou@uclan.ac.uk">mhadjikyriakou@uclan.ac.uk</a><br>
+        Phone: +357 24 694000
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SAME JAVASCRIPT AS INDEX.HTML ================= -->
 <script>
+// SIMPLE HAMBURGER TOGGLE
 document.addEventListener("DOMContentLoaded", function() {
-    const hamburger = document.getElementById("hamburger");
-    const menu = document.querySelector(".menu");
-    const body = document.body;
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.querySelector(".menu");
+  const body = document.body;
 
-    if (hamburger && menu) {
-        hamburger.addEventListener("click", function(e) {
-            e.stopPropagation();
-            menu.classList.toggle("active");
-            hamburger.classList.toggle("active");
-            body.classList.toggle("menu-open");
-        });
-
-        document.addEventListener("click", function(e) {
-            if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
-                menu.classList.remove("active");
-                hamburger.classList.remove("active");
-                body.classList.remove("menu-open");
-            }
-        });
-    }
-
-    document.querySelectorAll(".dropdown > a").forEach(link => {
-        link.addEventListener("click", function(e) {
-            if (window.innerWidth <= 1250) {
-                e.preventDefault();
-                e.stopPropagation();
-                document.querySelectorAll(".dropdown").forEach(item => {
-                    if (item !== this.parentElement) {
-                        item.classList.remove("open");
-                    }
-                });
-                this.parentElement.classList.toggle("open");
-            }
-        });
+  if (hamburger && menu) {
+    hamburger.addEventListener("click", function(e) {
+      e.stopPropagation();
+      menu.classList.toggle("active");
+      hamburger.classList.toggle("active");
+      body.classList.toggle("menu-open");
     });
+
+    document.addEventListener("click", function(e) {
+      if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+        menu.classList.remove("active");
+        hamburger.classList.remove("active");
+        body.classList.remove("menu-open");
+      }
+    });
+  }
+
+  document.querySelectorAll(".dropdown > a").forEach(link => {
+    link.addEventListener("click", function(e) {
+      if (window.innerWidth <= 1250) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        document.querySelectorAll(".dropdown").forEach(item => {
+          if (item !== this.parentElement) {
+            item.classList.remove("open");
+          }
+        });
+        
+        this.parentElement.classList.toggle("open");
+      }
+    });
+  });
 });
 </script>
 
