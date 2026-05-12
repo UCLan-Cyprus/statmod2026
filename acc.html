@@ -5,12 +5,9 @@
     <meta name="robots" content="max-image-preview:large">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travelling and accommodation | ΣtatMod2026</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* ===== GLOBAL FONT CONSISTENCY - No italics, no indentation ===== */
+        /* ===== GLOBAL FONT CONSISTENCY - Helvetica Neue ===== */
         * {
             margin: 0;
             padding: 0;
@@ -18,7 +15,7 @@
         }
         
         html, body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             font-size: 16px;
             line-height: 1.5;
             color: #1a1a2e;
@@ -38,13 +35,31 @@
             text-align: left;
         }
         
-        /* All text elements inherit consistent font */
+        /* All text elements inherit consistent font - NO BLUE anywhere */
         body, main, section, div, p, h1, h2, h3, h4, h5, li, ul, ol, table, th, td, span, a, 
         .hotel-item, .travel-section, .note-box, .contact-details, .menu, .dropdown-content, 
         .menu li a, header, nav, .contact-section, .details, .accommodation-intro,
-        .corporate-table th, .corporate-table td, .small-meta, .booking-method, .update-notice {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        .corporate-table th, .corporate-table td, .small-meta, .booking-method, .update-notice,
+        .airport-warning, .contact-info, .note-box {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             font-style: normal;
+        }
+        
+        /* All links - no blue, use dark gray/black */
+        a, a:visited, a:hover, a:active, .hotel-item a, .contact-details a, .travel-section a {
+            color: #2d2d3a !important;
+            text-decoration: underline;
+            text-decoration-color: #aaa;
+        }
+        
+        a:hover {
+            color: #000 !important;
+            text-decoration-color: #2d2d3a;
+        }
+        
+        /* No blue borders or accents - replace with dark gray */
+        .travel-section h2, .subheading {
+            border-left-color: #333 !important;
         }
         
         /* Base paragraph text */
@@ -57,7 +72,7 @@
             color: #2d2d3a;
         }
         
-        /* Heading styles */
+        /* Heading styles - no blue */
         main .details h1 {
             font-size: 2.2rem;
             margin-bottom: 20px;
@@ -70,7 +85,7 @@
             font-size: 1.5rem;
             color: #1a1a2e;
             margin: 35px 0 16px 0;
-            border-left: 4px solid #2563eb;
+            border-left: 4px solid #333;
             padding-left: 16px;
             font-weight: 600;
             letter-spacing: -0.3px;
@@ -97,11 +112,11 @@
             font-weight: 600;
             color: #1a1a2e;
             margin: 30px 0 15px 0;
-            border-left: 4px solid #2563eb;
+            border-left: 4px solid #333;
             padding-left: 16px;
         }
         
-        /* Lists - no indentation */
+        /* Lists */
         ul, ol {
             margin: 10px 0 10px 0;
             padding-left: 20px;
@@ -111,7 +126,7 @@
             margin-bottom: 4px;
         }
         
-        /* Table styling */
+        /* Table styling - no blue */
         .corporate-table {
             width: 100%;
             border-collapse: collapse;
@@ -121,7 +136,7 @@
         
         .corporate-table th,
         .corporate-table td {
-            border: 1px solid #ddd;
+            border: 1px solid #ccc;
             padding: 10px 12px;
             text-align: left;
             vertical-align: top;
@@ -129,11 +144,11 @@
         }
         
         .corporate-table th {
-            background-color: #f5f5f5;
+            background-color: #f0f0f0;
             font-weight: 600;
         }
         
-        /* Contact info */
+        /* Contact info - no blue */
         .contact-info {
             background-color: #f5f5f5;
             padding: 12px 15px;
@@ -146,10 +161,10 @@
             text-align: left;
         }
         
-        /* Warning box - no italics */
+        /* Warning box - no blue */
         .airport-warning {
             background-color: #fff3cd;
-            border-left: 4px solid #ffc107;
+            border-left: 4px solid #ccaa00;
             padding: 12px 15px;
             margin: 15px 0;
             border-radius: 5px;
@@ -159,7 +174,7 @@
             margin: 0;
         }
         
-        /* Note boxes - no italics */
+        /* Note boxes - no blue */
         .note-box {
             background-color: #f5f5f5;
             padding: 15px 18px;
@@ -178,7 +193,7 @@
             color: #1a1a2e;
         }
         
-        /* No italics for these classes */
+        /* No italics, no blue */
         .update-notice, .small-meta, .booking-method {
             font-style: normal !important;
             font-size: 0.85rem;
@@ -215,20 +230,11 @@
         .hotel-item {
             margin-bottom: 20px;
             padding-bottom: 12px;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #e0e0e0;
         }
         
         .hotel-item p {
             margin: 5px 0;
-        }
-        
-        .hotel-item a {
-            color: #2563eb;
-            text-decoration: none;
-        }
-        
-        .hotel-item a:hover {
-            text-decoration: underline;
         }
         
         hr {
@@ -271,7 +277,7 @@
         
         .contact-details a:hover {
             text-decoration: underline;
-            color: #2563eb;
+            color: #000;
         }
         
         /* Responsive adjustments */
