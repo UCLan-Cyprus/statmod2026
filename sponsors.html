@@ -7,85 +7,379 @@
     <title>Sponsors | ΣtatMod2026</title>
     <link rel="stylesheet" href="style.css" />
     <style>
+        /* ----- base & reset (matches theme) ----- */
+        * {
+            box-sizing: border-box;
+        }
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
+            background: #fafafa;
+            color: #1e1e1e;
         }
 
+        /* ----- header (identical to index) ----- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 40px;
+            background-color: #0b1a2b;
+            border-bottom: 3px solid #008c96;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 100;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo a {
+            display: inline-block;
+        }
+        .combined-logo {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+            filter: brightness(1.05);
+        }
+        .hamburger-container {
+            display: none;
+        }
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px 4px;
+        }
+        .hamburger span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background: white;
+            border-radius: 2px;
+            transition: 0.25s ease;
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 6px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -6px);
+        }
+        nav {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 12px 22px;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .menu > li {
+            position: relative;
+        }
+        .menu > li > a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 8px 0;
+            letter-spacing: 0.3px;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .menu > li > a:hover {
+            color: #8dd8e0;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #0b1a2b;
+            min-width: 200px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            border-radius: 6px;
+            padding: 8px 0;
+            list-style: none;
+            z-index: 200;
+            border: 1px solid #1e3a4a;
+        }
+        .dropdown-content li a {
+            color: #e8f0f0;
+            padding: 8px 20px;
+            display: block;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.15s;
+        }
+        .dropdown-content li a:hover {
+            background: #1f4055;
+            color: white;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* ----- main sections ----- */
         main .details {
-            padding: 60px 20px;
+            padding: 60px 20px 30px;
             text-align: center;
             max-width: 1200px;
             margin: 0 auto;
         }
-
         h1 {
             font-size: 2.8rem;
             font-weight: 700;
-            color: black;
+            color: #0b1a2b;
             margin-bottom: 10px;
+            letter-spacing: -0.5px;
         }
-
-        main .details p {
-            font-size: 1.2rem;
+        .subhead {
+            font-size: 1.15rem;
             max-width: 700px;
-            margin-bottom: 40px;
-            color: black;
-            text-align: center;
-            margin: 0 auto 40px auto;
+            margin: 0 auto 40px;
+            color: #2c3e4e;
+            border-bottom: 2px solid #008c9630;
+            padding-bottom: 20px;
         }
 
-        .gallery {
+        /* ----- SPONSOR GRID (gold / silver) ----- */
+        .sponsor-tier {
+            margin: 40px auto 60px;
+            max-width: 1100px;
+            padding: 0 20px;
+        }
+        .tier-title {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            display: inline-block;
+            padding: 0 20px 8px;
+            border-bottom: 4px solid;
+        }
+        .tier-gold .tier-title {
+            color: #b8860b;
+            border-color: #d4af37;
+        }
+        .tier-silver .tier-title {
+            color: #7a8b9b;
+            border-color: #b0c4d0;
+        }
+
+        .sponsor-grid {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            gap: 40px 50px;
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+            transition: box-shadow 0.2s;
+        }
+        .sponsor-grid:hover {
+            box-shadow: 0 12px 40px rgba(0, 140, 150, 0.12);
         }
 
-        .gallery img {
-            width: 300px;
-            height: 300px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 140, 150, 0.5);
-            transition: transform 0.3s ease;
-            object-fit: contain;
+        .sponsor-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 260px;
+            height: 180px;
             background: white;
+            border-radius: 16px;
             padding: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .sponsor-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 24px rgba(0, 140, 150, 0.25);
+        }
+        .sponsor-item img {
+            max-width: 100%;
+            max-height: 130px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 6px rgba(0,0,0,0.06));
+            transition: filter 0.2s;
+        }
+        .sponsor-item img:hover {
+            filter: drop-shadow(0 4px 12px rgba(0, 140, 150, 0.2));
         }
 
-        .gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(0, 140, 150, 0.8);
+        /* gold specific style (premium border) */
+        .tier-gold .sponsor-item {
+            border: 1px solid #e6c873;
+            background: #fefcf5;
+        }
+        .tier-silver .sponsor-item {
+            border: 1px solid #d0dce6;
+            background: #fafcfe;
+        }
+
+        /* ----- contact section (same as original) ----- */
+        .contact-section {
+            background: #0b1a2b;
+            color: #f0f7fa;
+            padding: 40px 20px 50px;
+            margin-top: 30px;
+        }
+        .contact-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+        .contact-details {
+            max-width: 600px;
+            width: 100%;
+            padding: 10px 20px;
+        }
+        .contact-details h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #b0dae0;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #008c96;
+            padding-bottom: 8px;
+        }
+        .contact-details h3 {
+            color: #9bcbd4;
+            margin-top: 28px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+        .contact-details p {
+            margin: 6px 0;
+            line-height: 1.6;
+            color: #e0edf0;
+        }
+        .contact-details a {
+            color: #8dd8e0;
+            text-decoration: none;
+            border-bottom: 1px dotted #008c96;
+        }
+        .contact-details a:hover {
+            color: white;
+            border-bottom: 1px solid white;
+        }
+
+        /* ----- responsive (matches index) ----- */
+        @media (max-width: 1250px) {
+            header {
+                padding: 12px 24px;
+            }
+            .hamburger-container {
+                display: flex;
+                align-items: center;
+            }
+            nav {
+                flex: 0 0 100%;
+                order: 3;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease;
+                margin-top: 0;
+                background: #0b1a2b;
+                border-radius: 0 0 12px 12px;
+            }
+            nav.open {
+                max-height: 800px;
+                transition: max-height 0.5s ease;
+            }
+            .menu {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+                padding: 20px 0 30px;
+                width: 100%;
+            }
+            .menu > li {
+                width: 100%;
+            }
+            .menu > li > a {
+                padding: 10px 0;
+                display: block;
+                font-size: 1.05rem;
+            }
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                background: #0f2538;
+                padding-left: 18px;
+                border-radius: 0;
+                border: none;
+                display: none;
+                width: 100%;
+            }
+            .dropdown.open .dropdown-content {
+                display: block;
+            }
+            .dropdown-content li a {
+                padding: 8px 12px;
+                font-size: 0.95rem;
+            }
+            .dropdown:hover .dropdown-content {
+                display: none;
+            }
+            .dropdown.open .dropdown-content {
+                display: block;
+            }
+            .menu .dropdown > a::after {
+                content: " ▾";
+                font-size: 0.7rem;
+                opacity: 0.7;
+            }
+            .menu .dropdown.open > a::after {
+                content: " ▴";
+            }
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .gallery img {
-                width: 250px;
-                height: 250px;
+            h1 { font-size: 2rem; }
+            .tier-title { font-size: 1.6rem; }
+            .sponsor-grid { gap: 24px; padding: 24px 16px; }
+            .sponsor-item { width: 200px; height: 150px; padding: 12px; }
+            .sponsor-item img { max-height: 90px; }
+        }
+        @media (max-width: 480px) {
+            .sponsor-item { width: 160px; height: 130px; padding: 10px; }
+            .sponsor-item img { max-height: 70px; }
+            .contact-details { padding: 0 6px; }
+        }
+        /* ensure hamburger toggles nav */
+        .hamburger-container {
+            display: none;
+        }
+        @media (max-width: 1250px) {
+            .hamburger-container {
+                display: flex;
             }
         }
-        
-        @media (max-width: 480px) {
-            .gallery img {
-                width: 200px;
-                height: 200px;
-            }
+        /* utility for menu-open */
+        body.menu-open {
+            overflow: hidden;
         }
     </style>
 </head>
 
 <body>
-    <!-- ================= HEADER - SAME AS INDEX.HTML ================= -->
+    <!-- ================= HEADER (exactly as index) ================= -->
     <header>
-        <!-- LOGO - LEFT SIDE -->
         <div class="logo-container">
             <div class="logo">
                 <a href="index.html">
@@ -94,7 +388,6 @@
             </div>
         </div>
 
-        <!-- HAMBURGER - RIGHT SIDE (Hidden on desktop) -->
         <div class="hamburger-container">
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -103,49 +396,68 @@
             </div>
         </div>
 
-        <!-- NAV MENU -->
- <nav>
-    <ul class="menu">
-      <li class="dropdown">
-        <a href="#">Committees</a>
-        <ul class="dropdown-content">
-          <li><a href="steeringc.html">Steering Committee</a></li>
-          <li><a href="scientific.html">Scientific Committee</a></li>
-          <li><a href="committees.html">Organizing Committee</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#">About the Conference</a>
-        <ul class="dropdown-content">
-          <li><a href="plenaryspeakers.html">Plenary Speakers</a></li>
-          <li><a href="honours.html">Invited Speakers</a></li>
-          <li><a href="honours.html">Contributed Speakers</a></li>
-          <li><a href="topics.html">Topics</a></li>
-          <li><a href="honours.html">Scientific Program</a></li>
-          <li><a href="honours.html">Social Events</a></li>
-          <li><a href="pastconf.html">Past Conferences</a></li>
-          <li><a href="partners.html">Partners</a></li>
-        </ul>
-      </li>
-      <li><a href="bookofabs.html">Book of Abstracts</a></li>
-      <li><a href="sponsors.html">Sponsors</a></li>
-      <li><a href="registration.html">Registration/Abstract Submission</a></li>
-      <li><a href="honours.html">UCLAN Gallery</a></li>
-    </ul>
-  </nav>
+        <nav id="mainNav">
+            <ul class="menu">
+                <li class="dropdown">
+                    <a href="#">Committees</a>
+                    <ul class="dropdown-content">
+                        <li><a href="steeringc.html">Steering Committee</a></li>
+                        <li><a href="scientific.html">Scientific Committee</a></li>
+                        <li><a href="committees.html">Organizing Committee</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">About the Conference</a>
+                    <ul class="dropdown-content">
+                        <li><a href="plenaryspeakers.html">Plenary Speakers</a></li>
+                        <li><a href="honours.html">Invited Speakers</a></li>
+                        <li><a href="honours.html">Contributed Speakers</a></li>
+                        <li><a href="topics.html">Topics</a></li>
+                        <li><a href="honours.html">Scientific Program</a></li>
+                        <li><a href="honours.html">Social Events</a></li>
+                        <li><a href="pastconf.html">Past Conferences</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                    </ul>
+                </li>
+                <li><a href="bookofabs.html">Book of Abstracts</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="registration.html">Registration/Abstract Submission</a></li>
+                <li><a href="honours.html">UCLAN Gallery</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <section class="details">
             <h1>Sponsors</h1>
-            <div class="gallery">
-                <img src="https://study-net.eu/wp-content/uploads/2018/02/UCLan_Cyprus_logo_rgb.jpg" alt="UCLan Cyprus Logo" />
+            <p class="subhead">We are grateful for the generous support of our partners.</p>
+
+            <!-- GOLD TIER -->
+            <div class="sponsor-tier tier-gold">
+                <div class="tier-title">Gold Sponsors</div>
+                <div class="sponsor-grid">
+                    <div class="sponsor-item">
+                        <img src="https://study-net.eu/wp-content/uploads/2018/02/UCLan_Cyprus_logo_rgb.jpg" alt="UCLan Cyprus Gold Sponsor">
+                    </div>
+                </div>
+            </div>
+
+            <!-- SILVER TIER -->
+            <div class="sponsor-tier tier-silver">
+                <div class="tier-title">Silver Sponsors</div>
+                <div class="sponsor-grid">
+                    <div class="sponsor-item">
+                        <!-- Clinbay_logo.png – placed in same folder as this file -->
+                        <img src="Clinbay_logo.png" alt="Clinbay Silver Sponsor">
+                    </div>
+                    <!-- you can add more silver sponsors here if needed -->
+                </div>
             </div>
         </section>
 
+        <!-- CONTACT SECTION (unchanged) -->
         <section class="contact-section">
             <div class="contact-wrapper">
-                <!-- LEFT SIDE -->
                 <div class="contact-details">
                     <h2>Contact details</h2>
                     <p>University Of Central Lancashire</p>
@@ -168,50 +480,55 @@
         </section>
     </main>
 
-    <!-- ================= SAME JAVASCRIPT AS INDEX.HTML ================= -->
+    <!-- ================= JAVASCRIPT (same as index) ================= -->
     <script>
-    // SIMPLE HAMBURGER TOGGLE
-    document.addEventListener("DOMContentLoaded", function() {
-        const hamburger = document.getElementById("hamburger");
-        const menu = document.querySelector(".menu");
-        const body = document.body;
+        document.addEventListener("DOMContentLoaded", function() {
+            const hamburger = document.getElementById("hamburger");
+            const nav = document.getElementById("mainNav");
+            const menu = document.querySelector(".menu");
+            const body = document.body;
 
-        hamburger.addEventListener("click", function(e) {
-            e.stopPropagation();
-            menu.classList.toggle("active");
-            hamburger.classList.toggle("active");
-            body.classList.toggle("menu-open");
-        });
+            hamburger.addEventListener("click", function(e) {
+                e.stopPropagation();
+                nav.classList.toggle("open");
+                hamburger.classList.toggle("active");
+                body.classList.toggle("menu-open");
+            });
 
-        // Close menu when clicking outside
-        document.addEventListener("click", function(e) {
-            if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
-                menu.classList.remove("active");
-                hamburger.classList.remove("active");
-                body.classList.remove("menu-open");
-            }
-        });
+            document.addEventListener("click", function(e) {
+                if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+                    nav.classList.remove("open");
+                    hamburger.classList.remove("active");
+                    body.classList.remove("menu-open");
+                }
+            });
 
-        // Mobile dropdowns
-        document.querySelectorAll(".dropdown > a").forEach(link => {
-            link.addEventListener("click", function(e) {
-                if (window.innerWidth <= 1250) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    // Close other dropdowns
-                    document.querySelectorAll(".dropdown").forEach(item => {
-                        if (item !== this.parentElement) {
-                            item.classList.remove("open");
-                        }
-                    });
-                    
-                    // Toggle current dropdown
-                    this.parentElement.classList.toggle("open");
+            // Mobile dropdowns (same as original)
+            document.querySelectorAll(".dropdown > a").forEach(link => {
+                link.addEventListener("click", function(e) {
+                    if (window.innerWidth <= 1250) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        document.querySelectorAll(".dropdown").forEach(item => {
+                            if (item !== this.parentElement) {
+                                item.classList.remove("open");
+                            }
+                        });
+                        this.parentElement.classList.toggle("open");
+                    }
+                });
+            });
+
+            // close dropdowns on resize to desktop
+            window.addEventListener("resize", function() {
+                if (window.innerWidth > 1250) {
+                    document.querySelectorAll(".dropdown").forEach(item => item.classList.remove("open"));
+                    nav.classList.remove("open");
+                    hamburger.classList.remove("active");
+                    body.classList.remove("menu-open");
                 }
             });
         });
-    });
     </script>
 </body>
 </html>
