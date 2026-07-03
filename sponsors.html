@@ -43,13 +43,6 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        .sponsor-card h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #1e466e;
-        }
-
-        /* Sponsor tier styling */
         .tier-gold {
             border-bottom: 2px solid #e8eef5;
             padding-bottom: 40px;
@@ -78,7 +71,6 @@
             color: #7a8b9b;
         }
 
-        /* Sponsor grid - similar to speaker layout */
         .sponsor-grid {
             display: flex;
             flex-wrap: wrap;
@@ -134,7 +126,7 @@
             color: #7a8b9b;
         }
 
-        /* Original footer/contact section - EXACTLY as in your original */
+        /* FOOTER STYLES - ADDED DIRECTLY TO FIX THE ISSUE */
         .contact-section {
             background: #0b1a2b;
             color: #f0f7fa;
@@ -225,7 +217,6 @@
 <body>
     <!-- ================= HEADER - SAME AS ORIGINAL ================= -->
     <header>
-        <!-- LOGO - LEFT SIDE -->
         <div class="logo-container">
             <div class="logo">
                 <a href="index.html">
@@ -234,7 +225,6 @@
             </div>
         </div>
 
-        <!-- HAMBURGER - RIGHT SIDE (Hidden on desktop) -->
         <div class="hamburger-container">
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -243,7 +233,6 @@
             </div>
         </div>
 
-        <!-- NAV MENU -->
         <nav>
             <ul class="menu">
                 <li class="dropdown">
@@ -277,12 +266,10 @@
 
     <main>
         <section class="sponsor-section">
-            <!-- Header with background image -->
             <div class="sponsor-header">
                 <h1>Our Sponsors</h1>
             </div>
 
-            <!-- Main card content -->
             <div class="sponsor-card">
                 <!-- GOLD TIER -->
                 <div class="tier-gold">
@@ -303,17 +290,15 @@
                             <img src="Clinbay_logo.png" alt="Clinbay Logo" />
                             <span class="sponsor-label">Clinbay</span>
                         </div>
-                        <!-- You can add more silver sponsors here -->
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- ================= ORIGINAL CONTACT SECTION - EXACTLY AS YOUR FIRST PAGE ================= -->
+    <!-- ================= FOOTER - NOW WITH PROPER STYLING ================= -->
     <section class="contact-section">
         <div class="contact-wrapper">
-            <!-- LEFT SIDE -->
             <div class="contact-details">
                 <h2>Contact details</h2>
                 <p>University Of Central Lancashire</p>
@@ -335,9 +320,8 @@
         </div>
     </section>
 
-    <!-- ================= SAME JAVASCRIPT AS ORIGINAL ================= -->
+    <!-- ================= JAVASCRIPT ================= -->
     <script>
-        // SIMPLE HAMBURGER TOGGLE
         document.addEventListener("DOMContentLoaded", function() {
             const hamburger = document.getElementById("hamburger");
             const menu = document.querySelector(".menu");
@@ -350,7 +334,6 @@
                 body.classList.toggle("menu-open");
             });
 
-            // Close menu when clicking outside
             document.addEventListener("click", function(e) {
                 if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
                     menu.classList.remove("active");
@@ -359,21 +342,16 @@
                 }
             });
 
-            // Mobile dropdowns
             document.querySelectorAll(".dropdown > a").forEach(link => {
                 link.addEventListener("click", function(e) {
                     if (window.innerWidth <= 1250) {
                         e.preventDefault();
                         e.stopPropagation();
-
-                        // Close other dropdowns
                         document.querySelectorAll(".dropdown").forEach(item => {
                             if (item !== this.parentElement) {
                                 item.classList.remove("open");
                             }
                         });
-
-                        // Toggle current dropdown
                         this.parentElement.classList.toggle("open");
                     }
                 });
