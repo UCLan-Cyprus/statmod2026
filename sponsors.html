@@ -67,31 +67,15 @@
             font-weight: 700;
             text-align: center;
             margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
+            color: #1e466e;
         }
 
         .tier-gold .tier-title {
             color: #b8860b;
         }
 
-        .tier-gold .tier-title::before,
-        .tier-gold .tier-title::after {
-            content: "⭐";
-            font-size: 1.6rem;
-        }
-
         .tier-silver .tier-title {
             color: #7a8b9b;
-        }
-
-        .tier-silver .tier-title::before,
-        .tier-silver .tier-title::after {
-            content: "✦";
-            font-size: 1.6rem;
-            color: #b0c4d0;
         }
 
         /* Sponsor grid - similar to speaker layout */
@@ -106,7 +90,7 @@
         .sponsor-item {
             flex: 0 0 300px;
             text-align: center;
-            background: #fafcfe;
+            background: #ffffff;
             padding: 30px 20px;
             border-radius: 12px;
             border: 2px solid #e0e7ef;
@@ -116,16 +100,6 @@
         .sponsor-item:hover {
             transform: scale(1.02);
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-
-        .tier-gold .sponsor-item {
-            border-color: #d4af37;
-            background: #fefcf5;
-        }
-
-        .tier-silver .sponsor-item {
-            border-color: #b0c4d0;
-            background: #fafcfe;
         }
 
         .sponsor-item img {
@@ -160,7 +134,7 @@
             color: #7a8b9b;
         }
 
-        /* Contact section - matching plenary speakers page */
+        /* Original footer/contact section */
         .contact-section {
             background: #0b1a2b;
             color: #f0f7fa;
@@ -243,11 +217,6 @@
             .sponsor-item {
                 flex: 0 0 100%;
                 max-width: 280px;
-            }
-
-            .tier-title::before,
-            .tier-title::after {
-                display: none;
             }
         }
     </style>
@@ -341,9 +310,10 @@
         </section>
     </main>
 
-    <!-- ================= CONTACT SECTION ================= -->
+    <!-- ================= ORIGINAL CONTACT SECTION (restored) ================= -->
     <section class="contact-section">
         <div class="contact-wrapper">
+            <!-- LEFT SIDE -->
             <div class="contact-details">
                 <h2>Contact details</h2>
                 <p>University Of Central Lancashire</p>
