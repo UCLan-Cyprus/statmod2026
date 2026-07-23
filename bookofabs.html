@@ -2,244 +2,364 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coming Soon | ΣtatMod2026</title>
   <meta name="robots" content="max-image-preview:large">
-
-  <!-- MAIN SITE CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book of Abstracts | ΣtatMod2026</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- PAGE-SPECIFIC CSS -->
   <style>
     body {
       font-family: Arial, sans-serif;
       background: #f4f6f8;
       margin: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
     }
 
-    main {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 20px;
+    .abstract-section {
+      padding-bottom: 60px;
     }
 
-    .coming-soon-section {
-      width: 100%;
-      max-width: 800px;
-    }
-
-    .coming-soon-header {
+    .abstract-header {
       background-image:
-        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
         url("https://ik.imagekit.io/edtechdigit/usdsi/content/images/articles/explore-the-vital-role-of-data-visualisation-in-data-science.jpeg");
       background-size: cover;
       background-position: center;
-      background-repeat: no-repeat;
-      color: #ffffff;
       text-align: center;
-      padding: 100px 20px;
-      border-radius: 12px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+      padding: 80px 20px;
+      color: white;
     }
 
-    .coming-soon-header h1 {
+    .abstract-header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
       margin: 0;
-      font-size: 3.5rem;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
     }
 
-    .coming-soon-header p {
-      font-size: 1.4rem;
-      max-width: 700px;
-      margin: 0 auto;
+    .abstract-card {
+      max-width: 1100px;
+      margin: -40px auto 0;
+      background: #ffffff;
+      padding: 50px 40px 60px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .abstract-card h2 {
+      font-size: 2.2rem;
+      color: #1e466e;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .abstract-card p {
+      font-size: 1.2rem;
+      color: #2c3e50;
+      margin-bottom: 35px;
       line-height: 1.6;
     }
 
-    .coming-soon-header .subtitle {
+    .download-btn-wrap {
+      display: inline-block;
+      background: #f0f7fc;
+      padding: 18px 40px;
+      border-radius: 60px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: background 0.2s ease;
+      border: 1px solid #d0ddee;
+    }
+
+    .download-btn-wrap:hover {
+      background: #e6f0fa;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0a4b6e;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 40px;
+      transition: color 0.2s ease, transform 0.1s ease;
+    }
+
+    .download-btn:hover {
+      color: #003153;
+      transform: scale(1.01);
+    }
+
+    .download-btn i {
+      font-size: 2rem;
+      line-height: 1;
+      display: inline-block;
+    }
+
+    .pdf-icon {
+      display: inline-block;
+      width: 44px;
+      height: 44px;
+      background: #c62828;
+      color: white;
+      border-radius: 8px;
+      line-height: 44px;
+      text-align: center;
+      font-weight: bold;
       font-size: 1.2rem;
+      box-shadow: 0 2px 8px rgba(198, 40, 40, 0.3);
+      flex-shrink: 0;
+    }
+
+    .click-here-highlight {
+      background: #f5e56b;
+      padding: 0 10px;
+      border-radius: 20px;
+      font-weight: 700;
+      color: #1e3a5f;
+    }
+
+    /* ---- contact section (matching plenary) ---- */
+    .contact-section {
+      background: #0b1a2b;
+      color: #f0f7fa;
+      padding: 40px 20px 50px;
       margin-top: 30px;
-      opacity: 0.9;
-      font-style: italic;
+    }
+
+    .contact-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .contact-details {
+      max-width: 600px;
+      width: 100%;
+      padding: 10px 20px;
+    }
+
+    .contact-details h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #b0dae0;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #008c96;
+      padding-bottom: 8px;
+    }
+
+    .contact-details h3 {
+      color: #9bcbd4;
+      margin-top: 28px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    .contact-details p {
+      margin: 6px 0;
+      line-height: 1.6;
+      color: #e0edf0;
+    }
+
+    .contact-details a {
+      color: #8dd8e0;
+      text-decoration: none;
+      border-bottom: 1px dotted #008c96;
+    }
+
+    .contact-details a:hover {
+      color: white;
+      border-bottom: 1px solid white;
     }
 
     @media (max-width: 768px) {
-      .coming-soon-header {
-        padding: 60px 20px;
+      .abstract-header h1 {
+        font-size: 2rem;
       }
-      
-      .coming-soon-header h1 {
-        font-size: 2.2rem;
+      .abstract-card {
+        padding: 30px 20px 40px;
+        margin: -30px 15px 0;
       }
-      
-      .coming-soon-header p {
-        font-size: 1.1rem;
+      .abstract-card h2 {
+        font-size: 1.8rem;
       }
-      
-      .coming-soon-header .subtitle {
+      .download-btn {
+        font-size: 1.2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .pdf-icon {
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
         font-size: 1rem;
       }
     }
-    
+
     @media (max-width: 480px) {
-      .coming-soon-header h1 {
-        font-size: 1.8rem;
+      .download-btn-wrap {
+        padding: 12px 18px;
       }
-      
-      .coming-soon-header p {
-        font-size: 1rem;
-      }
-      
-      main {
-        padding: 20px 15px;
+      .download-btn {
+        font-size: 1.1rem;
+        gap: 8px;
       }
     }
   </style>
 </head>
 
 <body>
-
-<!-- ================= HEADER - SAME AS INDEX.HTML ================= -->
-<header>
-  <!-- LOGO - LEFT SIDE -->
-  <div class="logo-container">
-    <div class="logo">
-      <a href="index.html">
-        <img src="logosheader.png" alt="UCLan Cyprus and ΣtatMod2026 Logo" class="combined-logo">
-      </a>
+  <!-- ================= HEADER - SAME AS ORIGINAL ================= -->
+  <header>
+    <!-- LOGO - LEFT SIDE -->
+    <div class="logo-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="logosheader.png" alt="UCLan Cyprus and ΣtatMod2026 Logo" class="combined-logo">
+        </a>
+      </div>
     </div>
-  </div>
 
-  <!-- HAMBURGER - RIGHT SIDE (Hidden on desktop) -->
-  <div class="hamburger-container">
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+    <!-- HAMBURGER - RIGHT SIDE (Hidden on desktop) -->
+    <div class="hamburger-container">
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
-  </div>
 
-  <!-- NAV MENU -->
-        <nav>
-    <ul class="menu">
-      <li class="dropdown">
-        <a href="#">Committees</a>
-        <ul class="dropdown-content">
-          <li><a href="steeringc.html">Steering Committee</a></li>
-          <li><a href="scientific.html">Scientific Committee</a></li>
-          <li><a href="committees.html">Organizing Committee</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#">About the Conference</a>
-       <ul class="dropdown-content">
-          <li><a href="plenaryspeakers.html">Plenary Speakers</a></li>
-          <li><a href="speakers.html">Speakers</a></li>
-          <li><a href="topics.html">Topics</a></li>
-          <li><a href="honours.html">Scientific Program</a></li>
-          <li><a href="honours.html">Social Events</a></li>
-          <li><a href="pastconf.html">Past Conferences</a></li>
-          <li><a href="partners.html">Partners</a></li>
-        </ul>
-      </li>
-      <li><a href="bookofabs.html">Book of Abstracts</a></li>
-      <li><a href="sponsors.html">Sponsors</a></li>
-      <li><a href="registration.html">Registration/Abstract Submission</a></li>
-      <li><a href="honours.html">UCLAN Gallery</a></li>
-    </ul>
-  </nav>
-</header>
+    <!-- NAV MENU -->
+    <nav>
+      <ul class="menu">
+        <li class="dropdown">
+          <a href="#">Committees</a>
+          <ul class="dropdown-content">
+            <li><a href="steeringc.html">Steering Committee</a></li>
+            <li><a href="scientific.html">Scientific Committee</a></li>
+            <li><a href="committees.html">Organizing Committee</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">About the Conference</a>
+          <ul class="dropdown-content">
+            <li><a href="plenaryspeakers.html">Plenary Speakers</a></li>
+            <li><a href="honours.html">Invited Speakers</a></li>
+            <li><a href="honours.html">Contributed Speakers</a></li>
+            <li><a href="topics.html">Topics</a></li>
+            <li><a href="honours.html">Scientific Program</a></li>
+            <li><a href="honours.html">Social Events</a></li>
+            <li><a href="pastconf.html">Past Conferences</a></li>
+            <li><a href="partners.html">Partners</a></li>
+          </ul>
+        </li>
+        <li><a href="bookofabs.html">Book of Abstracts</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="registration.html">Registration/Abstract Submission</a></li>
+        <li><a href="honours.html">UCLAN Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<!-- ================= MAIN ================= -->
-<main>
+  <main>
+    <section class="abstract-section">
+      <!-- Header with background image (consistent with plenary speakers) -->
+      <div class="abstract-header">
+        <h1>Book of Abstracts</h1>
+      </div>
 
-  <section class="coming-soon-section">
-    <div class="coming-soon-header">
-      <h1>Coming Soon</h1>
-      <p>The ΣtatMod2026 website is currently under construction. We're working hard to bring you an amazing experience!</p>
-      <p class="subtitle">Please check back soon for updates and complete information.</p>
+      <!-- Main card: download prompt -->
+      <div class="abstract-card">
+        <h2>📄 Conference Abstracts</h2>
+        <p>
+          For the book of abstracts <span class="click-here-highlight">click here</span> to download the PDF.
+        </p>
+
+        <div class="download-btn-wrap">
+          <a href="Book of Abstracts.pdf" download class="download-btn">
+            <span class="pdf-icon">PDF</span>
+            <span>📥 <strong>Download</strong> Book of Abstracts</span>
+          </a>
+        </div>
+
+        <!-- subtle note: the file is Book of Abstracts.pdf in the same folder -->
+        <p style="margin-top: 30px; font-size: 0.9rem; color: #6a7f96;">
+          <span style="background: #eef3f8; padding: 4px 12px; border-radius: 30px;">📁 Book of Abstracts.pdf (2.3 MB)</span>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= CONTACT SECTION (matching plenary) ================= -->
+  <section class="contact-section">
+    <div class="contact-wrapper">
+      <div class="contact-details">
+        <h2>Contact details</h2>
+        <p>University Of Central Lancashire</p>
+
+        <h3>📍 Location</h3>
+        <p>
+          University Ave 12-14, Pyla 7080<br>
+          <a href="https://www.google.com/maps/place/University+of+Central+Lancashire,+Cyprus+(UCLan+Cyprus)/" target="_blank">
+            View on Google Maps
+          </a>
+        </p>
+
+        <h3>📞 Info</h3>
+        <p>
+          Email: <a href="/cdn-cgi/l/email-protection#e28f8a83868b888a98938a82888c96a297818e838ccc8381cc9789"><span class="__cf_email__" data-cfemail="4f22272e2b252622303b222a20243e0f3a2c232e21612e2c613a24">[email&#160;protected]</span></a><br>
+          Phone: +357 24 694000
+        </p>
+      </div>
     </div>
   </section>
 
-</main>
+  <!-- ================= SAME JAVASCRIPT AS ORIGINAL ================= -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script>
+    // SIMPLE HAMBURGER TOGGLE
+    document.addEventListener("DOMContentLoaded", function() {
+      const hamburger = document.getElementById("hamburger");
+      const menu = document.querySelector(".menu");
+      const body = document.body;
 
-<!-- ================= FOOTER / CONTACT ================= -->
-<section class="contact-section">
-  <div class="contact-wrapper">
-
-    <div class="contact-details">
-      <h2>Contact details</h2>
-      <p>University Of Central Lancashire</p>
-
-      <h3>📍 Location</h3>
-      <p>
-        University Ave 12-14, Pyla 7080<br>
-        <a href="https://www.google.com/maps/place/University+of+Central+Lancashire,+Cyprus+(UCLan+Cyprus)/" target="_blank">
-          View on Google Maps
-        </a>
-      </p>
-
-      <h3>📞 Info</h3>
-      <p>
-        Email: <a href="mailto:mhadjikyriakou@uclan.ac.uk">mhadjikyriakou@uclan.ac.uk</a><br>
-        Phone: +357 24 694000
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= SAME JAVASCRIPT AS INDEX.HTML ================= -->
-<script>
-// SIMPLE HAMBURGER TOGGLE
-document.addEventListener("DOMContentLoaded", function() {
-  const hamburger = document.getElementById("hamburger");
-  const menu = document.querySelector(".menu");
-  const body = document.body;
-
-  hamburger.addEventListener("click", function(e) {
-    e.stopPropagation();
-    menu.classList.toggle("active");
-    hamburger.classList.toggle("active");
-    body.classList.toggle("menu-open");
-  });
-
-  // Close menu when clicking outside
-  document.addEventListener("click", function(e) {
-    if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
-      menu.classList.remove("active");
-      hamburger.classList.remove("active");
-      body.classList.remove("menu-open");
-    }
-  });
-
-  // Mobile dropdowns
-  document.querySelectorAll(".dropdown > a").forEach(link => {
-    link.addEventListener("click", function(e) {
-      if (window.innerWidth <= 1250) {
-        e.preventDefault();
+      hamburger.addEventListener("click", function(e) {
         e.stopPropagation();
-        
-        // Close other dropdowns
-        document.querySelectorAll(".dropdown").forEach(item => {
-          if (item !== this.parentElement) {
-            item.classList.remove("open");
+        menu.classList.toggle("active");
+        hamburger.classList.toggle("active");
+        body.classList.toggle("menu-open");
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener("click", function(e) {
+        if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+          menu.classList.remove("active");
+          hamburger.classList.remove("active");
+          body.classList.remove("menu-open");
+        }
+      });
+
+      // Mobile dropdowns
+      document.querySelectorAll(".dropdown > a").forEach(link => {
+        link.addEventListener("click", function(e) {
+          if (window.innerWidth <= 1250) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            // Close other dropdowns
+            document.querySelectorAll(".dropdown").forEach(item => {
+              if (item !== this.parentElement) {
+                item.classList.remove("open");
+              }
+            });
+
+            // Toggle current dropdown
+            this.parentElement.classList.toggle("open");
           }
         });
-        
-        // Toggle current dropdown
-        this.parentElement.classList.toggle("open");
-      }
+      });
     });
-  });
-});
-</script>
-
+  </script>
 </body>
 </html>
