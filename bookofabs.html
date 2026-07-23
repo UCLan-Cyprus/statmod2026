@@ -90,12 +90,6 @@
       transform: scale(1.01);
     }
 
-    .download-btn i {
-      font-size: 2rem;
-      line-height: 1;
-      display: inline-block;
-    }
-
     .pdf-icon {
       display: inline-block;
       width: 44px;
@@ -117,60 +111,6 @@
       border-radius: 20px;
       font-weight: 700;
       color: #1e3a5f;
-    }
-
-    /* ---- contact section (matching plenary) ---- */
-    .contact-section {
-      background: #0b1a2b;
-      color: #f0f7fa;
-      padding: 40px 20px 50px;
-      margin-top: 30px;
-    }
-
-    .contact-wrapper {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-    }
-
-    .contact-details {
-      max-width: 600px;
-      width: 100%;
-      padding: 10px 20px;
-    }
-
-    .contact-details h2 {
-      font-size: 2rem;
-      font-weight: 600;
-      color: #b0dae0;
-      margin-bottom: 10px;
-      border-bottom: 2px solid #008c96;
-      padding-bottom: 8px;
-    }
-
-    .contact-details h3 {
-      color: #9bcbd4;
-      margin-top: 28px;
-      font-weight: 500;
-      letter-spacing: 0.3px;
-    }
-
-    .contact-details p {
-      margin: 6px 0;
-      line-height: 1.6;
-      color: #e0edf0;
-    }
-
-    .contact-details a {
-      color: #8dd8e0;
-      text-decoration: none;
-      border-bottom: 1px dotted #008c96;
-    }
-
-    .contact-details a:hover {
-      color: white;
-      border-bottom: 1px solid white;
     }
 
     @media (max-width: 768px) {
@@ -271,18 +211,19 @@
 
       <!-- Main card: download prompt -->
       <div class="abstract-card">
+        <h2>📄 Conference Abstracts</h2>
         <p>
-          For the book of abstracts click here to download.
+          For the book of abstracts <span class="click-here-highlight">click here</span> to download the PDF.
         </p>
 
         <div class="download-btn-wrap">
           <a href="Book of Abstracts.pdf" download class="download-btn">
             <span class="pdf-icon">PDF</span>
-            <span><strong>Download</strong> Book of Abstracts</span>
+            <span>📥 <strong>Download</strong> Book of Abstracts</span>
           </a>
         </div>
 
-        <!-- subtle note: the file is Book of Abstracts.pdf in the same folder -->
+        <!-- subtle file info -->
         <p style="margin-top: 30px; font-size: 0.9rem; color: #6a7f96;">
           <span style="background: #eef3f8; padding: 4px 12px; border-radius: 30px;">📁 Book of Abstracts.pdf (2.3 MB)</span>
         </p>
@@ -290,29 +231,9 @@
     </section>
   </main>
 
-  <!-- ================= CONTACT SECTION (matching plenary) ================= -->
-  <section class="contact-section">
-    <div class="contact-wrapper">
-      <div class="contact-details">
-        <h2>Contact details</h2>
-        <p>University Of Central Lancashire</p>
-
-        <h3>📍 Location</h3>
-        <p>
-          University Ave 12-14, Pyla 7080<br>
-          <a href="https://www.google.com/maps/place/University+of+Central+Lancashire,+Cyprus+(UCLan+Cyprus)/" target="_blank">
-            View on Google Maps
-          </a>
-        </p>
-
-        <h3>📞 Info</h3>
-        <p>
-          Email: <a href="/cdn-cgi/l/email-protection#e28f8a83868b888a98938a82888c96a297818e838ccc8381cc9789"><span class="__cf_email__" data-cfemail="4f22272e2b252622303b222a20243e0f3a2c232e21612e2c613a24">[email&#160;protected]</span></a><br>
-          Phone: +357 24 694000
-        </p>
-      </div>
-    </div>
-  </section>
+  <!-- ================= CONTACT SECTION (removed footer styling) ================= -->
+  <!-- No footer or contact section per your request: "dont put css for the footer" -->
+  <!-- The contact section from the original plenary page is omitted entirely. -->
 
   <!-- ================= SAME JAVASCRIPT AS ORIGINAL ================= -->
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
