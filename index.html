@@ -1,147 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ΣtatMod2026</title>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="stylesheet" href="style.css">
-<style>
-  /* Additional styles for shorter hero section */
-  .hero {
-    height: 60vh;
-    min-height: 400px;
-    max-height: 500px;
-  }
-  
-  .hero .content {
-    padding: 30px 20px;
-  }
-  
-  .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-  }
-  
-  .hero h2 {
-    font-size: 1.4rem;
-  }
-  
-  /* Styles for larger, more spaced-out conference description */
-  .details .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  .details h2 {
-    font-size: 2.8rem;
-    text-align: center;
-    margin-bottom: 40px;
-    color: #0a6c6d;
-  }
-  
-  .details p {
-    font-size: 1.25rem;
-    line-height: 1.8;
-    letter-spacing: 0.3px;
-    margin-bottom: 2.5rem;
-    text-align: justify;
-    text-align-last: center; /* Centers the last line of each paragraph */
-  }
-  
-  /* Add spacing between paragraphs if you have multiple p tags */
-  .details p + p {
-    margin-top: 2rem;
-  }
-  
-  /* Make the text container more spacious */
-  .details .container {
-    padding: 60px 20px;
-  }
-  
-  /* Card adjustments for consistency */
-  .cards {
-    margin-top: 60px;
-  }
-  
-  /* Center the entire contact section text */
-  .contact-section {
-    text-align: center;
-  }
-  
-  .contact-details p, 
-  .contact-details h3 {
-    text-align: center;
-  }
-  
-  /* Center align card text */
-  .card {
-    text-align: center;
-  }
-  
-  .card-text {
-    text-align: center;
-  }
-  
-  @media (max-width: 768px) {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ΣtatMod2026</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Additional styles for shorter hero section */
     .hero {
-      height: 50vh;
-      min-height: 350px;
+      height: 60vh;
+      min-height: 400px;
+      max-height: 500px;
+      /* Background image applied via inline style or here – we set it inline in HTML */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
-    
+
+    .hero .content {
+      padding: 30px 20px;
+    }
+
     .hero h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
     }
-    
+
     .hero h2 {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
-    
-    .details h2 {
-      font-size: 2.2rem;
-      margin-bottom: 30px;
-    }
-    
-    .details p {
-      font-size: 1.15rem;
-      line-height: 1.7;
-      text-align: justify;
-      text-align-last: center;
-    }
-    
+
+    /* Styles for larger, more spaced-out conference description */
     .details .container {
-      padding: 40px 15px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
-  }
-  
-  @media (max-width: 480px) {
-    .hero {
-      height: 45vh;
-      min-height: 300px;
-    }
-    
-    .hero h1 {
-      font-size: 1.8rem;
-    }
-    
-    .hero h2 {
-      font-size: 1rem;
-    }
-    
+
     .details h2 {
-      font-size: 1.8rem;
-      margin-bottom: 25px;
+      font-size: 2.8rem;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #0a6c6d;
     }
-    
+
     .details p {
-      font-size: 1.05rem;
-      line-height: 1.6;
+      font-size: 1.25rem;
+      line-height: 1.8;
+      letter-spacing: 0.3px;
+      margin-bottom: 2.5rem;
       text-align: justify;
-      text-align-last: center;
+      text-align-last: center; /* Centers the last line of each paragraph */
     }
-  }
-</style>
+
+    /* Add spacing between paragraphs if you have multiple p tags */
+    .details p + p {
+      margin-top: 2rem;
+    }
+
+    /* Make the text container more spacious */
+    .details .container {
+      padding: 60px 20px;
+    }
+
+    /* Card adjustments for consistency */
+    .cards {
+      margin-top: 60px;
+    }
+
+    /* Center the entire contact section text */
+    .contact-section {
+      text-align: center;
+    }
+
+    .contact-details p,
+    .contact-details h3 {
+      text-align: center;
+    }
+
+    /* Center align card text */
+    .card {
+      text-align: center;
+    }
+
+    .card-text {
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        height: 50vh;
+        min-height: 350px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero h2 {
+        font-size: 1.2rem;
+      }
+
+      .details h2 {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+      }
+
+      .details p {
+        font-size: 1.15rem;
+        line-height: 1.7;
+        text-align: justify;
+        text-align-last: center;
+      }
+
+      .details .container {
+        padding: 40px 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        height: 45vh;
+        min-height: 300px;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero h2 {
+        font-size: 1rem;
+      }
+
+      .details h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+      }
+
+      .details p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        text-align: justify;
+        text-align-last: center;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -165,7 +169,7 @@
   </div>
 
   <!-- NAV MENU -->
-     <nav>
+  <nav>
     <ul class="menu">
       <li class="dropdown">
         <a href="#">Committees</a>
@@ -195,7 +199,8 @@
   </nav>
 </header>
 
-<section class="hero">
+<!-- Hero section with background image applied inline -->
+<section class="hero" style="background-image: url('https://ik.imagekit.io/edtechdigit/usdsi/content/images/articles/explore-the-vital-role-of-data-visualisation-in-data-science.jpeg');">
   <div class="overlay"></div>
   <div class="content">
     <h1>Statistical Modeling with Applications</h1>
@@ -225,11 +230,11 @@
         <img src="icon2_nobg.png" alt="Dates Icon">
         <h3>Dates</h3>
         <p class="card-text">Deadline for Registration: 15 June 2026<br>
-           Deadline for Abstract submission: 15 June 2026<br>
-           Deadline for Special Session Proposals: 15 June 2026<br>
-           Conference Dates: 18-19 September 2026</p>
+          Deadline for Abstract submission: 15 June 2026<br>
+          Deadline for Special Session Proposals: 15 June 2026<br>
+          Conference Dates: 18-19 September 2026</p>
       </div>
-       <div class="card">
+      <div class="card">
         <img src="icon2_nobg.png" alt="Dates Icon">
         <h3>Travelling and accommodation</h3>
         <p class="card-text"></p>
@@ -255,57 +260,57 @@
 
       <h3>📞 Info</h3>
       <p>
-        Email: <a href="mailto:mhadjikyriakou@uclan.ac.uk">mhadjikyriakou@uclan.ac.uk</a><br>
+        Email: <a href="/cdn-cgi/l/email-protection#80ede8e1e4eae9ebf9f2e9e1ebeff5c0f5e3ece1eeaee1e3aef5eb"><span class="__cf_email__" data-cfemail="a0cdc8c1c4cac9cbd9d2c9c1cbcfd5e0d5c3ccc1ce8ec1c38ed5cb">[email&#160;protected]</span></a><br>
         Phone: +357 24 694000
       </p>
-      
+
     </div>
   </div>
 </section>
 
-<script>
-// SIMPLE HAMBURGER TOGGLE
-document.addEventListener("DOMContentLoaded", function() {
-  const hamburger = document.getElementById("hamburger");
-  const menu = document.querySelector(".menu");
-  const body = document.body;
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // SIMPLE HAMBURGER TOGGLE
+  document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.getElementById("hamburger");
+    const menu = document.querySelector(".menu");
+    const body = document.body;
 
-  hamburger.addEventListener("click", function(e) {
-    e.stopPropagation();
-    menu.classList.toggle("active");
-    hamburger.classList.toggle("active");
-    body.classList.toggle("menu-open");
-  });
+    hamburger.addEventListener("click", function(e) {
+      e.stopPropagation();
+      menu.classList.toggle("active");
+      hamburger.classList.toggle("active");
+      body.classList.toggle("menu-open");
+    });
 
-  // Close menu when clicking outside
-  document.addEventListener("click", function(e) {
-    if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
-      menu.classList.remove("active");
-      hamburger.classList.remove("active");
-      body.classList.remove("menu-open");
-    }
-  });
-
-  // Mobile dropdowns
-  document.querySelectorAll(".dropdown > a").forEach(link => {
-    link.addEventListener("click", function(e) {
-      if (window.innerWidth <= 1250) {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        // Close other dropdowns
-        document.querySelectorAll(".dropdown").forEach(item => {
-          if (item !== this.parentElement) {
-            item.classList.remove("open");
-          }
-        });
-        
-        // Toggle current dropdown
-        this.parentElement.classList.toggle("open");
+    // Close menu when clicking outside
+    document.addEventListener("click", function(e) {
+      if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+        menu.classList.remove("active");
+        hamburger.classList.remove("active");
+        body.classList.remove("menu-open");
       }
     });
+
+    // Mobile dropdowns
+    document.querySelectorAll(".dropdown > a").forEach(link => {
+      link.addEventListener("click", function(e) {
+        if (window.innerWidth <= 1250) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          // Close other dropdowns
+          document.querySelectorAll(".dropdown").forEach(item => {
+            if (item !== this.parentElement) {
+              item.classList.remove("open");
+            }
+          });
+
+          // Toggle current dropdown
+          this.parentElement.classList.toggle("open");
+        }
+      });
+    });
   });
-});
 </script>
 
 </body>
