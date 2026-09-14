@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +8,7 @@
   <meta name="robots" content="max-image-preview:large">
 
   <!-- MAIN SITE CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://statmod2026.uclancyprus.ac.cy/style.css">
 
   <!-- PAGE-SPECIFIC CSS -->
   <style>
@@ -45,7 +45,10 @@
       background: #ffffff;
       padding: 30px;
       border-radius: 8px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+      /* CENTER MAIN TEXT */
+      text-align: center;
     }
 
     .committee-card h2 {
@@ -56,11 +59,12 @@
     .committee-list {
       list-style: none;
       padding: 0;
-      margin: 0;
+      margin: 0 auto;
+      max-width: 800px;
     }
 
     .committee-list li {
-      line-height: 1.4;
+      line-height: 1.6;
       color: #333;
       margin-bottom: 16px;
     }
@@ -68,19 +72,33 @@
     .committee-list li:last-child {
       margin-bottom: 0;
     }
-    
+
+    .committee-list a {
+      color: #0a6c6d;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .committee-list a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 768px) {
       .committee-header h1 {
         font-size: 2rem;
       }
-      
+
       .committee-header {
         padding: 60px 20px;
       }
-      
+
       .committee-card {
         padding: 20px;
         margin: -30px auto 0;
+      }
+
+      .committee-list {
+        max-width: 100%;
       }
     }
   </style>
@@ -88,149 +106,298 @@
 
 <body>
 
-<!-- ================= HEADER - SAME AS INDEX.HTML ================= -->
-<header>
-  <!-- LOGO - LEFT SIDE -->
-  <div class="logo-container">
-    <div class="logo">
-      <a href="index.html">
-        <img src="logosheader.png" alt="UCLan Cyprus and ΣtatMod2026 Logo" class="combined-logo">
-      </a>
-    </div>
-  </div>
+  <!-- ================= HEADER - SAME AS INDEX.HTML ================= -->
+  <header>
 
-  <!-- HAMBURGER - RIGHT SIDE (Hidden on desktop) -->
-  <div class="hamburger-container">
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-
-  <!-- NAV MENU -->
- <nav>
-    <ul class="menu">
-      <li class="dropdown">
-        <a href="#">Committees</a>
-        <ul class="dropdown-content">
-          <li><a href="steeringc.html">Steering Committee</a></li>
-          <li><a href="scientific.html">Scientific Committee</a></li>
-          <li><a href="committees.html">Organizing Committee</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#">About the Conference</a>
-       <ul class="dropdown-content">
-          <li><a href="plenaryspeakers.html">Plenary Speakers</a></li>
-          <li><a href="speakers.html">Speakers</a></li>
-          <li><a href="topics.html">Topics</a></li>
-          <li><a href="program.html">Scientific Program</a></li>
-          <li><a href="socialevents.html">Social Events</a></li>
-          <li><a href="pastconf.html">Past Conferences</a></li>
-          <li><a href="partners.html">Partners</a></li>
-        </ul>
-      </li>
-      <li><a href="bookofabs.html">Book of Abstracts</a></li>
-      <li><a href="sponsors.html">Sponsors</a></li>
-      <li><a href="registration.html">Registration/Abstract Submission</a></li>
-      <li><a href="honours.html">UCLAN Gallery</a></li>
-    </ul>
-  </nav>
-</header>
-
-<!-- ================= MAIN ================= -->
-<main>
-
-  <section class="committee-section">
-
-    <div class="committee-header">
-      <h1>Social Events</h1>
+    <!-- LOGO - LEFT SIDE -->
+    <div class="logo-container">
+      <div class="logo">
+        <a href="https://statmod2026.uclancyprus.ac.cy/index.html">
+          <img
+            src="https://statmod2026.uclancyprus.ac.cy/logosheader.png"
+            alt="UCLan Cyprus and ΣtatMod2026 Logo"
+            class="combined-logo"
+          >
+        </a>
+      </div>
     </div>
 
-    <div class="committee-card">
-      <h2>Social Events</h2>
+    <!-- HAMBURGER - RIGHT SIDE (Hidden on desktop) -->
+    <div class="hamburger-container">
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
 
-      <ul class="committee-list">
-        <li>The conference social dinner will take place on Friday, September 18th, at Vlachos Tavern (https://vlachostavern.com/), a traditional family-run Cypriot tavern located in Pyla, just outside Larnaca. The evening will offer participants the opportunity to enjoy traditional Cypriot cuisine and local flavours in a relaxed and welcoming setting, while continuing discussions and socialising with fellow conference participants beyond the scientific programme.
-          Transportation to and from the dinner venue will be arranged for conference participants.</li>
+    <!-- NAV MENU -->
+    <nav>
+      <ul class="menu">
+
+        <li class="dropdown">
+          <a href="#">Committees</a>
+
+          <ul class="dropdown-content">
+            <li>
+              <a href="https://statmod2026.uclancyprus.ac.cy/steeringc.html">
+                Steering Committee
+              </a>
+            </li>
+
+            <li>
+              <a href="https://statmod2026.uclancyprus.ac.cy/scientific.html">
+                Scientific Committee
+              </a>
+            </li>
+
+            <li>
+              <a href="https://statmod2026.uclancyprus.ac.cy/committees.html">
+                Organizing Committee
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#">About the Conference</a>
+
+          <ul class="dropdown-content">
+            <li>
+              <a href="https://statmod2026.uclancyprus.ac.cy/plenaryspeakers.html">
+                Plenary Speakers
+              </a>
+            </li>
+
+            <li>
+              <a href="https://statmod2026.uclancyprus.ac.cy/speakers.html">
+                Speakers
+              </a>
+            </li>
+
+            <li>
+              <a href="https://statmod2026.uclancyprus.ac.cy/topics.html">
+                Topics
+              </a>
+            </li>
+
+            <li>
+              <a href="https://statmod2026.uclancyprus.ac.cy/program.html">
+                Scientific Program
+              </a>
+            </li>
+
+            <li>
+              <a href="https://statmod2026.uclancyprus.ac.cy/socialevents.html">
+                Social Events
+              </a>
+            </li>
+
+            <li>
+              <a href="https://statmod2026.uclancyprus.ac.cy/pastconf.html">
+                Past Conferences
+              </a>
+            </li>
+
+            <li>
+              <a href="https://statmod2026.uclancyprus.ac.cy/partners.html">
+                Partners
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="https://statmod2026.uclancyprus.ac.cy/bookofabs.html">
+            Book of Abstracts
+          </a>
+        </li>
+
+        <li>
+          <a href="https://statmod2026.uclancyprus.ac.cy/sponsors.html">
+            Sponsors
+          </a>
+        </li>
+
+        <li>
+          <a href="https://statmod2026.uclancyprus.ac.cy/registration.html">
+            Registration/Abstract Submission
+          </a>
+        </li>
+
+        <li>
+          <a href="https://statmod2026.uclancyprus.ac.cy/honours.html">
+            UCLAN Gallery
+          </a>
+        </li>
+
       </ul>
+    </nav>
+  </header>
+
+
+  <!-- ================= MAIN ================= -->
+  <main>
+
+    <section class="committee-section">
+
+      <div class="committee-header">
+        <h1>Social Events</h1>
+      </div>
+
+      <div class="committee-card">
+
+        <h2>Social Events</h2>
+
+        <ul class="committee-list">
+
+          <li>
+            The conference social dinner will take place on
+            <strong>Friday, September 18th</strong>, at
+            <a href="https://vlachostavern.com/" target="_blank" rel="noopener">
+              Vlachos Tavern
+            </a>,
+            a traditional family-run Cypriot tavern located in Pyla,
+            just outside Larnaca.
+
+            The evening will offer participants the opportunity to enjoy
+            traditional Cypriot cuisine and local flavours in a relaxed
+            and welcoming setting, while continuing discussions and
+            socialising with fellow conference participants beyond the
+            scientific programme.
+
+            Transportation to and from the dinner venue will be arranged
+            for conference participants.
+          </li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER / CONTACT ================= -->
+  <section class="contact-section">
+
+    <div class="contact-wrapper">
+
+      <div class="contact-details">
+
+        <h2>Contact details</h2>
+
+        <p>
+          University Of Central Lancashire
+        </p>
+
+        <h3>📍 Location</h3>
+
+        <p>
+          University Ave 12-14, Pyla 7080<br>
+
+          <a
+            href="https://www.google.com/maps/place/University+of+Central+Lancashire,+Cyprus+(UCLan+Cyprus)/"
+            target="_blank"
+            rel="noopener"
+          >
+            View on Google Maps
+          </a>
+        </p>
+
+        <h3>📞 Info</h3>
+
+        <p>
+          Email:
+          <a href="/cdn-cgi/l/email-protection#462b2e27222c2f2d3f342f272d29330633252a272868272568332d">
+            <span
+              class="__cf_email__"
+              data-cfemail="9bf6f3fafff1f2f0e2e9f2faf0f4eedbeef8f7faf5b5faf8b5eef0"
+            >
+              [email protected]
+            </span>
+          </a>
+          <br>
+
+          Phone: +357 24 694000
+        </p>
+
+      </div>
+
     </div>
+
   </section>
 
-</main>
 
-<!-- ================= FOOTER / CONTACT ================= -->
-<section class="contact-section">
-  <div class="contact-wrapper">
+  <!-- ================= JAVASCRIPT ================= -->
+  <script
+    data-cfasync="false"
+    src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
+  </script>
 
-    <div class="contact-details">
-      <h2>Contact details</h2>
-      <p>University Of Central Lancashire</p>
+  <script>
+    // SIMPLE HAMBURGER TOGGLE
+    document.addEventListener("DOMContentLoaded", function () {
 
-      <h3>📍 Location</h3>
-      <p>
-        University Ave 12-14, Pyla 7080<br>
-        <a href="https://www.google.com/maps/place/University+of+Central+Lancashire,+Cyprus+(UCLan+Cyprus)/" target="_blank">
-          View on Google Maps
-        </a>
-      </p>
+      const hamburger = document.getElementById("hamburger");
+      const menu = document.querySelector(".menu");
+      const body = document.body;
 
-      <h3>📞 Info</h3>
-      <p>
-        Email: <a href="mailto:mhadjikyriakou@uclan.ac.uk">mhadjikyriakou@uclan.ac.uk</a><br>
-        Phone: +357 24 694000
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= SAME JAVASCRIPT AS INDEX.HTML ================= -->
-<script>
-// SIMPLE HAMBURGER TOGGLE
-document.addEventListener("DOMContentLoaded", function() {
-  const hamburger = document.getElementById("hamburger");
-  const menu = document.querySelector(".menu");
-  const body = document.body;
-
-  hamburger.addEventListener("click", function(e) {
-    e.stopPropagation();
-    menu.classList.toggle("active");
-    hamburger.classList.toggle("active");
-    body.classList.toggle("menu-open");
-  });
-
-  // Close menu when clicking outside
-  document.addEventListener("click", function(e) {
-    if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
-      menu.classList.remove("active");
-      hamburger.classList.remove("active");
-      body.classList.remove("menu-open");
-    }
-  });
-
-  // Mobile dropdowns
-  document.querySelectorAll(".dropdown > a").forEach(link => {
-    link.addEventListener("click", function(e) {
-      if (window.innerWidth <= 1250) {
-        e.preventDefault();
+      hamburger.addEventListener("click", function (e) {
         e.stopPropagation();
-        
-        // Close other dropdowns
-        document.querySelectorAll(".dropdown").forEach(item => {
-          if (item !== this.parentElement) {
-            item.classList.remove("open");
+
+        menu.classList.toggle("active");
+        hamburger.classList.toggle("active");
+        body.classList.toggle("menu-open");
+      });
+
+
+      // Close menu when clicking outside
+      document.addEventListener("click", function (e) {
+
+        if (
+          !menu.contains(e.target) &&
+          !hamburger.contains(e.target)
+        ) {
+          menu.classList.remove("active");
+          hamburger.classList.remove("active");
+          body.classList.remove("menu-open");
+        }
+
+      });
+
+
+      // Mobile dropdowns
+      document.querySelectorAll(".dropdown > a").forEach(link => {
+
+        link.addEventListener("click", function (e) {
+
+          if (window.innerWidth <= 1250) {
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            // Close other dropdowns
+            document.querySelectorAll(".dropdown").forEach(item => {
+
+              if (item !== this.parentElement) {
+                item.classList.remove("open");
+              }
+
+            });
+
+            // Toggle current dropdown
+            this.parentElement.classList.toggle("open");
           }
+
         });
-        
-        // Toggle current dropdown
-        this.parentElement.classList.toggle("open");
-      }
+
+      });
+
     });
-  });
-});
-</script>
+  </script>
 
 </body>
 </html>
+```
